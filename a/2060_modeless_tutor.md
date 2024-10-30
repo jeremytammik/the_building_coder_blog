@@ -80,17 +80,24 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Modeless Add-In Samples and Tutorials
+### Modeless Add-In Sample and Tutorial
 
-####<a name="2"></a>
+
 
 <center>
 <img src="img/.png" alt="" title="" width="100"/>
 </center>
 
+####<a name="2"></a> Retirement Looming
 
+My retirement is coming up, currently schedule for end of April 2025.
 
-####<a name="2"></a> modeless WPF add-in samples and tutorials
+Since I have heaps of unused accrued vacation that I need to use up beforehand, and no enough working hours to do so, I am planning to take leave in November and December 2024.
+
+So, I will presumably be less active both here in The Building Coder blog and in
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160).
+
+####<a name="2"></a> Modeless WPF Add-In Sample and Tutorial
 
 modeless WPF add-in samples and tutorials
 Revit addin with modeless WPF window with XAML
@@ -106,7 +113,7 @@ https://forums.autodesk.com/t5/revit-api-forum/revit-crashes-when-exiting-add-in
 Moustafa Khalil of [SharpBIM](https://hashnode.com/@SharpBIM) ([GitHub](https://github.com/mostafa901))
 [Revit_WPF_Example](https://github.com/mostafa901/Revit_WPF_Example)
 
-####<a name="2"></a> add to dismiss dialogues:
+####<a name="2"></a> add to dismiss dialogues
 
 add to dismiss dialogues:
 https://adndevblog.typepad.com/aec/2013/06/dismiss-the-dialog-when-opening-a-copied-central-model-file.html
@@ -114,7 +121,7 @@ https://archi-lab.net/dismissing-revit-pop-ups-the-easy-and-not-so-easy-ways/
 Dismiss Task Dialog Copied Central Model Revit 2023 with Visual Studio
 https://stackoverflow.com/questions/79125045/dismiss-task-dialog-copied-central-model-revit-2023-with-visual-studio
 
-####<a name="2"></a> ai llm rag &rarr; graphrag &rarr; knowledgebase
+####<a name="2"></a> AI LLM RAG &rarr; graphrag &rarr; knowledgebase
 
 ai llm rag &rarr; graphrag &rarr; knowledgebase
 https://duckduckgo.com/?q=ai+llm+rag+--%3E+graphrag+--%3E+knowledgebase
@@ -149,4 +156,13 @@ HTML for people
 https://htmlforpeople.com/
 create and publish a web site from scratch, for anyone
 
+####<a name="2"></a> UN Confirms We Are not tackling climate change
+
+World way off target in tackling climate change - UN
+https://www.bbc.com/news/articles/ce8yyle2eq2o
+Greenhouse gas emissions:
+Right now, when the plans are added up, they indicate that emissions will likely fall by just 2.6% by 2030 compared to 2019.
+This is far short of the 43% reduction that scientists say will be needed by the end of this decade to keep the world on track for net-zero carbon by 2050.
+Forest feedback loop:
+So if the forests and the oceans become less able to soak up CO2, global warming could accelerate more rapidly.
 
