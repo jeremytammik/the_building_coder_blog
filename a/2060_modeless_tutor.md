@@ -88,14 +88,47 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 <img src="img/.png" alt="" title="" width="100"/>
 </center>
 
-####<a name="2"></a> Retirement Looming
+####<a name="2"></a> DevCon Europe Call for Papers
 
-My retirement is coming up, currently schedule for end of April 2025.
+DevCon Europe is coming up, and the Call for Papers is open, including customer submissions.
 
-Since I have heaps of unused accrued vacation that I need to use up beforehand, and no enough working hours to do so, I am planning to take leave in November and December 2024.
+DevCon is classified into three tracks:
 
-So, I will presumably be less active both here in The Building Coder blog and in
-the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160).
+- Low Code / No Code
+- APS Beginner
+- APS Advanced
+
+the core topics cover:
+
+- AI
+- Digital Transformation
+- Sustainability
+
+Please submit your papers by November 14th and join us for an unforgettable experience filled with learning, networking, and inspiration. This is your chance to share your expertise, innovative ideas, and groundbreaking projects with a vibrant community of developers, engineers, and tech enthusiasts.
+
+- Event Date: May 20-21, 2025
+- Location: Amsterdam, Netherlands
+
+We are thrilled that the Autodesk DevCon Europe 2025 will be held in the beautiful city of Amsterdam!
+Whether you're working on cutting-edge software, pioneering new technologies, or have unique insights into the future of development, we want to hear from you!
+
+Don't miss out on the opportunity to be a part of this exciting event!
+
+<center>
+<a href="https://adndata.autodesk.io/events/120/cfp">Call for Papers @ adndata.autodesk.io/events/120/cfp</a>
+</center>
+
+<!-- #AutodeskDevCon #CallForPapers #TechConference #Amsterdam2025 #DeveloperCommunity #Innovation -->
+
+####<a name="2"></a> Retirement and Away on Leave
+
+My retirement is coming up, currently scheduled for end of spring 2025.
+
+Since I have heaps of unused accrued vacation that I need to consume beforehand, and not enough remaining working hours to do so, I am taking leave in November and December 2024.
+
+So, I will be less active both here in The Building Coder blog and in
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) until
+the beginning of next year.
 
 ####<a name="2"></a> Modeless WPF Add-In Sample and Tutorial
 
