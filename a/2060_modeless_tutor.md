@@ -84,7 +84,18 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### DevCon CFP, Modeless Add-Ins and Leave
 
-<!-- Sample and Tutorial -->
+I will be away a lot for ther rest of this year, and leave you with the following exciting mix of very good and very bad news:
+
+- [DevCon Europe call for papers](#2)
+- [Retirement and away on leave](#3)
+- [ChatGPT for Q4R4](#4)
+- [First LLM forum solution](#5)
+- [Modeless WPF add-in sample and tutorial](#6)
+- [The bitter lesson](#7)
+- [Brain drain: David vs Goliath](#8)
+- [AI effects on human creativity](#9)
+- [HTML for people](#10)
+- [UN climate change efforts off track](#11)
 
 ####<a name="2"></a> DevCon Europe Call for Papers
 
@@ -118,23 +129,23 @@ Don't miss out on the opportunity to be a part of this exciting event!
 
 <!-- #AutodeskDevCon #CallForPapers #TechConference #Amsterdam2025 #DeveloperCommunity #Innovation -->
 
-####<a name="2"></a> Retirement and Away on Leave
+####<a name="3"></a> Retirement and Away on Leave
 
-My retirement is coming up, currently scheduled for end of spring 2025.
+My retirement is coming up, currently scheduled before summer 2025.
 
 Since I have heaps of unused accrued vacation that I need to consume beforehand, and not enough remaining working hours to do so, I am taking leave in November and December 2024.
 
 So, I will be less active both here in The Building Coder blog and in
-the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) until
-the beginning of next year.
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) for
+the rest of 2024.
 
-While I am less active, the potential offered by AI LLMs to step in and help is constantly growing.
+Happily, during that time, new growing capabilities offered by the AI LLMs may enable them to step in and help:
 
-####<a name="2"></a> ChatGPT for Q4R4
+####<a name="4"></a> ChatGPT for Q4R4
 
 Back in 2017, I pondered a question answering system for Revit API.
 I called it [Q4R4](https://thebuildingcoder.typepad.com/blog/r4q4/), short for `QA` `4` `RA`, aiming for a short yet globally unique term.
-Here are some of my old and more recent notes on that:
+Here are some notes on that project:
 
 <ul>
 <li><a href="http://thebuildingcoder.typepad.com/blog/2017/03/q4r4-revit-api-question-answering-system.html">Q4R4 &ndash; Revit API Question Answering System</a></li>
@@ -144,7 +155,15 @@ Here are some of my old and more recent notes on that:
 <li><a href="https://thebuildingcoder.typepad.com/blog/2024/07/aps-accelerator-and-q4r4-chunking-with-claude.html">Q4R4 with LLM and RAG and chunking the blog with Claude</a></li>
 </ul>
 
-As of today, though, maybe my research and efforts in this area are no longer needed.
+Since the advent of ChatGPT, I thought I might create a collection of Revit API questions and answers to feed a RAG-enhanced LLM system.
+Currently, RAG in evolving further into GraphsRAG and KnowledgeGraph.
+
+TYhat would make sense if the Revit API knowledge that I wish to use was proprietary and not public.
+
+Luckily, however, I have now spent over 15 years pushing hard to make all Revit API questions and answers publicly available.
+
+Thos efforts are now paying off, and there may be less need for my research and efforts in this area:
+
 [ChatGPT now searches the live internet](https://openai.com/index/introducing-chatgpt-search/),
 including the Revit API discussion forum and the blog:
 
@@ -152,20 +171,15 @@ including the Revit API discussion forum and the blog:
 <img src="img/chatgpt_revit_api.png" alt="ChatGPT knows the Revit API discussion forum" title="ChatGPT knows the Revit API discussion forum" width="800"/>
 </center>
 
-What exactly does it mean that it “searches the live internet”?
-Is it making live search requests behind the scenes?
-
-I don't know exactly.
-
 I tested it on a real live forum question
 on [rebar cover geometry extraction and visualizing using C#](https://forums.autodesk.com/t5/revit-api-forum/rebar-cover-geometry-extraction-visualizing-using-c/m-p/13130442).
 The result is promising: ChatGPT was successful in answering the customer's question, cf.
-the [first LLM forum solution](#???) below.
+the [first LLM forum solution](#4) below.
 
-So, no need for RAG or any dedicated chat machine if you have the RAG sources on the public Internet.
+So, possibly no need for RAG or any dedicated chat machine if you have the RAG sources on the public Internet.
 Just use a generic AI that has up-to-date Internet access and tell it where to look for the answers.
 
-####<a name="2"></a> First LLM Forum Solution
+####<a name="5"></a> First LLM Forum Solution
 
 This is the first AI LLM-generated [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) solution Q &amp; A:
 
@@ -272,72 +286,57 @@ Curve hostFaceCurveTranslation = offset.CreateTransformed(
     new XYZ(0, 0, coverDist))); // To move vertically
 </code></pre>
 
-####<a name="2"></a> Modeless WPF Add-In Sample and Tutorial
+####<a name="6"></a> Modeless WPF Add-In Sample and Tutorial
 
-modeless WPF add-in samples and tutorials
-Revit addin with modeless WPF window with XAML
-https://www.linkedin.com/pulse/revit-addin-modeless-window-sergei-nefedov-bceef/
-by Sergei Nefedov
-Extensible Application Markup Language
-https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language
-came up in
-Calling IExternalCommand from WPF button
-https://forums.autodesk.com/t5/revit-api-forum/calling-iexternalcommand-from-wpf-button/m-p/13110196
-Revit crashes when exiting add-in WPF application
-https://forums.autodesk.com/t5/revit-api-forum/revit-crashes-when-exiting-add-in-wpf-application/m-p/9236332/
-Moustafa Khalil of [SharpBIM](https://hashnode.com/@SharpBIM) ([GitHub](https://github.com/mostafa901))
-[Revit_WPF_Example](https://github.com/mostafa901/Revit_WPF_Example)
+We are happy to present new modeless WPF add-in samples and tutorials:
 
-####<a name="2"></a> add to dismiss dialogues
+First, the [Revit addin with modeless WPF window with XAML](https://www.linkedin.com/pulse/revit-addin-modeless-window-sergei-nefedov-bceef/)
+tutorial by Sergei Nefedov came up in the question
+on [Calling IExternalCommand from WPF button](https://forums.autodesk.com/t5/revit-api-forum/calling-iexternalcommand-from-wpf-button/m-p/13110196).
 
-add to dismiss dialogues:
-https://adndevblog.typepad.com/aec/2013/06/dismiss-the-dialog-when-opening-a-copied-central-model-file.html
-https://archi-lab.net/dismissing-revit-pop-ups-the-easy-and-not-so-easy-ways/
-Dismiss Task Dialog Copied Central Model Revit 2023 with Visual Studio
-https://stackoverflow.com/questions/79125045/dismiss-task-dialog-copied-central-model-revit-2023-with-visual-studio
+Secondly, Moustafa Khalil of [SharpBIM](https://hashnode.com/@SharpBIM) ([GitHub](https://github.com/mostafa901))
+shared a [Revit_WPF_Example](https://github.com/mostafa901/Revit_WPF_Example) in his answer
+to [Revit crashes when exiting add-in WPF application](https://forums.autodesk.com/t5/revit-api-forum/revit-crashes-when-exiting-add-in-wpf-application/m-p/9236332/).
 
-####<a name="2"></a> AI LLM RAG &rarr; graphrag &rarr; knowledgebase
+####<a name="7"></a> The Bitter Lesson
 
-ai llm rag &rarr; graphrag &rarr; knowledgebase
-https://duckduckgo.com/?q=ai+llm+rag+--%3E+graphrag+--%3E+knowledgebase
+Back to AI-related news, a very ssuccinct summary of one problematic aspect is provided by Rich Sutton
+in [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html):
 
-####<a name="2"></a> The Bitter Lesson
-
-The Bitter Lesson
-http://www.incompleteideas.net/IncIdeas/BitterLesson.html
 > One thing that should be learned from the bitter lesson is the great power of general purpose methods, of methods that continue to scale with increased computation even as the available computation becomes very great. The two methods that seem to scale arbitrarily in this way are search and learning.
+
 > The second general point to be learned from the bitter lesson is that the actual contents of minds are tremendously, irredeemably complex; we should stop trying to find simple ways to think about the contents of minds, such as simple ways to think about space, objects, multiple agents, or symmetries. All these are part of the arbitrary, intrinsically-complex, outside world. They are not what should be built in, as their complexity is endless; instead we should build in only the meta-methods that can find and capture this arbitrary complexity. Essential to these methods is that they can find good approximations, but the search for them should be by our methods, not by us. We want AI agents that can discover like we can, not which contain what we have discovered. Building in our discoveries only makes it harder to see how the discovering process can be done.
 
-####<a name="2"></a> Brain Drain: David vs Goliath
+####<a name="8"></a> Brain Drain: David vs Goliath
 
-Brain Drain: David vs Goliath
-https://stackoverflow.blog/2024/10/17/training-data-scarcity-synthetic-quality-model-genai-ai/
-> There are worries that GenAI systems may run out of fresh data as they scale. Synthetic data is an option, but using AI-generated data to train AI can degrade the model's performance. There may be a better solution. Can data quality overcome a loss of data quantity?
+I ran into The Bitter Lesson reading
+about [Brain Drain: David vs Goliath](https://stackoverflow.blog/2024/10/17/training-data-scarcity-synthetic-quality-model-genai-ai/):
 
-####<a name="2"></a> https://x.com/hellokillian/status/1849248458701705334
+> There are worries that GenAI systems may run out of fresh data as they scale.
+Synthetic data is an option, but using AI-generated data to train AI can degrade the model's performance.
+There may be a better solution.
+Can data quality overcome a loss of data quantity?
 
-https://x.com/hellokillian/status/1849248458701705334
-interpreter --os requires OpenAI API key
-interpreter --local
+####<a name="9"></a> AI Effects on Human Creativity
 
-####<a name="2"></a> MetaGPT
+New reasearch present interesting results
+on [Human Creativity in the Age of LLMs: Randomized Experiments on Divergent and Convergent Thinking](https://arxiv.org/abs/2410.03703):
 
-MetaGPT
-https://github.com/geekan/MetaGPT
+> Large language models are transforming the creative process by offering unprecedented capabilities to algorithmically generate ideas. While these tools can enhance human creativity when people co-create with them, it's unclear how this will impact unassisted human creativity. We conducted two large pre-registered parallel experiments involving 1,100 participants attempting tasks targeting the two core components of creativity, divergent and convergent thinking. We compare the effects of two forms of large language model (LLM) assistance -- a standard LLM providing direct answers and a coach-like LLM offering guidance -- with a control group receiving no AI assistance, and focus particularly on how all groups perform in a final, unassisted stage. Our findings reveal that while LLM assistance can provide short-term boosts in creativity during assisted tasks, it may inadvertently hinder independent creative performance when users work without assistance, raising concerns about the long-term impact on human creativity and cognition.
 
-####<a name="2"></a> HTML for people
+####<a name="10"></a> HTML for People
 
-HTML for people
-https://htmlforpeople.com/
-create and publish a web site from scratch, for anyone
+Moving away from both AI and the Recvit API, here is a neat introduction
+to [HTML for people](https://htmlforpeople.com/),
+showing how to create and publish a web site from scratch, right now, for anyone.
 
-####<a name="2"></a> UN Confirms We Are not tackling climate change
+####<a name="11"></a> UN Climate Change Efforts Off Track
 
-World way off target in tackling climate change - UN
-https://www.bbc.com/news/articles/ce8yyle2eq2o
-Greenhouse gas emissions:
-Right now, when the plans are added up, they indicate that emissions will likely fall by just 2.6% by 2030 compared to 2019.
-This is far short of the 43% reduction that scientists say will be needed by the end of this decade to keep the world on track for net-zero carbon by 2050.
-Forest feedback loop:
-So if the forests and the oceans become less able to soak up CO2, global warming could accelerate more rapidly.
+The [world is way off target in tackling climate change](https://www.bbc.com/news/articles/ce8yyle2eq2o).
+
+- Greenhouse gas emissions:
+  Right now, when the plans are added up, they indicate that emissions will likely fall by just 2.6% by 2030 compared to 2019.
+  This is far short of the 43% reduction that scientists say will be needed by the end of this decade to keep the world on track for net-zero carbon by 2050.
+- Forest feedback loop:
+  So, if the forests and the oceans become less able to soak up CO2, global warming could accelerate more rapidly.
 
