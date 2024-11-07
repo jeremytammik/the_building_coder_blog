@@ -156,7 +156,7 @@ Here are some notes on that project:
 </ul>
 
 Since the advent of ChatGPT, I thought I might create a collection of Revit API questions and answers to feed a RAG-enhanced LLM system.
-Currently, RAG in evolving further into GraphsRAG and KnowledgeGraph.
+Currently, RAG in evolving further into GraphRAG, KnowledgeGraph, etc.
 
 That would make sense if the Revit API knowledge that I wish to use was proprietary and not public.
 
@@ -297,7 +297,7 @@ to [Revit crashes when exiting add-in WPF application](https://forums.autodesk.c
 
 ####<a name="7"></a> The Bitter Lesson
 
-Back to AI-related news, a succinct summary of one problematic aspect was provided several yearsd ago by Rich Sutton
+Back to AI-related news, a succinct summary of one problematic aspect was provided several years ago by Rich Sutton
 in [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html):
 
 > One thing that should be learned from the bitter lesson is the great power of general purpose methods, of methods that continue to scale with increased computation even as the available computation becomes very great. The two methods that seem to scale arbitrarily in this way are search and learning.
@@ -316,14 +316,14 @@ Can data quality overcome a loss of data quantity?
 
 ####<a name="9"></a> AI Effects on Human Creativity
 
-New reasearch presents interesting results
+New research presents interesting results
 on [human creativity in the age of LLMs: randomized experiments on divergent and convergent thinking](https://arxiv.org/abs/2410.03703):
 
 > Large language models are transforming the creative process by offering unprecedented capabilities to algorithmically generate ideas. While these tools can enhance human creativity when people co-create with them, it's unclear how this will impact unassisted human creativity. We conducted two large pre-registered parallel experiments involving 1,100 participants attempting tasks targeting the two core components of creativity, divergent and convergent thinking. We compare the effects of two forms of large language model (LLM) assistance -- a standard LLM providing direct answers and a coach-like LLM offering guidance -- with a control group receiving no AI assistance, and focus particularly on how all groups perform in a final, unassisted stage. Our findings reveal that while LLM assistance can provide short-term boosts in creativity during assisted tasks, it may inadvertently hinder independent creative performance when users work without assistance, raising concerns about the long-term impact on human creativity and cognition.
 
 ####<a name="10"></a> HTML for People
 
-Moving away from both AI and the Recvit API, here is a neat introduction
+Moving away from both AI and the Revit API, here is a neat introduction
 to [HTML for people](https://htmlforpeople.com/),
 showing how to create and publish a web site from scratch, right now, for anyone.
 
