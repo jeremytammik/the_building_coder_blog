@@ -84,7 +84,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### DevCon CFP, Modeless Add-Ins and Leave
 
-I will be away a lot for ther rest of this year, and leave you with the following exciting mix of very good and very bad news:
+I will be away a most of the rest of this year, and leave you with the following exciting mix of very good and very bad news:
 
 - [DevCon Europe call for papers](#2)
 - [Retirement and away on leave](#3)
@@ -107,7 +107,7 @@ DevCon is classified into three tracks:
 - APS Beginner
 - APS Advanced
 
-the core topics cover:
+The core topics include:
 
 - AI
 - Digital Transformation
@@ -131,7 +131,7 @@ Don't miss out on the opportunity to be a part of this exciting event!
 
 ####<a name="3"></a> Retirement and Away on Leave
 
-My retirement is coming up, currently scheduled before summer 2025.
+My retirement is coming up, currently scheduled before the middle of next year.
 
 Since I have heaps of unused accrued vacation that I need to consume beforehand, and not enough remaining working hours to do so, I am taking leave in November and December 2024.
 
@@ -158,12 +158,11 @@ Here are some notes on that project:
 Since the advent of ChatGPT, I thought I might create a collection of Revit API questions and answers to feed a RAG-enhanced LLM system.
 Currently, RAG in evolving further into GraphsRAG and KnowledgeGraph.
 
-TYhat would make sense if the Revit API knowledge that I wish to use was proprietary and not public.
+That would make sense if the Revit API knowledge that I wish to use was proprietary and not public.
 
 Luckily, however, I have now spent over 15 years pushing hard to make all Revit API questions and answers publicly available.
 
-Thos efforts are now paying off, and there may be less need for my research and efforts in this area:
-
+Those efforts are now paying off, and there may be less need for my research and efforts to create a closed-loop RAG-base system; instead,
 [ChatGPT now searches the live internet](https://openai.com/index/introducing-chatgpt-search/),
 including the Revit API discussion forum and the blog:
 
@@ -172,7 +171,7 @@ including the Revit API discussion forum and the blog:
 </center>
 
 I tested it on a real live forum question
-on [rebar cover geometry extraction and visualizing using C#](https://forums.autodesk.com/t5/revit-api-forum/rebar-cover-geometry-extraction-visualizing-using-c/m-p/13130442).
+on [rebar cover geometry extraction and visualisation using C#](https://forums.autodesk.com/t5/revit-api-forum/rebar-cover-geometry-extraction-visualizing-using-c/m-p/13130442).
 The result is promising: ChatGPT was successful in answering the customer's question, cf.
 the [first LLM forum solution](#4) below.
 
@@ -184,15 +183,14 @@ Just use a generic AI that has up-to-date Internet access and tell it where to l
 This is the first AI LLM-generated [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) solution Q &amp; A:
 
 **Original Question:**
-Do We have any way's to Extract/ Visualize the rebar cover geometry given to the host element.
+Do we have any way to extract/ visualize the rebar cover geometry given to the host element.
 I need to create curves with respect to the cover geometry.
 Could anyone help me on this topic?
 
 **Answer:**
-
 [ChatGPT now supports improved real-time access to the Internet](https://openai.com/index/introducing-chatgpt-search/).
 
-Therefore, it can now be used to answer questions that require it to look for answers in the Revit API discussion forum, The Building Coder blog, and elsewhere on the web.
+Therefore, it can be used to answer questions that require looking for answers in the Revit API discussion forum, The Building Coder blog, and elsewhere on the web.
 Therefore, I simply rephrased your question as follows and received the attached answer.
 Please check it out and see whether it helps you move forward.
 Please let us know the results and how you and up solving this.
@@ -217,8 +215,7 @@ To extract and visualize rebar cover geometry using the Revit API, you can follo
 - Visualization: To visualize these curves in Revit, add them as model lines or use temporary graphics. You can use Document.Create.NewModelCurve for permanent lines, or TemporaryGraphicsManager to show temporary lines.
 
 Example Code:
-
-Here is a simplified code outline in C# to extract cover geometry and create curves around it:
+here is a simplified code outline in C# to extract cover geometry and create curves around it:
 
 <pre><code class="language-cs">using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
@@ -300,7 +297,7 @@ to [Revit crashes when exiting add-in WPF application](https://forums.autodesk.c
 
 ####<a name="7"></a> The Bitter Lesson
 
-Back to AI-related news, a very ssuccinct summary of one problematic aspect is provided by Rich Sutton
+Back to AI-related news, a succinct summary of one problematic aspect was provided several yearsd ago by Rich Sutton
 in [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html):
 
 > One thing that should be learned from the bitter lesson is the great power of general purpose methods, of methods that continue to scale with increased computation even as the available computation becomes very great. The two methods that seem to scale arbitrarily in this way are search and learning.
@@ -309,7 +306,7 @@ in [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html
 
 ####<a name="8"></a> Brain Drain: David vs Goliath
 
-I ran into The Bitter Lesson reading
+I ran into *The Bitter Lesson* reading
 about [Brain Drain: David vs Goliath](https://stackoverflow.blog/2024/10/17/training-data-scarcity-synthetic-quality-model-genai-ai/):
 
 > There are worries that GenAI systems may run out of fresh data as they scale.
@@ -319,8 +316,8 @@ Can data quality overcome a loss of data quantity?
 
 ####<a name="9"></a> AI Effects on Human Creativity
 
-New reasearch present interesting results
-on [Human Creativity in the Age of LLMs: Randomized Experiments on Divergent and Convergent Thinking](https://arxiv.org/abs/2410.03703):
+New reasearch presents interesting results
+on [human creativity in the age of LLMs: randomized experiments on divergent and convergent thinking](https://arxiv.org/abs/2410.03703):
 
 > Large language models are transforming the creative process by offering unprecedented capabilities to algorithmically generate ideas. While these tools can enhance human creativity when people co-create with them, it's unclear how this will impact unassisted human creativity. We conducted two large pre-registered parallel experiments involving 1,100 participants attempting tasks targeting the two core components of creativity, divergent and convergent thinking. We compare the effects of two forms of large language model (LLM) assistance -- a standard LLM providing direct answers and a coach-like LLM offering guidance -- with a control group receiving no AI assistance, and focus particularly on how all groups perform in a final, unassisted stage. Our findings reveal that while LLM assistance can provide short-term boosts in creativity during assisted tasks, it may inadvertently hinder independent creative performance when users work without assistance, raising concerns about the long-term impact on human creativity and cognition.
 
@@ -332,7 +329,8 @@ showing how to create and publish a web site from scratch, right now, for anyone
 
 ####<a name="11"></a> UN Climate Change Efforts Off Track
 
-The [world is way off target in tackling climate change](https://www.bbc.com/news/articles/ce8yyle2eq2o).
+Finally, unfortunately,
+the [world is way off target in tackling climate change](https://www.bbc.com/news/articles/ce8yyle2eq2o).
 
 - Greenhouse gas emissions:
   Right now, when the plans are added up, they indicate that emissions will likely fall by just 2.6% by 2030 compared to 2019.
