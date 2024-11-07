@@ -66,7 +66,17 @@ twitter:
 
  the @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-&ndash; ...
+I will be away a most of the rest of this year, and leave you with the following exciting mix of very good and very bad news
+&ndash; DevCon Europe call for papers
+&ndash; Retirement and away on leave
+&ndash; ChatGPT for Q4R4
+&ndash; First LLM forum solution
+&ndash; Modeless WPF add-in sample and tutorial
+&ndash; The bitter lesson
+&ndash; Brain drain: David vs Goliath
+&ndash; AI effects on human creativity
+&ndash; HTML for people
+&ndash; UN climate change efforts off track...
 
 linkedin:
 
@@ -82,7 +92,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### DevCon CFP, Modeless Add-Ins and Leave
+### DevCon, AI for Revit API, Modeless Add-Ins, Leave
 
 I will be away a most of the rest of this year, and leave you with the following exciting mix of very good and very bad news:
 
@@ -282,6 +292,8 @@ Curve hostFaceCurveTranslation = offset.CreateTransformed(
   Transform.CreateTranslation(
     new XYZ(0, 0, coverDist))); // To move vertically
 </code></pre>
+
+Thank you for the confirmation, Thomas Tinu, thanks to ChatGPT for the research and answer, and thanks to the entire community for years of discussing questions and answers in public to feed the LLM!
 
 ####<a name="6"></a> Modeless WPF Add-In Sample and Tutorial
 
