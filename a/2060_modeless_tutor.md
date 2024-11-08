@@ -64,7 +64,7 @@
 
 twitter:
 
- the @AutodeskRevit #RevitAPI #BIM @DynamoBIM
+DevCon CFP, modeless add-in tutorial and sample, and using ChatGPT to answer questions on @AutodeskRevit #RevitAPI #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html
 
 I will be away a most of the rest of this year, and leave you with the following exciting mix of very good and very bad news
 &ndash; DevCon Europe call for papers
@@ -79,6 +79,23 @@ I will be away a most of the rest of this year, and leave you with the following
 &ndash; UN climate change efforts off track...
 
 linkedin:
+
+DevCon CFP, modeless add-in tutorial and sample, and using ChatGPT to answer #RevitAPI questions...
+
+https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html
+
+I will be away a most of the rest of this year, and leave you with the following exciting mix of very good and very bad news
+
+- DevCon Europe call for papers
+- Retirement and away on leave
+- ChatGPT for Q4R4
+- First LLM forum solution
+- Modeless WPF add-in sample and tutorial
+- The bitter lesson
+- Brain drain: David vs Goliath
+- AI effects on human creativity
+- HTML for people
+- UN climate change efforts off track...
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
