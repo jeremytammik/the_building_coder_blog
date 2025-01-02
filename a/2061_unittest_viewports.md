@@ -121,14 +121,51 @@ Today, I would like to highlight three new non-repetitive threads from the past 
 
 ####<a name="4"></a> Multi-Version NUnit Testing Framework
 
+Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari shared
+his [multi-version NUnit testing framework for Revit API](https://forums.autodesk.com/t5/revit-api-forum/multi-version-nunit-testing-framework-for-revit-api/m-p/13230523), saying:
 
-Multi-version NUnit testing framework for Revit API.
-https://forums.autodesk.com/t5/revit-api-forum/multi-version-nunit-testing-framework-for-revit-api/m-p/13230523
+Hello everyone, after some years of development my Test framework for Revit API is released.
+
+[ricaun.RevitTest](https://www.youtube.com/watch?v=_lsmvQtGftE) is a multi-version `NUnit` testing framework for Revit API.
+It support all releases from Revit 2019 to up to Revit 2025.
+
+Features:
+
+- Run tests and debug using Visual Studio to execute tests inside Revit.
+- Open and Close Revit and dotnet test execution.
+- Auto detect Revit installation and no manual plugin installation required.
+
+The whole project is open-source with all the utility packages.
+
+Here is his 34-minute video on [Open-Source RevitTest](https://youtu.be/_lsmvQtGftE):
+
+<center>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/_lsmvQtGftE?si=qdaigwbo3LXi-s22" title="Open-Source RevitTest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<center>
+
+The best way to start is by downloading the sample [RevitTest project on GitHub](https://github.com/ricaun-io/RevitTest).
+
+Please make us of the [RevitTest discussions area](https://github.com/ricaun-io/RevitTest/discussions) for help and discussion.
 
 ####<a name="5"></a> Revit Icons Support High-Resolution Display
 
-Revit Icons Support High-Resolution Display
-https://forums.autodesk.com/t5/revit-api-forum/revit-icons-support-high-resolution-display/m-p/13238444#M83163
+[@ricaun](https://ricaun.com/) also shared the results of his research
+on [Revit icons support high-resolution display](https://forums.autodesk.com/t5/revit-api-forum/revit-icons-support-high-resolution-display/m-p/13238444#M83163):
+
+Unlike AutoCAD, the Revit UI itself doers not provide this support, but Revit add-ins can do so, using TIFF files to allow multiple resolutions of the same image in a single file, exactly as the Autodesk Icon Design Guidelines suggest, e.g., 5 DPI png images (100%, 150%, 200% 300% and 400%) to support clear displays on high-resolution monitors.
+
+- [Icons in AutoCAD](https://forums.autodesk.com/t5/autocad-forum/looking-for-icon-definitions/m-p/13136339/highlight/true#M1141560)
+- [ricaun.Revit.UI library](https://github.com/ricaun-io/ricaun.Revit.UI) enhanced to support TIFF and select the best high-resolution monitor image
+- [Autodesk.Icon.Example project](https://github.com/ricaun-io/Autodesk.Icon.Example) updated with TIFF files
+
+Next step: update all add-ins to use TIFF files instead of ICO files to support high-resolution monitors, cf. the ten-minute video explaining how
+to [create multi-dpi `tiff` icons for Revit](https://youtu.be/3JrIW3UW5Ws):
+
+<center>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/3JrIW3UW5Ws?si=9HMRlWLswOQ7EII8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<center>
+
+
 
 ####<a name="6"></a> relationships between viewports, view types, and title types
 
