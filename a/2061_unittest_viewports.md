@@ -73,7 +73,30 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-&ndash;  ...
+Back again and winding up, multi-version NUnit testing framework, hires icons, viewports and view types, interact with BIM via ChatGPT, humans versus LLMs completing ARC-AGI and
+- [2024 AI breakthroughs &amp; controversies](#10)
+- [LLM transformers explained](#11)
+- [Short movie by Veo 2](#12)
+- [LangChain state of AI 2024 report](#13)
+- [Current AIs are not politically neutral](#14)
+- [Mind-reading potential of AI](#15)
+- [Iterative spell check with Gemini](#16)
+
+
+Back again!
+&ndash; Winding up
+&ndash; Multi-version NUnit test
+&ndash; Hires Revit icons
+&ndash; Retrieve and update viewport types
+&ndash; Interact with BIM via ChatGPT
+&ndash; Expertise in real world contexts
+&ndash; Humans versus LLMs completing ARC-AGI
+&ndash; 2024 AI breakthroughs &amp; controversies
+&ndash; LLM transformers
+&ndash; Short movie by Veo 2
+&ndash; Current AIs are not politically neutral
+&ndash; Mind-reading potential of AI
+&ndash; Iterative spell check with Gemini...
 
 linkedin:
 
@@ -107,7 +130,7 @@ Long time no see! Happy New Year. Here I am again with a host of stuff:
     - [Dynamo users](#6.7)
     - [Practical considerations](#6.8)
     - [Summary of steps](#6.9)
-    - [Additional insights from my experience](#6.10)
+    - [Additional insights](#6.10)
 - [Interact with BIM via ChatGPT interface in Revit](#7)
 - [Expertise in real world contexts](#8)
 - [Humans versus LLMs completing ARC-AGI](#9)
@@ -317,7 +340,7 @@ Use Viewport.ChangeTypeId() to apply the target type to specific viewports.
 - Diagnostic Code:
 Use the provided diagnostic code to list available viewport types and verify your settings.
 
-####<a name="6.10"></a> Additional Insights from My Experience
+####<a name="6.10"></a> Additional Insights
 
 Sometimes, my NLU (Natural Language Understanding) system doesn't interpret things perfectly, so please feel free to let me know if any part of this explanation is unclear or inaccurate.
 This response stems from my own challenges when attempting to programmatically change legend viewport titles in Revit.
