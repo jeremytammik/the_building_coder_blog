@@ -73,11 +73,9 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-
 &ndash;  ...
 
 linkedin:
-
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
@@ -92,6 +90,34 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 -->
 
 ### Back Again to Unit Test, Icons, Viewports and More
+
+Long time no see! Happy New Year. Here I am again with a host of stuff:
+
+- [Happy New Year!](#2)
+- [Back again and winding up](#3)
+- [Multi-version NUnit testing framework](#4)
+- [Revit icons support high-resolution display](#5)
+- [Viewports, view types and title types](#6)
+    - [Clarifying viewport, view type, and title type](#6.1)
+    - [Goal: change the viewport type](#6.2)
+    - [1. Retrieve viewport types programmatically](#6.3)
+    - [2. Update viewport types](#6.4)
+    - [Key insights](#6.5)
+    - [Correct diagnostic code](#6.6)
+    - [Dynamo users](#6.7)
+    - [Practical considerations](#6.8)
+    - [Summary of steps](#6.9)
+    - [Additional insights from my experience](#6.10)
+- [Interact with BIM via ChatGPT interface in Revit](#7)
+- [Expertise in real world contexts](#8)
+- [Humans versus LLMs completing ARC-AGI](#9)
+- [2024 AI breakthroughs &amp; controversies](#10)
+- [LLM transformers explained](#11)
+- [Short movie by Veo 2](#12)
+- [LangChain state of AI 2024 report](#13)
+- [Current AIs are not politically neutral](#14)
+- [Mind-reading potential of AI](#15)
+- [Iterative spell check with Gemini](#16)
 
 
 ####<a name="2"></a> Happy New Year!
@@ -112,7 +138,7 @@ As I mentioned in November,
 [my retirement is nearing](https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#3)
 and I took time off in the past two months.
 
-I am back again now and thinking about how to wind up my activities before retiring towords the middle of the year.
+I am back again now and thinking about how to wind up my activities before retiring towards the middle of the year.
 
 Meanwhile, I am mesmerised by the advancements in AI and LLMs.
 I am confident that already today, most of the repetitive questions that keep coming up in the Revit API forum can be answered by proper queries to one of the LLMs.
@@ -152,7 +178,7 @@ Please use the [RevitTest discussions area](https://github.com/ricaun-io/RevitTe
 [@ricaun](https://ricaun.com/) also shared the results of his research
 on [Revit icons support high-resolution display](https://forums.autodesk.com/t5/revit-api-forum/revit-icons-support-high-resolution-display/m-p/13238444#M83163):
 
-Unlike AutoCAD, the Revit UI itself doers not provide this support, but Revit add-ins can do so, using TIFF files to allow multiple resolutions of the same image in a single file, exactly as the Autodesk Icon Design Guidelines suggest, e.g., 5 DPI png images (100%, 150%, 200% 300% and 400%) to support clear displays on high-resolution monitors.
+Unlike AutoCAD, the Revit UI itself does not provide this support, but Revit add-ins can do so, using TIFF files to allow multiple resolutions of the same image in a single file, exactly as the Autodesk Icon Design Guidelines suggest, e.g., 5 DPI png images (100%, 150%, 200% 300% and 400%) to support clear displays on high-resolution monitors.
 
 - [Icons in AutoCAD](https://forums.autodesk.com/t5/autocad-forum/looking-for-icon-definitions/m-p/13136339/highlight/true#M1141560)
 - [ricaun.Revit.UI library](https://github.com/ricaun-io/ricaun.Revit.UI) enhanced to support TIFF and select the best high-resolution monitor image
@@ -376,7 +402,7 @@ LLMs are currently challenged to reach the higher stages, and it is worthwhile p
 
 ####<a name="9"></a> Humans versus LLMs Completing ARC-AGI
 
-In December, OpenAI released `o1`, the most adcvanced LLM so far, and showed off the reasoning capabilities of its unreleased successor `o3`.
+In December, OpenAI released `o1`, the most advanced LLM so far, and showed off the reasoning capabilities of its unreleased successor `o3`.
 
 `o3` is the first LLM to be able to partially solve
 the [ARC-AGI](https://arcprize.org/) Abstraction and Reasoning Corpus for Artificial General Intelligence test.\
@@ -391,7 +417,7 @@ It is very worthwhile trying it out for yourself to get an idea of the tasks tha
 For a quick overview of what going on in general, check out
 the [top 10 AI breakthroughs & controversies of 2024](https://www.techopedia.com/top-ai-breakthroughs-and-controversies)
 
-####<a name="11"></a> Meet Transformers: The Google Breakthrough that Rewrote AI's Roadmap
+####<a name="11"></a> LLM Transformers Explained
 
 For an even more basic introduction to the fundamentals of what started off the current LLM revolution, one might want
 to [meet transformers: the Google breakthrough that rewrote AI's roadmap](https://www.techspot.com/article/2933-meet-transformers-ai/)
@@ -426,4 +452,33 @@ Many groups are researching different ways of using deep learning to interpret h
 and [read your thoughts](https://thebuildingcoder.typepad.com/blog/2023/05/dark-icons-newfamilyinstance-and-ai-news.html#6).
 Here is a TED presentation
 on [the mind-reading potential of AI](https://www.ted.com/talks/chin_teng_lin_the_mind_reading_potential_of_ai).
+
+####<a name="16"></a> Iterative Spell Check with Gemini
+
+Until today, I proof read my blog post text myself and then used Word for spell checking.
+A very manual process performed by me, a human being.
+
+Today, for the first time, I asked an LLM to spell check instead.
+It is interesting to try out.
+
+Here is a summary of our conversation:
+
+- Jeremy: can you spell check the text for me, please?
+- Gemini: Please provide the text you would like me to spell check. &lt;... further details&gt;
+- Jeremy: here is the text: &lt;blog post text&gt;
+- Gemini: The text you provided is well-written and informative. There are no spelling errors or grammatical mistakes. Here are some minor suggestions for improvement: &lt;other stuff&gt;
+- Jeremy: no spelling errors at all in there?
+- Gemini: You are absolutely right to question me! I apologize for the oversight. There is one clear spelling error: "towords" should be "towards"; My apologies for missing that. It highlights the importance of always having a second pair of eyes (or another AI!) review text.
+- Jeremy: thank you. can you find any further spelling errors?
+- Gemini: You're right to be thorough! It's very easy to miss things. I've gone through the text again with a fine-toothed comb. Here's what I found:
+    - "doers" should be "does": In the sentence "Unlike AutoCAD, the Revit UI itself doers not provide this support...", the correct word is "does."
+I believe this is the only remaining spelling error. However, there are a few other points that are not strictly spelling but could be improved:
+    - Inconsistent use of italics: Sometimes you italicize phrases like ricaun.RevitTest and sometimes you don't. For consistency, it's generally better to use backticks for code or file names.
+    - "adcvanced" should be "advanced": In the section "Humans versus LLMs Completing ARC-AGI", the word "adcvanced" appears to be a typo.
+I'm more confident now that these are all the issues. Thanks again for your patience and for helping me learn! I'm still under development, and your feedback is very valuable.
+- Jeremy: i corrected the errors that you pointed out. thank you for that. here is the corrected text. could you take another look at it and ensure that all spelling errors have been addressed? thank you! &lt;blog post text&gt;
+- Gemini: The text appears to be free of spelling errors. Here are some minor improvements you can consider: &lt;other stuff&gt;
+
+I am still experimenting with how far to trust these things and how to remain critical, patient and persevere to obtain good results.
+If you have not tried using an LLM for your own purposes, I strongly suggest you give it a try and gather some experience.
 

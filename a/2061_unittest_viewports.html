@@ -71,11 +71,9 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-
 &ndash;  ...
 
 linkedin:
-
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
@@ -90,6 +88,36 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 -->
 
 <h3>Back Again to Unit Test, Icons, Viewports and More</h3>
+<p>Long time no see! Happy New Year. Here I am again with a host of stuff:</p>
+<ul>
+<li><a href="#2">Happy New Year!</a></li>
+<li><a href="#3">Back again and winding up</a></li>
+<li><a href="#4">Multi-version NUnit testing framework</a></li>
+<li><a href="#5">Revit icons support high-resolution display</a></li>
+<li><a href="#6">Viewports, view types and title types</a><ul>
+<li><a href="#6.1">Clarifying viewport, view type, and title type</a></li>
+<li><a href="#6.2">Goal: change the viewport type</a></li>
+<li><a href="#6.3">1. Retrieve viewport types programmatically</a></li>
+<li><a href="#6.4">2. Update viewport types</a></li>
+<li><a href="#6.5">Key insights</a></li>
+<li><a href="#6.6">Correct diagnostic code</a></li>
+<li><a href="#6.7">Dynamo users</a></li>
+<li><a href="#6.8">Practical considerations</a></li>
+<li><a href="#6.9">Summary of steps</a></li>
+<li><a href="#6.10">Additional insights from my experience</a></li>
+</ul>
+</li>
+<li><a href="#7">Interact with BIM via ChatGPT interface in Revit</a></li>
+<li><a href="#8">Expertise in real world contexts</a></li>
+<li><a href="#9">Humans versus LLMs completing ARC-AGI</a></li>
+<li><a href="#10">2024 AI breakthroughs &amp; controversies</a></li>
+<li><a href="#11">LLM transformers explained</a></li>
+<li><a href="#12">Short movie by Veo 2</a></li>
+<li><a href="#13">LangChain state of AI 2024 report</a></li>
+<li><a href="#14">Current AIs are not politically neutral</a></li>
+<li><a href="#15">Mind-reading potential of AI</a></li>
+<li><a href="#16">Iterative spell check with Gemini</a></li>
+</ul>
 <h4><a name="2"></a> Happy New Year!</h4>
 <p>Happy New Year to all the brilliant minds in the Revit API developer community!
 Wishing you a year filled with joy, success in all your endeavors, and may your coding adventures be fruitful and rewarding.
@@ -103,7 +131,7 @@ Interesting times indeed.</p>
 <p>As I mentioned in November,
 <a href="https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#3">my retirement is nearing</a>
 and I took time off in the past two months.</p>
-<p>I am back again now and thinking about how to wind up my activities before retiring towords the middle of the year.</p>
+<p>I am back again now and thinking about how to wind up my activities before retiring towards the middle of the year.</p>
 <p>Meanwhile, I am mesmerised by the advancements in AI and LLMs.
 I am confident that already today, most of the repetitive questions that keep coming up in the Revit API forum can be answered by proper queries to one of the LLMs.</p>
 <p>Today, I would like to highlight three new non-repetitive threads from the past week here, and also list a few of the AI-related titbits that caught my attention.</p>
@@ -129,7 +157,7 @@ It supports all releases from Revit 2019 up to Revit 2025.</p>
 <h4><a name="5"></a> Revit Icons Support High-Resolution Display</h4>
 <p><a href="https://ricaun.com/">@ricaun</a> also shared the results of his research
 on <a href="https://forums.autodesk.com/t5/revit-api-forum/revit-icons-support-high-resolution-display/m-p/13238444#M83163">Revit icons support high-resolution display</a>:</p>
-<p>Unlike AutoCAD, the Revit UI itself doers not provide this support, but Revit add-ins can do so, using TIFF files to allow multiple resolutions of the same image in a single file, exactly as the Autodesk Icon Design Guidelines suggest, e.g., 5 DPI png images (100%, 150%, 200% 300% and 400%) to support clear displays on high-resolution monitors.</p>
+<p>Unlike AutoCAD, the Revit UI itself does not provide this support, but Revit add-ins can do so, using TIFF files to allow multiple resolutions of the same image in a single file, exactly as the Autodesk Icon Design Guidelines suggest, e.g., 5 DPI png images (100%, 150%, 200% 300% and 400%) to support clear displays on high-resolution monitors.</p>
 <ul>
 <li><a href="https://forums.autodesk.com/t5/autocad-forum/looking-for-icon-definitions/m-p/13136339/highlight/true#M1141560">Icons in AutoCAD</a></li>
 <li><a href="https://github.com/ricaun-io/ricaun.Revit.UI">ricaun.Revit.UI library</a> enhanced to support TIFF and select the best high-resolution monitor image</li>
@@ -324,7 +352,7 @@ analyses <a href="https://change-aide.com/Content/Downloads/Dreyfus-Expert.pdf">
 </ul>
 <p>LLMs are currently challenged to reach the higher stages, and it is worthwhile pondering that.</p>
 <h4><a name="9"></a> Humans versus LLMs Completing ARC-AGI</h4>
-<p>In December, OpenAI released <code>o1</code>, the most adcvanced LLM so far, and showed off the reasoning capabilities of its unreleased successor <code>o3</code>.</p>
+<p>In December, OpenAI released <code>o1</code>, the most advanced LLM so far, and showed off the reasoning capabilities of its unreleased successor <code>o3</code>.</p>
 <p><code>o3</code> is the first LLM to be able to partially solve
 the <a href="https://arcprize.org/">ARC-AGI</a> Abstraction and Reasoning Corpus for Artificial General Intelligence test.\</p>
 <p>The test is designed to be pretty simple for a human and very hard for an AI.
@@ -333,7 +361,7 @@ I did it myself and found it very easy, next to trivial, once I got the hang of 
 <h4><a name="10"></a> 2024 AI Breakthroughs &amp; Controversies</h4>
 <p>For a quick overview of what going on in general, check out
 the <a href="https://www.techopedia.com/top-ai-breakthroughs-and-controversies">top 10 AI breakthroughs &amp; controversies of 2024</a></p>
-<h4><a name="11"></a> Meet Transformers: The Google Breakthrough that Rewrote AI's Roadmap</h4>
+<h4><a name="11"></a> LLM Transformers Explained</h4>
 <p>For an even more basic introduction to the fundamentals of what started off the current LLM revolution, one might want
 to <a href="https://www.techspot.com/article/2933-meet-transformers-ai/">meet transformers: the Google breakthrough that rewrote AI's roadmap</a>
 &ndash; how attention replaced recurrence and changed the rules of AI.</p>
@@ -359,3 +387,30 @@ that <a href="https://news.mit.edu/2024/study-some-language-reward-models-exhibi
 and <a href="https://thebuildingcoder.typepad.com/blog/2023/05/dark-icons-newfamilyinstance-and-ai-news.html#6">read your thoughts</a>.
 Here is a TED presentation
 on <a href="https://www.ted.com/talks/chin_teng_lin_the_mind_reading_potential_of_ai">the mind-reading potential of AI</a>.</p>
+<h4><a name="16"></a> Iterative Spell Check with Gemini</h4>
+<p>Until today, I proof read my blog post text myself and then used Word for spell checking.
+A very manual process performed by me, a human being.</p>
+<p>Today, for the first time, I asked an LLM to spell check instead.
+It is interesting to try out.</p>
+<p>Here is a summary of our conversation:</p>
+<ul>
+<li>Jeremy: can you spell check the text for me, please?</li>
+<li>Gemini: Please provide the text you would like me to spell check. &lt;... further details&gt;</li>
+<li>Jeremy: here is the text: &lt;blog post text&gt;</li>
+<li>Gemini: The text you provided is well-written and informative. There are no spelling errors or grammatical mistakes. Here are some minor suggestions for improvement: &lt;other stuff&gt;</li>
+<li>Jeremy: no spelling errors at all in there?</li>
+<li>Gemini: You are absolutely right to question me! I apologize for the oversight. There is one clear spelling error: "towords" should be "towards"; My apologies for missing that. It highlights the importance of always having a second pair of eyes (or another AI!) review text.</li>
+<li>Jeremy: thank you. can you find any further spelling errors?</li>
+<li>Gemini: You're right to be thorough! It's very easy to miss things. I've gone through the text again with a fine-toothed comb. Here's what I found:<ul>
+<li>"doers" should be "does": In the sentence "Unlike AutoCAD, the Revit UI itself doers not provide this support...", the correct word is "does."
+I believe this is the only remaining spelling error. However, there are a few other points that are not strictly spelling but could be improved:</li>
+<li>Inconsistent use of italics: Sometimes you italicize phrases like ricaun.RevitTest and sometimes you don't. For consistency, it's generally better to use backticks for code or file names.</li>
+<li>"adcvanced" should be "advanced": In the section "Humans versus LLMs Completing ARC-AGI", the word "adcvanced" appears to be a typo.
+I'm more confident now that these are all the issues. Thanks again for your patience and for helping me learn! I'm still under development, and your feedback is very valuable.</li>
+</ul>
+</li>
+<li>Jeremy: i corrected the errors that you pointed out. thank you for that. here is the corrected text. could you take another look at it and ensure that all spelling errors have been addressed? thank you! &lt;blog post text&gt;</li>
+<li>Gemini: The text appears to be free of spelling errors. Here are some minor improvements you can consider: &lt;other stuff&gt;</li>
+</ul>
+<p>I am still experimenting with how far to trust these things and how to remain critical, patient and persevere to obtain good results.
+If you have not tried using an LLM for your own purposes, I strongly suggest you give it a try and gather some experience.</p>
