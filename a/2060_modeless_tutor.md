@@ -33,11 +33,10 @@
   Moustafa Khalil of [SharpBIM](https://hashnode.com/@SharpBIM) ([GitHub](https://github.com/mostafa901))
   [Revit_WPF_Example](https://github.com/mostafa901/Revit_WPF_Example)
 
-- add to dismiss dialogues:
-  https://adndevblog.typepad.com/aec/2013/06/dismiss-the-dialog-when-opening-a-copied-central-model-file.html
-  https://archi-lab.net/dismissing-revit-pop-ups-the-easy-and-not-so-easy-ways/
-  Dismiss Task Dialog Copied Central Model Revit 2023 with Visual Studio
-  https://stackoverflow.com/questions/79125045/dismiss-task-dialog-copied-central-model-revit-2023-with-visual-studio
+- hi guys, maybe our research and efforts in this area are no longer needed. ChatGPT now searches the live internet, including the Revit API discussion forum, cf., attached screen snapshot:
+  https://openai.com/index/introducing-chatgpt-search/
+  Maybe we should just research how well that works, and then advise people to start using it creatively.
+  img/chatgpt_revit_api.png
 
 - ai llm rag &rarr; graphrag &rarr; knowledgebase
   https://duckduckgo.com/?q=ai+llm+rag+--%3E+graphrag+--%3E+knowledgebase
@@ -50,13 +49,6 @@
 - Brain Drain: David vs Goliath
   https://stackoverflow.blog/2024/10/17/training-data-scarcity-synthetic-quality-model-genai-ai/
   > There are worries that GenAI systems may run out of fresh data as they scale. Synthetic data is an option, but using AI-generated data to train AI can degrade the model's performance. There may be a better solution. Can data quality overcome a loss of data quantity?
-
-- https://x.com/hellokillian/status/1849248458701705334
-  interpreter --os requires OpenAI API key
-  interpreter --local
-
-- MetaGPT
-  https://github.com/geekan/MetaGPT
 
 - HTML for people
   https://htmlforpeople.com/
