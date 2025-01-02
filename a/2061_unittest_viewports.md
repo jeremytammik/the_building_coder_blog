@@ -114,7 +114,7 @@ and I took time off in the past two months.
 
 I am back again now and thinking about how to wind up my activities before retiring towords the middle of the year.
 
-Meanwhile, it is facinating to follow the advancements in AI and LLMs.
+Meanwhile, I am mesmerised by the advancements in AI and LLMs.
 I am confident that already today, most of the repetitive questions that keep coming up in the Revit API forum can be answered by proper queries to one of the LLMs.
 
 Today, I would like to highlight three new non-repetitive threads from the past week here, and also list a few of the AI-related titbits that caught my attention.
@@ -127,7 +127,7 @@ his [multi-version NUnit testing framework for Revit API](https://forums.autodes
 Hello everyone, after some years of development my Test framework for Revit API is released.
 
 [ricaun.RevitTest](https://www.youtube.com/watch?v=_lsmvQtGftE) is a multi-version `NUnit` testing framework for Revit API.
-It support all releases from Revit 2019 to up to Revit 2025.
+It supports all releases from Revit 2019 up to Revit 2025.
 
 Features:
 
@@ -141,11 +141,11 @@ Here is his 34-minute video on [Open-Source RevitTest](https://youtu.be/_lsmvQtG
 
 <center>
 <iframe width="480" height="270" src="https://www.youtube.com/embed/_lsmvQtGftE?si=qdaigwbo3LXi-s22" title="Open-Source RevitTest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<center>
+</center>
 
 The best way to start is by downloading the sample [RevitTest project on GitHub](https://github.com/ricaun-io/RevitTest).
 
-Please make us of the [RevitTest discussions area](https://github.com/ricaun-io/RevitTest/discussions) for help and discussion.
+Please use the [RevitTest discussions area](https://github.com/ricaun-io/RevitTest/discussions) for help and discussion.
 
 ####<a name="5"></a> Revit Icons Support High-Resolution Display
 
@@ -163,31 +163,32 @@ to [create multi-dpi `tiff` icons for Revit](https://youtu.be/3JrIW3UW5Ws):
 
 <center>
 <iframe width="480" height="270" src="https://www.youtube.com/embed/3JrIW3UW5Ws?si=9HMRlWLswOQ7EII8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<center>
+</center>
 
 ####<a name="6"></a> Viewports, View Types and Title Types
 
 Another great forum contribution comes from
 Brian [@BriCircuitBIM](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/7975487) Miller,
 explaining the relationships between viewports, view types, and title types in order
-to [change viewport type via API](https://forums.autodesk.com/t5/revit-api-forum/change-viewport-type-via-api/m-p/13234218#M83138)
+to [change viewport type via API](https://forums.autodesk.com/t5/revit-api-forum/change-viewport-type-via-api/m-p/13234218#M83138).
+Here is his full explanation:
 
 ####<a name="6.1"></a> Clarifying Viewport, View Type, and Title Type
-Viewport Type:
-Each viewport placed on a sheet is an instance of a Viewport system family.
-Viewports have a type ID, which refers to the viewport type (e.g., "Title, No Scale, Line"). These types define how the title is displayed, including parameters like line visibility and scale display.
-View Type:
-The view type (ViewType.FloorPlan, ViewType.Legend, etc.) is a property of the view associated with the viewport. It describes the kind of view (floor plan, legend, section, etc.) but is unrelated to the viewport's title or appearance.
-Title Type:
-The title type (referenced via the viewport's ELEM_TYPE_PARAM) is what controls the viewport's title behavior and visual style. This is the parameter you're trying to modify programmatically.
+
+- Viewport Type &ndash;
+  Each viewport placed on a sheet is an instance of a Viewport system family.
+  Viewports have a type ID, which refers to the viewport type (e.g., "Title, No Scale, Line").
+  These types define how the title is displayed, including parameters like line visibility and scale display.
+- View Type &ndash; The view type (ViewType.FloorPlan, ViewType.Legend, etc.) is a property of the view associated with the viewport. It describes the kind of view (floor plan, legend, section, etc.) but is unrelated to the viewport's title or appearance.
+- Title Type &ndash; The title type (referenced via the viewport's ELEM_TYPE_PARAM) is what controls the viewport's title behavior and visual style. This is the parameter you're trying to modify programmatically.
 
 ####<a name="6.2"></a> Goal: Change the Viewport Type
 
 If your goal is to change the viewport type based on the view title name (e.g., "Title, No Scale, Line"), here's how you can proceed:
 
-####<a name="6.3"></a> Retrieve Viewport Types Programmatically
+####<a name="6.3"></a> 1. Retrieve Viewport Types Programmatically
 
-The key is to work with ElementType objects within the OST_ViewportLabel category, which represents viewport title types:
+The key is to work with `ElementType` objects within the `OST_ViewportLabel` category, which represents viewport title types:
 
 <pre><code class="language-cs">// Retrieve all viewport types (family symbols) in the project
 FilteredElementCollector collector = new FilteredElementCollector(doc)
@@ -205,9 +206,9 @@ if (targetViewportType == null)
   return;
 }</code></pre>
 
-####<a name="6.4"></a> Update Viewport Types
+####<a name="6.4"></a> 2. Update Viewport Types
 
-Once you've identified the desired viewport type, you can update specific viewports programmatically using the Viewport.ChangeTypeId() method:
+Once you've identified the desired viewport type, you can update specific viewports programmatically using the `Viewport.ChangeTypeId` method:
 
 <pre><code class="language-cs">FilteredElementCollector viewportCollector = new FilteredElementCollector(doc)
   .OfClass(typeof(Viewport));
@@ -238,11 +239,14 @@ using (Transaction trans = new Transaction(doc, "Change Viewport Types"))
   }
 }</code></pre>
 
-####<a name="6.5"></a> Key Insights for the API Limitations Why Your Diagnostic Code Returns Nothing
+####<a name="6.5"></a> Key Insights
 
-Your initial code attempts to retrieve viewport types by filtering with .OfClass(typeof(View)). However:
-Viewport types are ElementType objects under the OST_ViewportLabel category.
-Using OfClass(typeof(View)) will not return these types since it filters for views, not viewport types.
+Key insights for the API limitations why your diagnostic code returns nothing:
+Your initial code attempts to retrieve viewport types by filtering with .OfClass(typeof(View)).
+However:
+
+- Viewport types are `ElementType` objects under the `OST_ViewportLabel` category.
+- Using OfClass(typeof(View)) will not return these types since it filters for views, not viewport types.
 
 ####<a name="6.6"></a> Correct Diagnostic Code
 
@@ -263,36 +267,41 @@ TaskDialog.Show("Viewport Types", viewportTypeNames.ToString());</code></pre>
 ####<a name="6.7"></a> Dynamo Users
 
 For users working in Dynamo:
-Viewport Types are stored as FamilySymbol elements within the OST_ViewportLabel category.
-Use a combination of FamilySymbol.Name and Viewport.ChangeTypeId (if scripting with Python/DesignScript) to identify and update viewport types programmatically.
+
+- Viewport Types are stored as FamilySymbol elements within the OST_ViewportLabel category.
+- Use a combination of FamilySymbol.Name and Viewport.ChangeTypeId (if scripting with Python/DesignScript) to identify and update viewport types programmatically.
 
 ####<a name="6.8"></a> Practical Considerations
 
-Revit API Version:
+- Revit API Version &ndash;
 Ensure compatibility between your code and the Revit version you're using. Revit 2024 introduced enhanced sub-element handling for viewports, but these changes are not available in earlier versions.
-Scale Display:
+- Scale Display &ndash;
 If you're filtering by scale (e.g., "NTS"), retrieve the Scale parameter of the associated view and use it to identify relevant viewports.
-Error Handling:
+- Error Handling &ndash;
 Always validate the ViewId, TypeId, and compatibility of the viewport type before applying changes.
 
 ####<a name="6.9"></a> Summary of Steps
 
-Retrieve Viewport Types:
+- Retrieve Viewport Types:
 Use FilteredElementCollector to find all viewport types in the OST_ViewportLabel category.
-Filter by Target Name:
+- Filter by Target Name:
 Identify the desired viewport type by its name (e.g., "Title, No Scale, Line").
-Update Viewport Types:
+- Update Viewport Types:
 Use Viewport.ChangeTypeId() to apply the target type to specific viewports.
-Diagnostic Code:
+- Diagnostic Code:
 Use the provided diagnostic code to list available viewport types and verify your settings.
 
 ####<a name="6.10"></a> Additional Insights from My Experience
 
-Sometimes, my NLU (Natural Language Understanding) system doesn't interpret things perfectly, so please feel free to let me know if any part of this explanation is unclear or inaccurate. This response stems from my own challenges when attempting to programmatically change legend viewport titles in Revit.
-After spending two days meticulously experimenting, I concluded that it is not possible to change a legend viewport type unless that type already exists in the project. The breakthrough came when I shifted my focus to identifying viewport types that were already present in the project. By filtering and listing these existing types, I was able to determine which one to use as the replacement.
-For anyone facing similar struggles, I highly recommend starting with a diagnostic approach: gather all available viewport types using the FilteredElementCollector and confirm their names match your desired title type. This ensures you're working within the constraints of your project's current configuration.
+Sometimes, my NLU (Natural Language Understanding) system doesn't interpret things perfectly, so please feel free to let me know if any part of this explanation is unclear or inaccurate.
+This response stems from my own challenges when attempting to programmatically change legend viewport titles in Revit.
+After spending two days meticulously experimenting, I concluded that it is not possible to change a legend viewport type unless that type already exists in the project.
+The breakthrough came when I shifted my focus to identifying viewport types that were already present in the project.
+By filtering and listing these existing types, I was able to determine which one to use as the replacement.
+For anyone facing similar struggles, I highly recommend starting with a diagnostic approach: gather all available viewport types using the `FilteredElementCollector` and confirm their names match your desired title type.
+This ensures you're working within the constraints of your project's current configuration.
 
-Thank you very much, Brian, for documenting and explaing this!
+Thank you very much, Brian, for documenting and explaining this!
 
 Moustafa Khalil of [SharpBIM](https://hashnode.com/@SharpBIM) ([GitHub](https://github.com/mostafa901)) adds:
 
@@ -337,6 +346,8 @@ if (viewPortTypeId != null)
   vp.ChangeTypeId(viewPortTypeId);
   Trans.Commit();
 }</code></pre>
+
+Many thanks to Moustafa as well.
 
 ####<a name="7"></a> Interact with BIM via ChatGPT Interface in Revit
 
@@ -408,7 +419,7 @@ that [some language reward models exhibit political bias](https://news.mit.edu/2
 <img src="img/ai_political_bias.png" alt="AI political bias" title="AI political bias" width="400"/>
 </center>
 
-####<a name="15"></a> [The mind-reading potential of AI](https://www.ted.com/talks/chin_teng_lin_the_mind_reading_potential_of_ai)
+####<a name="15"></a> Mind-Reading Potential of AI
 
 Many groups are researching different ways of using deep learning to interpret human brain signals, cf.,
 [recreate Pink Floyd from brain activity](https://thebuildingcoder.typepad.com/blog/2023/08/15-years-polygon-areas-and-net-core.html#6)
