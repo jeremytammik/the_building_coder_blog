@@ -73,15 +73,7 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-Back again and winding up, multi-version NUnit testing framework, hires icons, viewports and view types, interact with BIM via ChatGPT, humans versus LLMs completing ARC-AGI and
-- [2024 AI breakthroughs &amp; controversies](#10)
-- [LLM transformers explained](#11)
-- [Short movie by Veo 2](#12)
-- [LangChain state of AI 2024 report](#13)
-- [Current AIs are not politically neutral](#14)
-- [Mind-reading potential of AI](#15)
-- [Iterative spell check with Gemini](#16)
-
+Back again and winding up, multi-version NUnit testing framework, hires icons, viewports and view types, interact with BIM via ChatGPT, humans versus LLMs completing ARC-AGI, AI breakthroughs, controversies and news in general  https://thebuildingcoder.typepad.com/blog/2025/01/back-again-to-unit-test-icons-viewports-and-more.html
 
 Back again!
 &ndash; Winding up
