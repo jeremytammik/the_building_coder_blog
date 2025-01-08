@@ -90,9 +90,9 @@ New projects and progress using LLMs for Revit API
 &ndash; Jupyter Forge viewer
 &ndash; Superhuman multi-player poker
 &ndash; OpenAI o1 hacks and cheats
-&ndash; Writing Doom &ndash; short film on superintelligence
+&ndash; Writing Doom short film on superintelligence
 &ndash; Cosmos for physical AI
-&ndash; MarkItDown convert files to Markdown
+&ndash; MarkItDown converts files to Markdown
 &ndash; NV-Ingest parses documents for RAG
 &ndash; Gitingest makes GitHub repos LLM-ready
 &ndash; LangSmith intro and LLM for dummies...
@@ -126,7 +126,7 @@ Lots of nice new projects to play with, and making progress on using LLMs to ans
 - [OpenAI o1 hacks and cheats](#10)
 - [Writing Doom &ndash; short film on superintelligence](#11)
 - [Cosmos for physical AI](#12)
-- [MarkItDown convert files to Markdown](#13)
+- [MarkItDown converts files to Markdown](#13)
 - [NV-Ingest parses documents for RAG](#14)
 - [Gitingest makes GitHub repos LLM-ready](#15)
 - [LangSmith intro and LLM for dummies](#16)
@@ -297,7 +297,7 @@ To help with that, Nvidia released an open-world foundation model with permissiv
 
 > State-of-the-art models trained on millions of hours of driving and robotics videos to democratize physical AI development, available under open model license.
 
-####<a name="13"></a> MarkItDown Convert Files to Markdown
+####<a name="13"></a> MarkItDown Converts Files to Markdown
 
 Markdown is a commonly used text file format, both for writing this blog, and also for AI communication, e.g., to generate documents to use for RAG.
 [MarkItDown](https://github.com/microsoft/markitdown) converts various files to Markdown, e.g., for indexing, text analysis, etc.
