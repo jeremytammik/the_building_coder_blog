@@ -97,7 +97,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### GPT Prompts, RAG Ingestion and Suchlike
+### LLM Prompting, RAG Ingestion and New Projects
 
 Lots of nice new projects to play with, and making progress on using LLMs to answer questions in the forum; please try it out yourself as well:
 
@@ -319,8 +319,7 @@ The [Introduction to LangSmith](https://academy.langchain.com/courses/intro-to-l
 
 For something nicer and shorter for dummies (i.e., me) the overview of the main [four approaches to creating a specialised LLM](https://stackoverflow.blog/2024/12/05/four-approaches-to-creating-a-specialized-llm) is a quick read.
 
-
 <center>
-<img src="img/" alt="" title="" width="400"/>
+<img src="img/wizard_apple_jupiter.png" alt="Wizard, apple and Jupiter" title="Wizard, apple and Jupiter" width="600"/>
 </center>
 
