@@ -79,9 +79,23 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-Back again and winding up, multi-version NUnit testing framework, hires icons, viewports and view types, interact with BIM via ChatGPT, humans versus LLMs completing ARC-AGI, AI breakthroughs, controversies and news in general  https://thebuildingcoder.typepad.com/blog/2025/01/back-again-to-unit-test-icons-viewports-and-more.html
 
-&ndash; ...
+New projects and progress using LLMs for Revit API
+&ndash; Add-In wizard 2025
+&ndash; DirectContext3D video
+&ndash; Rvt-App browses BasicFileInfo
+&ndash; Revit API support prompt
+&ndash; pyRevit scripting prompt
+&ndash; Promptimal prompt optimiser
+&ndash; Jupyter Forge viewer
+&ndash; Superhuman multi-player poker
+&ndash; OpenAI o1 hacks and cheats
+&ndash; Writing Doom &ndash; short film on superintelligence
+&ndash; Cosmos for physical AI
+&ndash; MarkItDown convert files to Markdown
+&ndash; NV-Ingest parses documents for RAG
+&ndash; Gitingest makes GitHub repos LLM-ready
+&ndash; LangSmith intro and LLM for dummies...
 
 linkedin:
 
@@ -116,6 +130,10 @@ Lots of nice new projects to play with, and making progress on using LLMs to ans
 - [NV-Ingest parses documents for RAG](#14)
 - [Gitingest makes GitHub repos LLM-ready](#15)
 - [LangSmith intro and LLM for dummies](#16)
+
+<center>
+<img src="img/wizard_apple_jupiter.png" alt="Wizard, apple and Jupiter" title="Wizard, apple and Jupiter" width="400"/>
+</center>
 
 ####<a name="2"></a> Add-In Wizard 2025
 
@@ -318,8 +336,4 @@ The [Introduction to LangSmith](https://academy.langchain.com/courses/intro-to-l
 5. Production Observability
 
 For something nicer and shorter for dummies (i.e., me) the overview of the main [four approaches to creating a specialised LLM](https://stackoverflow.blog/2024/12/05/four-approaches-to-creating-a-specialized-llm) is a quick read.
-
-<center>
-<img src="img/wizard_apple_jupiter.png" alt="Wizard, apple and Jupiter" title="Wizard, apple and Jupiter" width="600"/>
-</center>
 
