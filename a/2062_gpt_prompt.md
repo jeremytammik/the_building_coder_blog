@@ -99,6 +99,24 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### GPT Prompts, RAG Ingestion and Suchlike
 
+Lots of nice new projects to play with, and making progress on using LLMs to answer questions in the forum; please try it out yourself as well:
+
+- [Add-In wizard 2025](#2)
+- [DirectContext3D video](#3)
+- [Rvt-App browses BasicFileInfo](#4)
+- [Revit API support prompt](#5)
+- [pyRevit scripting prompt](#6)
+- [Promptimal prompt optimiser](#7)
+- [Jupyter Forge viewer](#8)
+- [Superhuman multi-player poker](#9)
+- [OpenAI o1 hacks and cheats](#10)
+- [Writing Doom &ndash; short film on superintelligence](#11)
+- [Cosmos for physical AI](#12)
+- [MarkItDown convert files to Markdown](#13)
+- [NV-Ingest parses documents for RAG](#14)
+- [Gitingest makes GitHub repos LLM-ready](#15)
+- [LangSmith intro and LLM for dummies](#16)
+
 ####<a name="2"></a> Add-In Wizard 2025
 
 Let's start with the pure .NET desktop Revit API stuff before diving into AI-related topics.
@@ -114,7 +132,7 @@ Many thanks to George for the update!
 ####<a name="3"></a> DirectContext3D Video
 
 Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari published
-the results of his experiments runnning a video inside a Revit 3D environment using `DirectContext3D`.
+the results of his experiments running a video inside a Revit 3D environment using `DirectContext3D`.
 Check out the result in the four-minute video [Playing 'Bad Apple' using Revit API DirectContext3D](https://youtu.be/BlymuRzS_Hk).
 Thank you, ricaun, for the cool project.
 
@@ -147,9 +165,9 @@ The LLMs have ingested the Revit API discussion forum, The Building Coder, the R
 It helps to prefix them with a persona prompt.
 I have used this persona prompt, followed by the original question:
 
-> you are a wise and helpful BIM expert, experienced Revit application ewngineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API exchanges: {original question}
+> you are a wise and helpful BIM expert, experienced Revit application engineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API resources: {original question}
 
-Here are two threads that I answered in the past couple of days; one answer was confirmed, the other I am still awaiting for:
+Here are two threads that I answered in the past couple of days; one answer was confirmed, the other I am still awaiting:
 
 - [Get Project Base Point Revit API 2025](https://forums.autodesk.com/t5/revit-api-forum/get-project-base-point-revit-api-2025/m-p/13241535)
 - [Automating Entire Copy/Monitor Process in Revit API](https://forums.autodesk.com/t5/revit-api-forum/automating-entire-copy-monitor-process-in-revit-api/m-p/13243637/)
@@ -161,10 +179,10 @@ I wonder whether there is enough APS and other Autodesk API information availabl
 
 Looking forward to hearing your thoughts and results.
 
-####<a name="6"></a> Erik's pyRevit Scripting Prompt
+####<a name="6"></a> pyRevit Scripting Prompt
 
 On the topic of prompts, [Erik Frits](https://www.linkedin.com/in/erik-frits) shared
-a similar positive [prompt for pyRevot scripting on LinkedIn](https://www.linkedin.com/posts/erik-frits_learnrevitapi-revitapi-pyrevit-activity-7280600140770402304-Yzrr):
+a similar positive [prompt for pyRevit scripting on LinkedIn](https://www.linkedin.com/posts/erik-frits_learnrevitapi-revitapi-pyrevit-activity-7280600140770402304-Yzrr):
 
 Last month, I opened an old script of mine that I hadn't touched for a long time.
 I thought 'No problem &ndash; it's my own code, it won't take long'.
@@ -210,14 +228,14 @@ But sometimes you still need to ask that teacher twice.
 
 P.S. Got Better Prompt? Share it in the comments.
 
-####<a name="4"></a> Promptimal Prompt Optimiser
+####<a name="7"></a> Promptimal Prompt Optimiser
 
 Underlining the importance of a good prompt,
 [Promptimal](https://github.com/shobrook/promptimal) is a Python CLI for quickly improving your AI prompts.
 
 > No dataset needed.  Just submit your prompt and a description of what you want to improve. Promptimal will then use a genetic algorithm to iteratively refine the prompt until it's better than the original. An LLM evaluates the modified prompts to guide the process, but you can also define your own evaluation function.
 
-####<a name="4"></a> Jupyter Forge Viewer
+####<a name="8"></a> Jupyter Forge Viewer
 
 Chuong Ho has also been busy, sharing a [Jupyter Forge Viewer notebook on LinkedIn](https://www.linkedin.com/posts/chuongmep_autodesk-aps-notebook-activity-7280056216792309760-CvJi/),
 saying:
@@ -230,21 +248,21 @@ I’d like to take a moment to wish everyone a fantastic new year and share that
 
 Let’s make this year innovative and impactful!
 
-- [Jupyter Forge Github open source repository](https://github.com/chuongmep/jupyter-forge)
+- [Jupyter Forge GitHub open source repository](https://github.com/chuongmep/jupyter-forge)
 - [Previous post](https://www.linkedin.com/feed/update/urn:li:activity:7274361324824858624/)
 
-####<a name="5"></a> Superhuman Multi-Player Poker
+####<a name="9"></a> Superhuman Multi-Player Poker
 
 Moving on to more AI news unrelated to Revit and APS, another AI breakthrough has been announced: [Superhuman AI for multiplayer poker](https://www.science.org/doi/10.1126/science.aay2400).
 
-####<a name="5"></a> OpenAI o1 Hacks and Cheats
+####<a name="10"></a> OpenAI o1 Hacks and Cheats
 
 Worryingly, when requested to
-beat [Stockfish](https://stockfishchess.org/) at chess, this half-hour video says
-[OpenAI's o1 just hacked the system](https://youtu.be/oJgbqcF4sBY) instead of following the rules of chess.
+beat [Stockfish](https://stockfishchess.org/) at chess (very hard), this half-hour video says
+[OpenAI's o1 just hacked the system](https://youtu.be/oJgbqcF4sBY) instead of following the rules of chess (easier).
 This can be seen as an example of scheming, c.f. further details in the video description.
 
-####<a name="5"></a> Writing Doom &ndash; Short Film on Superintelligence
+####<a name="11"></a> Writing Doom &ndash; Short Film on Superintelligence
 
 For further worrying thoughts, you may enjoy
 [Writing Doom &ndash; award-winning short film on superintelligence (2024)](https://youtu.be/xfMQ7hzyFW4),
@@ -253,7 +271,7 @@ grand prize winner of the Future of Life Institute's [Superintelligence Imagined
 
 > A writing team are given the task of making Artificial Superintelligence the 'bad guy' for the next season of their TV show. With the help of a newcomer to the team (a Machine Learning PhD), they must figure out how and why an ASI might function as an antagonist &ndash; and the threat it might pose to humanity.
 
-####<a name="5"></a> Cosmos for Physical AI
+####<a name="12"></a> Cosmos for Physical AI
 
 AI can become a much better threat given agency, e.g., tools and robots and stuff.
 To help with that, Nvidia released an open-world foundation model with permissive license, focused on robotics and physics:
@@ -261,7 +279,7 @@ To help with that, Nvidia released an open-world foundation model with permissiv
 
 > State-of-the-art models trained on millions of hours of driving and robotics videos to democratize physical AI development, available under open model license.
 
-####<a name="5"></a> MarkItDown Convert Files to Markdown
+####<a name="13"></a> MarkItDown Convert Files to Markdown
 
 Markdown is a commonly used text file format, both for writing this blog, and also for AI communication, e.g., to generate documents to use for RAG.
 [MarkItDown](https://github.com/microsoft/markitdown) converts various files to Markdown, e.g., for indexing, text analysis, etc.
@@ -277,17 +295,17 @@ It supports:
 - Text-based formats (CSV, JSON, XML)
 - ZIP files (iterates over contents)
 
-####<a name="5"></a> NV-Ingest Parses Documents for RAG
+####<a name="14"></a> NV-Ingest Parses Documents for RAG
 
 Also for RAG,
 [nv-ingest](https://github.com/NVIDIA/nv-ingest) by NVIDIA is an early access set of microservices for parsing hundreds of thousands of complex, messy unstructured PDFs and other enterprise documents into metadata and text to embed into retrieval systems.
 
-####<a name="5"></a> Gitingest Makes GitHub Repos LLM-Ready
+####<a name="15"></a> Gitingest Makes GitHub Repos LLM-Ready
 
 Also for LLM ingestion,
 [gitingest](https://gitingest.com/) makes large codebases from GitHub LLM-ready by converting the code into a prompt 1-click.
 
-####<a name="5"></a> LangSmith Intro and LLM for Dummies
+####<a name="16"></a> LangSmith Intro and LLM for Dummies
 
 Finally, let's round off with two tutorials:
 
