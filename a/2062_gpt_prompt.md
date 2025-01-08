@@ -107,12 +107,17 @@ My colleague George Moturi migrated
 the [VisualStudioRevitAddinWizard](https://github.com/jeremytammik/VisualStudioRevitAddinWizard)
 Visual Studio templates to generate .NET Revit add-ins to Revit 2025.
 We have now dropped support for the VB.NET ones and focused on C# only.
+You can check the [VisualStudioRevitAddinWizard release 2025.0.0.0](https://github.com/jeremytammik/VisualStudioRevitAddinWizard/releases/tag/2025.0.0.0) and
+compare it with previous versions to see what changed.
+Many thanks to George for the update!
 
 ####<a name="3"></a> DirectContext3D Video
 
 Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari published
 the results of his experiments runnning a video inside a Revit 3D environment using `DirectContext3D`.
 Check out the result in the four-minute video [Playing 'Bad Apple' using Revit API DirectContext3D](https://youtu.be/BlymuRzS_Hk).
+Thank you, ricaun, for the cool project.
+
 
 This reminds me of my precursor RevitWebcam sample making use of the AVF Analysis Visualisation Framework to display live webcam images on Revit BIM element faces in real time:
 
@@ -127,6 +132,7 @@ Moving away from the pure .NET desktop Revit API,
 Peter Hirn displays the basic Revit file information contained in `BasicFileInfo` in the browser using TypeScript.
 You can try it out by simply dropping an RVT BIM file into
 the [rvt.app](https://rvt.app/) web site.
+Thanks to Peter for sharing this handy utility.
 
 ####<a name="5"></a> Revit API Support Prompt
 
@@ -229,79 +235,71 @@ Let’s make this year innovative and impactful!
 
 ####<a name="5"></a> Superhuman Multi-Player Poker
 
-another AI breakthrough: [Superhuman AI for multiplayer poker](https://www.science.org/doi/10.1126/science.aay2400)
+Moving on to more AI news unrelated to Revit and APS, another AI breakthrough has been announced: [Superhuman AI for multiplayer poker](https://www.science.org/doi/10.1126/science.aay2400).
 
 ####<a name="5"></a> OpenAI o1 Hacks and Cheats
 
-When requested to beat [Stockfish](https://stockfishchess.org/) at chess, OpenAI's o1 hacked the system instead of following the rules of chess:
-
-https://youtu.be/oJgbqcF4sBY
-scheming
-https://x.com/PalisadeAI/status/1872666186753933347
-https://arxiv.org/abs/2412.04984
-https://www.anthropic.com/research/alignment-faking
-0:00 Intro
-0:41 Palisade research study
-6:17 Apollo study of scheming AI models
-20:27 Anthropic study alignment faking
+Worryingly, when requested to
+beat [Stockfish](https://stockfishchess.org/) at chess, this half-hour video says
+[OpenAI's o1 just hacked the system](https://youtu.be/oJgbqcF4sBY) instead of following the rules of chess.
+This can be seen as an example of scheming, c.f. further details in the video description.
 
 ####<a name="5"></a> Writing Doom &ndash; Short Film on Superintelligence
 
-[Writing Doom – Award-Winning Short Film on Superintelligence (2024)](https://youtu.be/xfMQ7hzyFW4)
-Writing Doom is a fiction short film about the dangers of artificial intelligence (AI).
-Grand Prize Winner of the Future of Life Institute's [Superintelligence Imagined Contest](https://futureoflife.org/project/superintelligence-imagined/):
+For further worrying thoughts, you may enjoy
+[Writing Doom &ndash; award-winning short film on superintelligence (2024)](https://youtu.be/xfMQ7hzyFW4),
+a fiction short film about the dangers of AI,
+grand prize winner of the Future of Life Institute's [Superintelligence Imagined Contest](https://futureoflife.org/project/superintelligence-imagined/):
 
-> A writing team are given the task of making Artificial Superintelligence the 'bad guy' for the next season of their TV show. With the help of a newcomer to the team (a Machine Learning PhD), they must figure out how and why an ASI might function as an antagonist - and the threat it might pose to humanity.
+> A writing team are given the task of making Artificial Superintelligence the 'bad guy' for the next season of their TV show. With the help of a newcomer to the team (a Machine Learning PhD), they must figure out how and why an ASI might function as an antagonist &ndash; and the threat it might pose to humanity.
 
 ####<a name="5"></a> Cosmos for Physical AI
 
-physical AI
-  Nvidia released an open-world foundation model with permissive license, focused on robotics and physics
-  NVIDIA Makes Cosmos World Foundation Models Openly Available to Physical AI Developer Community
-  https://blogs.nvidia.com/blog/cosmos-world-foundation-models/
-  State-of-the-art models trained on millions of hours of driving and robotics videos to democratize physical AI development, available under open model license.
+AI can become a much better threat given agency, e.g., tools and robots and stuff.
+To help with that, Nvidia released an open-world foundation model with permissive license, focused on robotics and physics:
+[NVIDIA makes Cosmos world foundation models openly available to physical AI developer community](https://blogs.nvidia.com/blog/cosmos-world-foundation-models/):
+
+> State-of-the-art models trained on millions of hours of driving and robotics videos to democratize physical AI development, available under open model license.
 
 ####<a name="5"></a> MarkItDown Convert Files to Markdown
 
+Markdown is a commonly used text file format, both for writing this blog, and also for AI communication, e.g., to generate documents to use for RAG.
 [MarkItDown](https://github.com/microsoft/markitdown) converts various files to Markdown, e.g., for indexing, text analysis, etc.
 It supports:
-PDF
-PowerPoint
-Word
-Excel
-Images (EXIF metadata and OCR)
-Audio (EXIF metadata and speech transcription)
-HTML
-Text-based formats (CSV, JSON, XML)
-ZIP files (iterates over contents)
+
+- PDF
+- PowerPoint
+- Word
+- Excel
+- Images (EXIF metadata and OCR)
+- Audio (EXIF metadata and speech transcription)
+- HTML
+- Text-based formats (CSV, JSON, XML)
+- ZIP files (iterates over contents)
 
 ####<a name="5"></a> NV-Ingest Parses Documents for RAG
 
+Also for RAG,
 [nv-ingest](https://github.com/NVIDIA/nv-ingest) by NVIDIA is an early access set of microservices for parsing hundreds of thousands of complex, messy unstructured PDFs and other enterprise documents into metadata and text to embed into retrieval systems.
 
 ####<a name="5"></a> Gitingest Makes GitHub Repos LLM-Ready
 
-[gitingest](https://gitingest.com/) makes large codebases from GitHub LLM-ready by converting the code into a prompt 1-click
+Also for LLM ingestion,
+[gitingest](https://gitingest.com/) makes large codebases from GitHub LLM-ready by converting the code into a prompt 1-click.
 
-####<a name="5"></a> LangSmith Introduction
+####<a name="5"></a> LangSmith Intro and LLM for Dummies
 
-[Introduction to LangSmith](https://academy.langchain.com/courses/intro-to-langsmith), a free 5-module 38-lesson course
-Module 1: Visibility While Building with Tracing
-Module 2: Testing and Evaluation
-Module 3: Prompt Engineering
-Module 4: Collecting Human Feedback
-Module 5: Production Observability
+Finally, let's round off with two tutorials:
 
-####<a name="5"></a> LLM Overview for Dummies
+The [Introduction to LangSmith](https://academy.langchain.com/courses/intro-to-langsmith) provides a free 5-module 38-lesson course:
 
-a nice and short overview for dummies (i.e., me) of the main [four approaches to creating a specialised LLM](https://stackoverflow.blog/2024/12/05/four-approaches-to-creating-a-specialized-llm)
+1. Visibility While Building with Tracing
+2. Testing and Evaluation
+3. Prompt Engineering
+4. Collecting Human Feedback
+5. Production Observability
 
-
-
-
-
-<pre><code class="language-cs"> ... </code></pre>
-
+For something nicer and shorter for dummies (i.e., me) the overview of the main [four approaches to creating a specialised LLM](https://stackoverflow.blog/2024/12/05/four-approaches-to-creating-a-specialized-llm) is a quick read.
 
 
 <center>
