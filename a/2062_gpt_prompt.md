@@ -103,6 +103,26 @@ New projects and progress using LLMs for Revit API
 
 linkedin:
 
+LLM prompts and RAG ingestion for #RevitAPI, add-In wizard for Revit 2025, live video using DirectContext3D, batch and online BasicFileInfo access and accelerating AI development:
+
+https://thebuildingcoder.typepad.com/blog/2025/01/llm-prompting-rag-ingestion-and-new-projects.html
+
+- Add-In wizard 2025
+- DirectContext3D video
+- Rvt-App browses BasicFileInfo
+- Revit API support prompt
+- pyRevit scripting prompt
+- Promptimal prompt optimiser
+- Jupyter Forge viewer
+- Superhuman multi-player poker
+- OpenAI o1 hacks and cheats
+- Writing Doom short film on superintelligence
+- Cosmos for physical AI
+- MarkItDown converts files to Markdown
+- NV-Ingest parses documents for RAG
+- Gitingest makes GitHub repos LLM-ready
+- LangSmith intro and LLM for dummies...
+
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
