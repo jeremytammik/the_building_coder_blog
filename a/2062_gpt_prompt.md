@@ -82,7 +82,7 @@
 
 twitter:
 
- @AutodeskRevit #RevitAPI #BIM @DynamoBIM
+LLM prompts and RAG ingestion for #RevitAPI, add-In wizard for @AutodeskRevit 2025, live video using DirectContext3D, batch and online BasicFileInfo access and accelerating AI development #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/01/llm-prompting-rag-ingestion-and-new-projects.html
 
 New projects and progress using LLMs for Revit API
 &ndash; Add-In wizard 2025
@@ -124,6 +124,7 @@ please try it out yourself as well:
 - [Add-In wizard 2025](#2)
 - [DirectContext3D video](#3)
 - [Rvt-App browses BasicFileInfo](#4)
+- [Python BasicFileInfo batch command](#4.2)
 - [Revit API support prompt](#5)
 - [pyRevit scripting prompt](#6)
 - [Promptimal prompt optimiser](#7)
@@ -176,13 +177,14 @@ You can try it out by simply dropping an RVT BIM file into
 the [rvt.app](https://rvt.app/) web site.
 Thanks to Peter for sharing this handy utility.
 
-####<a name="4.2"></a> Rvt-App Browses BasicFileInfo
+####<a name="4.2"></a> Python BasicFileInfo Batch Command
 
-- another basic file info reader
-  Jean-Marc COUFFIN <jmcouffin@gmail.com>
-  Reading your latest publication on tbc, I remembered I made a small console app to batch retrieve infos. I decided to make it public (and clean it a bit ;p
-  https://github.com/jmcouffin/Batch-Revit-Basic-Info-File-Retriever
+Jean-Marc [@jmcouffin](https://github.com/jmcouffin) Couffin adds:
+Reading this, I remembered I made a small console app to batch retrieve infos.
+I decided to make it public (and clean it a bit ;p
 
+- [Batch Revit basic info file retriever](https://github.com/jmcouffin/Batch-Revit-Basic-Info-File-Retriever),
+  a Python command line application to batch retrieve the `BasicFileInfo` OLE object data
 
 ####<a name="5"></a> Revit API Support Prompt
 
