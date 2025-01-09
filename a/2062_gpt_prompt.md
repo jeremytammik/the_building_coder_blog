@@ -36,6 +36,11 @@
   Genau, ich lese die BasicFileInfo hier:
   https://github.com/phi-ag/rvt-app/blob/main/src/lib/revit/info.ts
 
+- another basic file info reader
+  Jean-Marc COUFFIN <jmcouffin@gmail.com>
+  Reading your latest publication on tbc, I remembered I made a small console app to batch retrieve infos. I decided to make it public (and clean it a bit ;p
+  https://github.com/jmcouffin/Batch-Revit-Basic-Info-File-Retriever
+
 - OpenAI's o1 just hacked the system
   https://youtu.be/oJgbqcF4sBY
   scheming
@@ -79,7 +84,6 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-
 New projects and progress using LLMs for Revit API
 &ndash; Add-In wizard 2025
 &ndash; DirectContext3D video
@@ -113,7 +117,9 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### LLM Prompting, RAG Ingestion and New Projects
 
-Lots of nice new projects to play with, and making progress on using LLMs to answer questions in the forum; please try it out yourself as well:
+Lots of nice new projects to play with, and making progress on using LLMs to answer questions in
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160);
+please try it out yourself as well:
 
 - [Add-In wizard 2025](#2)
 - [DirectContext3D video](#3)
@@ -169,6 +175,14 @@ Peter Hirn displays the basic Revit file information contained in `BasicFileInfo
 You can try it out by simply dropping an RVT BIM file into
 the [rvt.app](https://rvt.app/) web site.
 Thanks to Peter for sharing this handy utility.
+
+####<a name="4.2"></a> Rvt-App Browses BasicFileInfo
+
+- another basic file info reader
+  Jean-Marc COUFFIN <jmcouffin@gmail.com>
+  Reading your latest publication on tbc, I remembered I made a small console app to batch retrieve infos. I decided to make it public (and clean it a bit ;p
+  https://github.com/jmcouffin/Batch-Revit-Basic-Info-File-Retriever
+
 
 ####<a name="5"></a> Revit API Support Prompt
 
