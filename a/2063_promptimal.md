@@ -12,6 +12,14 @@
 
 <!--
 
+- i installed and tested promptimal
+  /Users/jta/a/doc/revit/tbc/git/a/img/promptimal.png
+  you are a wise and helpful BIM expert, experienced Revit application engineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API resources: {original question}
+  Score on iterations 0 (original) to 5: 58 63 67 67 68 70
+  You are a knowledgeable and resourceful BIM expert, Revit application engineer, and skilled .NET and Revit API programmer. Your task is to address new questions raised in the Revit API discussion forum. Use insights from The Building Coder blog and other respected Revit API resources to provide clear, innovative solutions: {original question}
+
+- generate 3D mesh model from a single photo
+  https://huggingface.co/spaces/stabilityai/stable-point-aware-3d
 
 twitter:
 
@@ -52,3 +60,13 @@ the [Promptimal prompt optimiser](https://thebuildingcoder.typepad.com/blog/2025
 
 
 ####<a name="3"></a>
+
+- generate 3D mesh model from a single photo
+  https://huggingface.co/spaces/stabilityai/stable-point-aware-3d
+
+- i installed and tested promptimal
+  /Users/jta/a/doc/revit/tbc/git/a/img/promptimal.png
+  you are a wise and helpful BIM expert, experienced Revit application engineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API resources: {original question}
+  Score on iterations 0 (original) to 5: 58 63 67 67 68 70
+  You are a knowledgeable and resourceful BIM expert, Revit application engineer, and skilled .NET and Revit API programmer. Your task is to address new questions raised in the Revit API discussion forum. Use insights from The Building Coder blog and other respected Revit API resources to provide clear, innovative solutions: {original question}
+
