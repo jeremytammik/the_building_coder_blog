@@ -15,7 +15,7 @@ https://prismjs.com
 
 <!--
 
-####<a name="14"></a> Create dimension to wall centerline, center of core, faces of core
+- Create dimension to wall centerline, center of core, faces of core
   Create dimension to wall centerline, center of core, faces of core
   https://forums.autodesk.com/t5/revit-api-forum/create-dimension-to-wall-centerline-center-of-core-faces-of-core/m-p/13226893#M83096
   Code to create alignment to wall core center axis: (works as described above)
@@ -54,12 +54,16 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Wall Layer Voodoo and Prompt Optimisation
 
+The Revit API discussion forum is pretty calm, and I dabbled further with LLMs and prompt optimisation:
 
+- [Wall centre, core and face references](#2)
+- [Promptimalising my Revit API support prompt](#3)
+- [Generate 3D model from single 2D image](#4)
 
-####<a name="2"></a> Dimension Wall Centre, Core and Faces
+####<a name="2"></a> Wall Centre, Core and Face References
 
 Andrzej [andrzej_m](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/5857784) Matuszek proposes
-a new solution to the long-standing issue on how
+a solution to the long-standing issue on how
 to [create dimension to wall centerline, center of core, faces of core](https://forums.autodesk.com/t5/revit-api-forum/create-dimension-to-wall-centerline-center-of-core-faces-of-core/m-p/13226893#M83096),
 saying:
 
@@ -67,23 +71,25 @@ As far as I investigated, there is a rule that determines how indexed references
 
 For a multi-layer wall, I think the order is:
 
-<pre>
-  1: Center axis
-  2: 1-2 layers face
-  3: 2-3 layers face
-  4: 3-4 layers face
-  . . .
-  N: Core Center axis
-  N+1: Last face
-  N+2: First face
-</pre>
+
+<ol style="list-style: none;">
+    <li>1: &nbsp; Center axis</li>
+    <li>2: &nbsp; 1-2 layers face</li>
+    <li>3: &nbsp; 2-3 layers face</li>
+    <li>4: &nbsp; 3-4 layers face</li>
+    <li>... &nbsp; </li>
+    <li>N: &nbsp; Core Center axis</li>
+    <li>N+1: &nbsp; Last face</li>
+    <li>N+2: &nbsp; First face</li>
+</ol>
+
 
 Here, N is the count of wall layers.
 
 In the [long-standing discussion](https://forums.autodesk.com/t5/revit-api-forum/create-dimension-to-wall-centerline-center-of-core-faces-of-core/m-p/13226893),
 I would like to add that when we change the wall instance type, already created references have to remain unchanged and probably new references are appended.
 
-In the end, we have no guarantee that we will reference to proper face using manually created stable representations, unless we've just created the wall ourselves.
+There is no guarantee that we will reference to proper face using manually created stable representations, unless we've just created the wall ourselves.
 
 Here is Andrzej's code using stable representation voodoo to create alignment to wall core center axis:
 
@@ -153,7 +159,7 @@ Here is Andrzej's code using stable representation voodoo to create alignment to
 
 Many thanks to Andrzej for sharing this.
 
-####<a name="3"></a> Promptimal Revit API Prompt
+####<a name="3"></a> Promptimalising my Revit API Support Prompt
 
 Personally, I continue my quest of making good use of LLMs to help
 answer [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) threads.
@@ -188,10 +194,12 @@ The improved prompt in this case is:
 
 Please try it out yourself in your own questions and let us know how you fare.
 
-####<a name="4"></a>
+####<a name="4"></a> Generate 3D Model from Single 2D Image
 
 Another surprising utility that might even come in handy populating your BIM with 3D objects is the functionality to generate 3D mesh model from a single photo provided by
 the [SPAR3D stable point-aware reconstruction of 3D objects from single images](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d).
-I tried it out myself by simply creating a snapshot of a simple bookshelf and pasting that it.
-For such a simple task, the result was perfect.
+
+I tried it out myself by creating a snapshot of a simple bookshelf and pasting that in.
+For such a task, the result was perfect.
+I was tempted to add trivial, but in fact, it is not trivial at all!
 
