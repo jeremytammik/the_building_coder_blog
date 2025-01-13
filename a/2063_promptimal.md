@@ -174,25 +174,41 @@ This is the prompt I started out with:
 - you are a wise and helpful BIM expert, experienced Revit application engineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API resources: {original question}
 
 Promptimal reads the original prompt and asks you in which way you would like it improved.
-As an improvement, I requested something like "ensure that a Revit API question in the discussion forum is correctly andswered and explained to a newbie".
+As an improvement, I requested something like "ensure that a Revit API question in the discussion forum is correctly answered and explained to a newbie".
 Promptimal generates the improvement in an iterative process, in five steps, and calculates a score for the quality in each step.
 In my first run, the scores on iterations 0 (original) to 5 were: 58 63 67 67 68 70, with the following end result:
 
 - You are a knowledgeable and resourceful BIM expert, Revit application engineer, and skilled .NET and Revit API programmer. Your task is to address new questions raised in the Revit API discussion forum. Use insights from The Building Coder blog and other respected Revit API resources to provide clear, innovative solutions: {original question}
 
+<center>
+<img src="img/promptimal.png" alt="Promptimal" title="Promptimal" width="500"/>
+</center>
+
 Small changes, but apparently significant.
-Let's try one more runs, starting with the improved prompt above and requestion the improvement "Please improve this prompt to generate an answer to a highly specificult and difficult question raised by an experianced Revit add-in programmer."
-Here are the times spent and the scores calculated on the initial processing and the five iteration steps: 0:28 68 0:17 70 0:36 70.4 0:33 72 0:27 74.4 0:25 74.4.
+Let's try two more runs and make an interesting observation about the effect of the improvement request, starting with the improved prompt above.
+The first request for improvement is this: "Please improve this prompt to generate an answer to a highly specificult and difficult question raised by an experianced Revit add-in programmer."
+Note that it includes two typos!
+
+The times spent and the scores calculated on the initial processing and the five iteration steps are: 0:28 68 0:17 70 0:36 70.4 0:33 72 0:27 74.4 0:25 74.4.
 
 The improved prompt in this case is:
 
 - You are a respected BIM expert and adept Revit application engineer with deep specialization in .NET and Revit API programming. Your task is to solve complex and challenging questions from experienced Revit add-in programmers in the Revit API discussion forum. Formulate clear, innovative, and comprehensive solutions utilizing insights from The Building Coder blog and other esteemed Revit API resources: {original question}
 
+After discovering and correcting the two typos, I ran the same process again.
+The corrected improvement request is "Please improve this prompt to generate an answer to a highly specific and difficult question raised by an experienced Revit add-in programmer." The scores change significantly, the computation time is reduced, and the result is surprisingly different:
+
+- 0:24 62% 0:09 66% 0:19 70% 0:22 76% 0:17 78.6% 0:42 79%
+- You are a seasoned Revit add-in programmer and .NET expert with deep expertise in BIM principles and the Revit API. Your task is to address complex, technical questions raised by experienced Revit add-in developers in the Revit API forum. Leverage insights from The Building Coder blog, respected Revit API resources, and community feedback to provide innovative and practical solutions. Include clear explanations, advanced code examples, actionable snippets, and practical demonstrations to ensure effectiveness and clarity: {original question}
+
 <center>
-<img src="img/promptimal.png" alt="Promptimal" title="Promptimal" width="500"/>
+<img src="img/promptimal2.png" alt="Promptimal" title="Promptimal" width="500"/>
 </center>
 
-Please try it out yourself in your own questions and let us know how you fare.
+Obviously every run of an LLM can generate a different result.
+However, it seems to me that it is still worthwhile to avoid spelling errors up front whenever you can.
+
+Please try out your own prompts on your own questions and let us know how you fare.
 
 ####<a name="4"></a> Generate 3D Model from Single 2D Image
 
