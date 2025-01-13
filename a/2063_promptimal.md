@@ -34,7 +34,10 @@ twitter:
 for #RevitAPI @AutodeskRevit
 #BIM @DynamoBIM
 
-&ndash; ...
+I dabbled further with LLMs and prompt optimisation
+&ndash; Wall centre, core and face references
+&ndash; Promptimalising my Revit API support prompt
+&ndash; Generate 3D model from single 2D image...
 
 linkedin:
 
