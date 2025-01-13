@@ -32,7 +32,10 @@ twitter:
 for #RevitAPI @AutodeskRevit
 #BIM @DynamoBIM
 
-&ndash; ...
+I dabbled further with LLMs and prompt optimisation
+&ndash; Wall centre, core and face references
+&ndash; Promptimalising my Revit API support prompt
+&ndash; Generate 3D model from single 2D image...
 
 linkedin:
 
@@ -158,7 +161,7 @@ This is the prompt I started out with:</p>
 <li>you are a wise and helpful BIM expert, experienced Revit application engineer and proficient .NET, Revit API add-in and BIM programmer. Can you please help with this Revit API question, maybe discussed in the Revit API discussion forum, by The Building Coder blog, or other Revit API resources: {original question}</li>
 </ul>
 <p>Promptimal reads the original prompt and asks you in which way you would like it improved.
-As an improvement, I requested something like "ensure that a Revit API question in the discussion forum is correctly andswered and explained to a newbie".
+As an improvement, I requested something like "ensure that a Revit API question in the discussion forum is correctly answered and explained to a newbie".
 Promptimal generates the improvement in an iterative process, in five steps, and calculates a score for the quality in each step.
 In my first run, the scores on iterations 0 (original) to 5 were: 58 63 67 67 68 70, with the following end result:</p>
 <ul>
@@ -185,8 +188,8 @@ The corrected improvement request is "Please improve this prompt to generate an 
 <p><center>
 <img src="img/promptimal2.png" alt="Promptimal" title="Promptimal" width="500"/>
 </center></p>
-<p>Obvoiously every run of an LLM can generate a different result.
-Still, it seems to me that it is still worthwhile to avoid spelling errors up front whenever you can.</p>
+<p>Obviously every run of an LLM can generate a different result.
+However, it seems to me that it is still worthwhile to avoid spelling errors up front whenever you can.</p>
 <p>Please try out your own prompts on your own questions and let us know how you fare.</p>
 <h4><a name="4"></a> Generate 3D Model from Single 2D Image</h4>
 <p>Another surprising utility that might even come in handy populating your BIM with 3D objects is the functionality to generate 3D mesh model from a single photo provided by
