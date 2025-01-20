@@ -9757,3 +9757,61 @@
 2059:<"#3"> Revit 2025.3 SDK
 2059:<"#4"> Boost Your BIM AU API Wishes
 2059:<"#5"> Claude Computer Use Does Stuff
+2060:DevCon, AI for Revit API, Modeless Add-Ins, Leave
+2060:<"#2"> DevCon Europe Call for Papers
+2060:<"#3"> Retirement and Away on Leave
+2060:<"#4"> ChatGPT for Q4R4
+2060:<"#5"> First LLM Forum Solution
+2060:<"#6"> Modeless WPF Add-In Sample and Tutorial
+2060:<"#7"> The Bitter Lesson
+2060:<"#8"> Brain Drain: David vs Goliath
+2060:<"#9"> AI Effects on Human Creativity
+2060:<"#10"> HTML for People
+2060:<"#11"> UN Climate Change Efforts Off Track
+2061:Back Again to Unit Test, Icons, Viewports and More
+2061:<"#2"> Happy New Year!
+2061:<"#3"> Back Again and Winding Up
+2061:<"#4"> Multi-Version NUnit Testing Framework
+2061:<"#5"> Revit Icons Support High-Resolution Display
+2061:<"#6"> Viewports, View Types and Title Types
+2061:<"#6.1"> Clarifying Viewport, View Type, and Title Type
+2061:<"#6.2"> Goal: Change the Viewport Type
+2061:<"#6.3"> 1. Retrieve Viewport Types Programmatically
+2061:<"#6.4"> 2. Update Viewport Types
+2061:<"#6.5"> Key Insights
+2061:<"#6.6"> Correct Diagnostic Code
+2061:<"#6.7"> Dynamo Users
+2061:<"#6.8"> Practical Considerations
+2061:<"#6.9"> Summary of Steps
+2061:<"#6.10"> Additional Insights
+2061:<"#7"> Interact with BIM via ChatGPT Interface in Revit
+2061:<"#8"> Expertise in Real World Contexts
+2061:<"#9"> Humans versus LLMs Completing ARC-AGI
+2061:<"#10"> 2024 AI Breakthroughs &amp; Controversies
+2061:<"#11"> LLM Transformers Explained
+2061:<"#12"> Short Movie by Veo 2
+2061:<"#13"> LangChain State of AI 2024 Report
+2061:<"#14"> Current AIs are not Politically Neutral
+2061:<"#15"> Mind-Reading Potential of AI
+2061:<"#16"> Iterative Spell Check with Gemini
+2062:LLM Prompting, RAG Ingestion and New Projects
+2062:<"#2"> Add-In Wizard 2025
+2062:<"#3"> DirectContext3D Video
+2062:<"#4"> Rvt-App Browses BasicFileInfo
+2062:<"#4.2"> Python BasicFileInfo Batch Command
+2062:<"#5"> Revit API Support Prompt
+2062:<"#6"> pyRevit Scripting Prompt
+2062:<"#7"> Promptimal Prompt Optimiser
+2062:<"#8"> Jupyter Forge Viewer
+2062:<"#9"> Superhuman Multi-Player Poker
+2062:<"#10"> OpenAI o1 Hacks and Cheats
+2062:<"#11"> Writing Doom &ndash; Short Film on Superintelligence
+2062:<"#12"> Cosmos for Physical AI
+2062:<"#13"> MarkItDown Converts Files to Markdown
+2062:<"#14"> NV-Ingest Parses Documents for RAG
+2062:<"#15"> Gitingest Makes GitHub Repos LLM-Ready
+2062:<"#16"> LangSmith Intro and LLM for Dummies
+2063:Wall Layer Voodoo and Prompt Optimisation
+2063:<"#2"> Wall Centre, Core and Face References
+2063:<"#3"> Promptimalising my Revit API Support Prompt
+2063:<"#4"> Generate 3D Model from Single 2D Image
