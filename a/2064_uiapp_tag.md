@@ -102,12 +102,56 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Tage Relationships and UIApplication Access
 
-####<a name="2"></a> UIApplication Access
+####<a name="2"></a> Revit API Support with Gemini LLM
+
+I continue using LLMs to answer the odd query in
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) with
+great success.
+
+I check the question and evaluate whether I can answer it myself or not.
+In some cases, I can only address it incompletely.
+In some cases, I decide to ask the LLM for help.
+Recently, I have mostly been using Gemini 2.0 Flash.
+
+When  doing so, I prefix the persona prompt that I developed and refined.
+I described my prompt development process in the past few posts, cf.,
+[first LLM forum solution](https://thebuildingcoder.typepad.com/blog/2024/11/devcon-ai-for-revit-api-modeless-add-ins-leave.html#5),
+[Revit API support prompt](https://thebuildingcoder.typepad.com/blog/2025/01/llm-prompting-rag-ingestion-and-new-projects.html#5),
+and [promptimalising my Revit API support prompt](https://thebuildingcoder.typepad.com/blog/2025/01/wall-layer-voodoo-and-prompt-optimisation.html#3)
+
+My current prompt is this:
+
+- You are a seasoned Revit add-in programmer and .NET expert with deep expertise in BIM principles and the Revit API.
+Your task is to address complex, technical questions raised by experienced Revit add-in developers in the Revit API forum.
+Leverage insights from The Building Coder blog, respected Revit API resources, and community feedback to provide innovative and practical solutions.
+Include clear explanations, advanced code examples, actionable snippets, and practical demonstrations to ensure effectiveness and clarity:
+{original question}
+
+Here are some recent sample threads enlisting help from the LLM:
+
+- [Create Beams from level](https://forums.autodesk.com/t5/revit-api-forum/create-beams-from-level/td-p/13260688)
+- [How to reduce size of columns in above floors without changing its parameters](https://forums.autodesk.com/t5/revit-api-forum/how-to-reduce-size-of-columns-in-above-floors-without-changing/m-p/13261920)
+- [Renombrado de parámetros compartidos (Rename shared parameter)](https://forums.autodesk.com/t5/revit-api-forum/renombrado-de-parametros-compartidos-rename-shared-parameter/td-p/13262126)
+- [Dynamo Script Compatibility Issue for Wall Penetrations](https://forums.autodesk.com/t5/revit-api-forum/dynamo-script-compatibility-issue-for-wall-penetrations/td-p/13262124)
+- [Retrieving Active Users in a Revit Central Model File (File-Based)](https://forums.autodesk.com/t5/revit-api-forum/retrieving-active-users-in-a-revit-central-model-file-file-based/td-p/13272841)
+- [Direct context 3D over view](https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446)
+- [Get Elements in linked model when creating a schedule](https://forums.autodesk.com/t5/revit-api-forum/get-elements-in-linked-model-when-creating-a-schedule/td-p/13273405)
+
+I cannot always completely verify that the answer provided is completely accurate.
+Repeating the question will yield a different answer every time.
+So, a customer seeking perfection would be well advised to submit it several times over and pick the best one, or the best bits from several.
+
+I often do check that the API calls in the sample code exist.
+In one of the cases listed above, Gemini produced sample code that hallucinated non-existent Revit API calls.
+I noticed that and replied to the LLM, saying: “hey, the call you list in your sample code does not exists”.
+Thereupon the LLM answered, “you are absolutely correct. Sorry about that. Here is true valid sample code instead”.
+The second answer included true API calls, and I provided that to the customer.
+
+So, important aspect to note: every answer will be different, and some answers contain hallucinations, so every interaction must be taken with a pinch of salt and not blindly trusting.
+
+####<a name="3"></a> UIApplication Access
 
 
-<pre><code class="language-cs"> </code></pre>
-
-Many thanks to ??? for sharing this.
 
 ####<a name="3"></a>
 
@@ -194,3 +238,6 @@ be conservative in what you do, be liberal in what you accept from others
 keep calm, carry on, and be kind and tolerant
 that helps everybody
 
+<pre><code class="language-cs"> </code></pre>
+
+Many thanks to ??? for sharing this.
