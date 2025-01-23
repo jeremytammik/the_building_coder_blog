@@ -100,7 +100,8 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Tage Relationships and UIApplication Access
+### LLM API SUpport, Tag Relationships and UIApplication Access
+
 
 ####<a name="2"></a> Revit API Support with Gemini LLM
 
@@ -151,34 +152,57 @@ So, important aspect to note: every answer will be different, and some answers c
 
 ####<a name="3"></a> UIApplication Access
 
+Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari
+shared a new apporach to access the `UIApplication` object in the thread
+on [how to get UIApplication from IExternalApplication](https://forums.autodesk.com/t5/revit-api-forum/how-to-get-uiapplication-from-iexternalapplication/td-p/6355729):
 
+Actually you can access the internal UIApplication directly inside the UIControlledApplication using Reflection with no need for any events:
 
-####<a name="3"></a>
+<pre><code class="language-cs">public Result OnStartup(UIControlledApplication application)
+{
+    UIApplication uiapp = application.GetUIApplication();
+    string userName = uiapp.Application.Username;
+    return Result.Succeeded;
+}</code></pre>
 
-<center>
-<img src="img/promptimal.png" alt="Promptimal" title="Promptimal" width="500"/>
-</center>
+Here is the extension code:
 
+<pre><code class="language-cs">/// &lt;summary&gt;
+/// Get &lt;see cref="Autodesk.Revit.UI.UIApplication"/&gt; using the &lt;paramref name="application"/&gt;
+/// &lt;/summary&gt;
+/// &lt;param name="application"&gt;Revit UIApplication&lt;/param&gt;
+public static UIApplication GetUIApplication(this UIControlledApplication application)
+{
+    var type = typeof(UIControlledApplication);
 
-####<a name="3"></a> How to get UIApplication from IExternalApplication
+    var propertie = type.GetFields(BindingFlags.Instance | BindingFlags.NonPublic)
+        .FirstOrDefault(e =&gt; e.FieldType == typeof(UIApplication));
 
-How to get UIApplication from IExternalApplication
-https://forums.autodesk.com/t5/revit-api-forum/how-to-get-uiapplication-from-iexternalapplication/td-p/6355729
+    return propertie?.GetValue(application) as UIApplication;
+}</code></pre>
 
-####<a name="3"></a> relationshiop between tagged element and tag
+You can find the whole file extension below with the extension to convert UIApplication to UIControlledApplication in
+the [ricaun.Revit.DI](https://github.com/ricaun-io/ricaun.Revit.DI/tree/master) dependency injection container extension
+in the module [UIControlledApplicationExtension.cs](https://github.com/ricaun-io/ricaun.Revit.DI/blob/master/ricaun.Revit.DI/Extensions/UIControlledApplicationExtension.cs).
 
-relationshiop between tagged element and tag
-how to gets relation of element with its tag or its label?
-https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988
+Many thanks to ricaun for discovering and sharing this.
+
+####<a name="4"></a> Relationship Between Tagged Element and Tag
+
+Tom [TWhitehead_HED](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8336512) Whitehead
+and Daniel [DanielKP2Z9V](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/14971581) Krajnik
+veery kindly shared some sample code showing how to access tagged elements from their tags and vice versa in the thread
+on [how to gets relation of element with its tag or its label?](https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988):
+
+**Question:**
 I have doors.
 I have door tags
-want to verify the whether  particular tags present on that  particular door?
-A1:
-Contributor TWhitehead_HED
-2024-03-21 08:17 AM
-There's a saying about assuming... I'll leave it up to you to find on the internet.
-For others scraping through these posts looking for a modicum of actual help, here's how I ended up solving it with help from @Mohamed_Arshad (who actually provided some guidance).
-using (Transaction trans = new Transaction(doc, "Tag Parent Doors"))
+I want to verify whether a particular tag in present on a given door.
+
+**Answer 1:**
+Here's how I ended up solving it with help from [@Mohamed_Arshad](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8461394):
+
+<pre><code class="language-cs">using (Transaction trans = new Transaction(doc, "Tag Parent Doors"))
 {
     trans.Start();
 
@@ -187,7 +211,7 @@ using (Transaction trans = new Transaction(doc, "Tag Parent Doors"))
         if (new FilteredElementCollector(doc, currentView.Id)
              .OfCategory(BuiltInCategory.OST_DoorTags)
              .OfClass(typeof(IndependentTag))
-             .Cast<IndependentTag>()
+             .Cast&lt;IndependentTag&gt;()
              .SelectMany(x => x.GetTaggedLocalElementIds())
              .Where(x => x == door.Id).Any())
         {
@@ -195,49 +219,68 @@ using (Transaction trans = new Transaction(doc, "Tag Parent Doors"))
             continue;
         }
     }
-}
-A2:
-Advocate DanielKP2Z9V
-If anyone lands here looking for a reference how to switch selection between tags and their hosts I have commands to
-[SelectAssociatedTags](https://0x0.st/8o_A.bin)
-and
-[SelectElementsHostedBySelectedTags]()(https://0x0.st/8o_T.bin)
+}</code></pre>
 
-####<a name="3"></a> Self-Operating Computer Framework
+**Answer 2:**
+If you are looking for a reference how to switch selection between tags and their hosts, here are my commands to:
 
-Self-Operating Computer Framework
-https://github.com/OthersideAI/self-operating-computer
-A framework to enable multimodal models to operate a computer
+- [SelectAssociatedTags](https://0x0.st/8o_A.bin), and
+- [SelectElementsHostedBySelectedTags]()(https://0x0.st/8o_T.bin)
 
-####<a name="3"></a> BigBlueButton
+Many thanks to Tom and Daniel for digging in and helping!
 
-I pointed out a couple of video conferencing options; here is another one:
+####<a name="5"></a> Self-Operating Computer Framework
 
-BigBlueButton
-https://bigbluebutton.org/#
-conferencing:
-https://bbb.m4h.network/b/
-Greenlight is a simple front-end for your BigBlueButton open-source web conferencing server.
+I haven't tried anything like this myself yet, but it is interesting to note
+this [Self-Operating Computer Framework](https://github.com/OthersideAI/self-operating-computer):
+
+> A framework to enable multimodal models to operate a computer
+
+####<a name="6"></a> BigBlueButton
+
+I [recently mentioned](https://thebuildingcoder.typepad.com/blog/2024/05/migrating-vb-to-net-core-8-and-ai-news.html#4) a
+couple of video conferencing options; let's expand that list:
+
+[BigBlueButton](https://bigbluebutton.org/#) also includes functionality for [conferencing](https://bbb.m4h.network/b/):
+
+> Greenlight is a simple front-end for your BigBlueButton open-source web conferencing server.
 You can create your own rooms to host sessions, or join others using a short and convenient link.
-Mainstream google: google meet --  https://workspace.google.com/products/meet/
-https://thebuildingcoder.typepad.com/blog/2024/05/migrating-vb-to-net-core-8-and-ai-news.html#4
-Alternativ open source: Jitsi meet -- https://jitsi.org/
-Facetime can also be used in the browser, hence on any platform; you just need a link provided by an Apple user.
 
-####<a name="3"></a> The Wired Guide to Protecting Yourself From Government Surveillance
+Here are others:
 
-The Wired Guide to Protecting Yourself From Government Surveillance
-https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/
+- Mainstream [Google meet](https://workspace.google.com/products/meet/)
+- Open source [Jitsi meet](https://jitsi.org/)
 
-####<a name="3"></a> Postel's law or the Robustness principle
+I now learned that Apple Facetime can also be used in the browser, and hence on any platform, not just iOS; you just need a link provided by an Apple user to initiate.
 
-Postel's law or the Robustness principle
-https://en.wikipedia.org/wiki/Robustness_principle
-is applicable not only in software protocols and software design in general, but in every aspect of everyday life:
-be conservative in what you do, be liberal in what you accept from others
-keep calm, carry on, and be kind and tolerant
-that helps everybody
+####<a name="7"></a> Internet Security and Privacy
 
-<pre><code class="language-cs"> </code></pre>
+Talking about communication over the Internet, it is worthwhile thinking about privacy, e.g., looking
+at [The Wired Guide to Protecting Yourself From Government Surveillance](https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/)
 
-Many thanks to ??? for sharing this.
+####<a name="8"></a> Postel's Law, the Robustness Principle
+
+An article about leadership and personal behaviour brought to my attention
+[Postel's law or the Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle).
+Originally formulated for software protocols and software design in general, it is actually applicable to almost every aspect of everyday life and human interaction:
+
+> be conservative in what you do, be liberal in what you accept from others.
+
+####<a name="9"></a> Stargate Cost Comparison
+
+I wondered how the US $500B Stargate AI project cost compares to other huge projects.
+Here is a comparison of costs gleaned from
+a [reddit post](https://www.reddit.com/r/LocalLLaMA/comments/1i6zid8/just_a_comparison_of_us_500b_stargate_ai_project/),
+with the Marshall Plan added by me:
+
+- Marshall Plan ~$150 billion in today’s dollars, $13.3 billion at the time (~5.2% of US GDP)
+- Manhattan Project ~$30 billion in today’s dollars [~1.5% of US GDP in the mid-1940s]
+- Apollo Program ~$170–$180 billion in today’s dollars [~0.5% of US GDP in the mid-1960s]
+- Space Shuttle Program ~$275–$300 billion in today’s dollars [~0.2% of US GDP in the early 1980s]
+- Interstate Highway System, entire decades-long Interstate Highway System buildout, ~$500–$550 billion in today’s dollars [~0.2%–0.3% of GDP annually over multiple decades]
+- Stargate is huge AI project [~1.7% of US GDP 2024]
+
+<center>
+<img src="img/promptimal.png" alt="Promptimal" title="Promptimal" width="500"/>
+</center>
+
