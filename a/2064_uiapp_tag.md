@@ -84,7 +84,17 @@ twitter:
 
  @AutodeskRevit #RevitAPI #BIM @DynamoBIM
 
-&ndash; ...
+### Access to UIApplication, Tags and LLM API Support
+
+Continuing LLM explorations, Revit API highlights and other stuff of interest
+&ndash; Revit API support with Gemini LLM
+&ndash; UIApplication access
+&ndash; Relationship between tagged element and tag
+&ndash; Self-operating computer framework
+&ndash; BigBlueButton and conferencing tools
+&ndash; Internet security and privacy
+&ndash; Postel's law, the robustness principle
+&ndash; Stargate cost comparison...
 
 linkedin:
 
@@ -100,7 +110,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### LLM API Support, Tag Relationships and UIApplication Access
+### Access to UIApplication, Tags and LLM API Support
 
 Continuing my LLM explorations, Revit API highlights and other stuff of interest:
 
@@ -148,13 +158,13 @@ Here are some recent sample threads enlisting help from the LLM:
 - [Direct context 3D overview](https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446)
 - [Get Elements in linked model when creating a schedule](https://forums.autodesk.com/t5/revit-api-forum/get-elements-in-linked-model-when-creating-a-schedule/td-p/13273405)
 
-I cannot always completely verify that the answer provided is completely accurate.
+I cannot always verify that the answer provided is completely accurate.
 Repeating the question will yield a different answer every time.
 So, a customer seeking perfection would be well advised to submit it several times over and pick the best one, or the best bits from several.
 
 I often do check that the API calls in the sample code exist.
 In one of the cases listed above, Gemini produced sample code that hallucinated non-existent Revit API calls.
-I noticed that and replied to the LLM, saying: “hey, the call you list in your sample code does not exists”.
+I noticed that and replied to the LLM, saying: “hey, the call you list in your sample code does not exist”.
 Thereupon the LLM answered, “you are absolutely correct. Sorry about that. Here is true valid sample code instead”.
 The second answer included true API calls, and I provided that to the customer.
 
@@ -191,18 +201,18 @@ public static UIApplication GetUIApplication(this UIControlledApplication applic
     return propertie?.GetValue(application) as UIApplication;
 }</code></pre>
 
-You can find the whole file extension below with the extension to convert UIApplication to UIControlledApplication in
-the [ricaun.Revit.DI](https://github.com/ricaun-io/ricaun.Revit.DI/tree/master) dependency injection container extension
+The whole implementation including the extension to convert UIApplication to UIControlledApplication is shared in
+the [ricaun.Revit.DI](https://github.com/ricaun-io/ricaun.Revit.DI/tree/master) dependency injection container extension and
 in the module [UIControlledApplicationExtension.cs](https://github.com/ricaun-io/ricaun.Revit.DI/blob/master/ricaun.Revit.DI/Extensions/UIControlledApplicationExtension.cs).
 
-Many thanks to ricaun for discovering and sharing this.
+Many thanks to ricaun for discovering and sharing this!
 
 ####<a name="4"></a> Relationship Between Tagged Element and Tag
 
 Tom [TWhitehead_HED](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8336512) Whitehead
 and Daniel [DanielKP2Z9V](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/14971581) Krajnik
-veery kindly shared some sample code showing how to access tagged elements from their tags and vice versa in the thread
-on [how to gets relation of element with its tag or its label?](https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988):
+very kindly shared some sample code showing how to access tagged elements from their tags and vice versa in the thread
+on [how to gets relation of element with its tag or its label](https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988):
 
 **Question:**
 I have doors.
@@ -237,7 +247,7 @@ If you are looking for a reference how to switch selection between tags and thei
 - [SelectAssociatedTags](https://0x0.st/8o_A.bin), and
 - [SelectElementsHostedBySelectedTags]()(https://0x0.st/8o_T.bin)
 
-Many thanks to Tom and Daniel for digging in and helping!
+Many thanks to Tom, Mohamed and Daniel for digging in and helping!
 
 ####<a name="5"></a> Self-Operating Computer Framework
 
@@ -266,7 +276,7 @@ I now learned that Apple Facetime can also be used in the browser, and hence on 
 ####<a name="7"></a> Internet Security and Privacy
 
 Talking about communication over the Internet, it is worthwhile thinking about privacy, e.g., looking
-at [The Wired Guide to Protecting Yourself From Government Surveillance](https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/)
+at [The Wired Guide to Protecting Yourself From Government Surveillance](https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/).
 
 ####<a name="8"></a> Postel's Law, the Robustness Principle
 
