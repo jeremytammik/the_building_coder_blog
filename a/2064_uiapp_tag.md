@@ -100,8 +100,18 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### LLM API SUpport, Tag Relationships and UIApplication Access
+### LLM API Support, Tag Relationships and UIApplication Access
 
+Continuing my LLM explorations, Revit API highlights and other stuff of interest:
+
+- [Revit API support with Gemini LLM](#2)
+- [UIApplication access](#3)
+- [Relationship between tagged element and tag](#4)
+- [Self-operating computer framework](#5)
+- [BigBlueButton and conferencing tools](#6)
+- [Internet security and privacy](#7)
+- [Postel's law, the robustness principle](#8)
+- [Stargate cost comparison](#9)
 
 ####<a name="2"></a> Revit API Support with Gemini LLM
 
@@ -135,7 +145,7 @@ Here are some recent sample threads enlisting help from the LLM:
 - [Renombrado de parámetros compartidos (Rename shared parameter)](https://forums.autodesk.com/t5/revit-api-forum/renombrado-de-parametros-compartidos-rename-shared-parameter/td-p/13262126)
 - [Dynamo Script Compatibility Issue for Wall Penetrations](https://forums.autodesk.com/t5/revit-api-forum/dynamo-script-compatibility-issue-for-wall-penetrations/td-p/13262124)
 - [Retrieving Active Users in a Revit Central Model File (File-Based)](https://forums.autodesk.com/t5/revit-api-forum/retrieving-active-users-in-a-revit-central-model-file-file-based/td-p/13272841)
-- [Direct context 3D over view](https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446)
+- [Direct context 3D overview](https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446)
 - [Get Elements in linked model when creating a schedule](https://forums.autodesk.com/t5/revit-api-forum/get-elements-in-linked-model-when-creating-a-schedule/td-p/13273405)
 
 I cannot always completely verify that the answer provided is completely accurate.
@@ -153,7 +163,7 @@ So, important aspect to note: every answer will be different, and some answers c
 ####<a name="3"></a> UIApplication Access
 
 Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari
-shared a new apporach to access the `UIApplication` object in the thread
+shared a new approach to access the `UIApplication` object in the thread
 on [how to get UIApplication from IExternalApplication](https://forums.autodesk.com/t5/revit-api-forum/how-to-get-uiapplication-from-iexternalapplication/td-p/6355729):
 
 Actually you can access the internal UIApplication directly inside the UIControlledApplication using Reflection with no need for any events:
@@ -236,7 +246,7 @@ this [Self-Operating Computer Framework](https://github.com/OthersideAI/self-ope
 
 > A framework to enable multimodal models to operate a computer
 
-####<a name="6"></a> BigBlueButton
+####<a name="6"></a> BigBlueButton  and Conferencing Tools
 
 I [recently mentioned](https://thebuildingcoder.typepad.com/blog/2024/05/migrating-vb-to-net-core-8-and-ai-news.html#4) a
 couple of video conferencing options; let's expand that list:
@@ -281,6 +291,6 @@ with the Marshall Plan added by me:
 - Stargate is huge AI project [~1.7% of US GDP 2024]
 
 <center>
-<img src="img/promptimal.png" alt="Promptimal" title="Promptimal" width="500"/>
+<img src="img/stargate.jpg" alt="Stargate" title="Stargate" width="600"/>
 </center>
 
