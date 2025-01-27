@@ -80,9 +80,17 @@ https://prismjs.com
 
 twitter:
 
- @AutodeskRevit #RevitAPI #BIM @DynamoBIM
+#RevitAPI support with @GeminiApp LLM, UIApplication access, relationship between tagged element and tag in @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/01/access-to-uiapplication-tags-and-llm-api-support.html
 
-&ndash; ...
+Continuing LLM explorations, Revit API highlights and other stuff of interest
+&ndash; Revit API support with Gemini LLM
+&ndash; UIApplication access
+&ndash; Relationship between tagged element and tag
+&ndash; Self-operating computer framework
+&ndash; BigBlueButton and conferencing tools
+&ndash; Internet security and privacy
+&ndash; Postel's law, the robustness principle
+&ndash; Stargate cost comparison...
 
 linkedin:
 
@@ -98,7 +106,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-<h3>LLM API Support, Tag Relationships and UIApplication Access</h3>
+<h3>Access to UIApplication, Tags and LLM API Support</h3>
 <p>Continuing my LLM explorations, Revit API highlights and other stuff of interest:</p>
 <ul>
 <li><a href="#2">Revit API support with Gemini LLM</a></li>
@@ -140,13 +148,14 @@ Include clear explanations, advanced code examples, actionable snippets, and pra
 <li><a href="https://forums.autodesk.com/t5/revit-api-forum/retrieving-active-users-in-a-revit-central-model-file-file-based/td-p/13272841">Retrieving Active Users in a Revit Central Model File (File-Based)</a></li>
 <li><a href="https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446">Direct context 3D overview</a></li>
 <li><a href="https://forums.autodesk.com/t5/revit-api-forum/get-elements-in-linked-model-when-creating-a-schedule/td-p/13273405">Get Elements in linked model when creating a schedule</a></li>
+<li><a href="https://forums.autodesk.com/t5/revit-api-forum/setgeocoordinatesystem/td-p/13277799">SetGeoCoordinateSystem</a></li>
 </ul>
-<p>I cannot always completely verify that the answer provided is completely accurate.
+<p>I cannot always verify that the answer provided is completely accurate.
 Repeating the question will yield a different answer every time.
 So, a customer seeking perfection would be well advised to submit it several times over and pick the best one, or the best bits from several.</p>
 <p>I often do check that the API calls in the sample code exist.
 In one of the cases listed above, Gemini produced sample code that hallucinated non-existent Revit API calls.
-I noticed that and replied to the LLM, saying: “hey, the call you list in your sample code does not exists”.
+I noticed that and replied to the LLM, saying: “hey, the call you list in your sample code does not exist”.
 Thereupon the LLM answered, “you are absolutely correct. Sorry about that. Here is true valid sample code instead”.
 The second answer included true API calls, and I provided that to the customer.</p>
 <p>So, important aspect to note: every answer will be different, and some answers contain hallucinations, so every interaction must be taken with a pinch of salt and not blindly trusting.</p>
@@ -177,15 +186,15 @@ public static UIApplication GetUIApplication(this UIControlledApplication applic
     return propertie?.GetValue(application) as UIApplication;
 }</code></pre>
 
-<p>You can find the whole file extension below with the extension to convert UIApplication to UIControlledApplication in
-the <a href="https://github.com/ricaun-io/ricaun.Revit.DI/tree/master">ricaun.Revit.DI</a> dependency injection container extension
+<p>The whole implementation including the extension to convert UIApplication to UIControlledApplication is shared in
+the <a href="https://github.com/ricaun-io/ricaun.Revit.DI/tree/master">ricaun.Revit.DI</a> dependency injection container extension and
 in the module <a href="https://github.com/ricaun-io/ricaun.Revit.DI/blob/master/ricaun.Revit.DI/Extensions/UIControlledApplicationExtension.cs">UIControlledApplicationExtension.cs</a>.</p>
-<p>Many thanks to ricaun for discovering and sharing this.</p>
+<p>Many thanks to ricaun for discovering and sharing this!</p>
 <h4><a name="4"></a> Relationship Between Tagged Element and Tag</h4>
 <p>Tom <a href="https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8336512">TWhitehead_HED</a> Whitehead
 and Daniel <a href="https://forums.autodesk.com/t5/user/viewprofilepage/user-id/14971581">DanielKP2Z9V</a> Krajnik
-veery kindly shared some sample code showing how to access tagged elements from their tags and vice versa in the thread
-on <a href="https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988">how to gets relation of element with its tag or its label?</a>:</p>
+very kindly shared some sample code showing how to access tagged elements from their tags and vice versa in the thread
+on <a href="https://forums.autodesk.com/t5/revit-api-forum/how-to-gets-relation-of-element-with-its-tag-or-its-label/m-p/13262988">how to gets relation of element with its tag or its label</a>:</p>
 <p><strong>Question:</strong>
 I have doors.
 I have door tags
@@ -217,7 +226,7 @@ If you are looking for a reference how to switch selection between tags and thei
 <li><a href="https://0x0.st/8o_A.bin">SelectAssociatedTags</a>, and</li>
 <li><a href="">SelectElementsHostedBySelectedTags</a>(https://0x0.st/8o_T.bin)</li>
 </ul>
-<p>Many thanks to Tom and Daniel for digging in and helping!</p>
+<p>Many thanks to Tom, Mohamed and Daniel for digging in and helping!</p>
 <h4><a name="5"></a> Self-Operating Computer Framework</h4>
 <p>I haven't tried anything like this myself yet, but it is interesting to note
 this <a href="https://github.com/OthersideAI/self-operating-computer">Self-Operating Computer Framework</a>:</p>
@@ -240,7 +249,7 @@ You can create your own rooms to host sessions, or join others using a short and
 <p>I now learned that Apple Facetime can also be used in the browser, and hence on any platform, not just iOS; you just need a link provided by an Apple user to initiate.</p>
 <h4><a name="7"></a> Internet Security and Privacy</h4>
 <p>Talking about communication over the Internet, it is worthwhile thinking about privacy, e.g., looking
-at <a href="https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/">The Wired Guide to Protecting Yourself From Government Surveillance</a></p>
+at <a href="https://www.wired.com/story/the-wired-guide-to-protecting-yourself-from-government-surveillance/">The Wired Guide to Protecting Yourself From Government Surveillance</a>.</p>
 <h4><a name="8"></a> Postel's Law, the Robustness Principle</h4>
 <p>An article about leadership and personal behaviour brought to my attention
 <a href="https://en.wikipedia.org/wiki/Robustness_principle">Postel's law or the Robustness principle</a>.

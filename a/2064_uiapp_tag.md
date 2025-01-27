@@ -82,9 +82,7 @@ https://prismjs.com
 
 twitter:
 
- @AutodeskRevit #RevitAPI #BIM @DynamoBIM
-
-### Access to UIApplication, Tags and LLM API Support
+#RevitAPI support with @GeminiApp LLM, UIApplication access, relationship between tagged element and tag in @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/01/access-to-uiapplication-tags-and-llm-api-support.html
 
 Continuing LLM explorations, Revit API highlights and other stuff of interest
 &ndash; Revit API support with Gemini LLM
@@ -157,6 +155,7 @@ Here are some recent sample threads enlisting help from the LLM:
 - [Retrieving Active Users in a Revit Central Model File (File-Based)](https://forums.autodesk.com/t5/revit-api-forum/retrieving-active-users-in-a-revit-central-model-file-file-based/td-p/13272841)
 - [Direct context 3D overview](https://forums.autodesk.com/t5/revit-api-forum/direct-context-3d-over-view/td-p/13273446)
 - [Get Elements in linked model when creating a schedule](https://forums.autodesk.com/t5/revit-api-forum/get-elements-in-linked-model-when-creating-a-schedule/td-p/13273405)
+- [SetGeoCoordinateSystem](https://forums.autodesk.com/t5/revit-api-forum/setgeocoordinatesystem/td-p/13277799)
 
 I cannot always verify that the answer provided is completely accurate.
 Repeating the question will yield a different answer every time.
