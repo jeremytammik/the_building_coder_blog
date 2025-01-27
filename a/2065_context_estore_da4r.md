@@ -206,15 +206,22 @@ Now I just need to create a DA4R template &nbsp;  :-)
 
 Many thanks again to ricaun for solving this!
 
-####<a name="4"></a> ricaun's bundle package builder
+####<a name="4"></a> PackageBuilder versus RevitAddinUtility
 
-ricaun's bundle package builder
-RevitAddinUtility usage and redistribution permissions.
-https://forums.autodesk.com/t5/revit-api-forum/revitaddinutility-usage-and-redistribution-permissions/td-p/8182324
-I actually recreate a similar package only to create the .addin and the PackageContent.xml. That what I have been using in my build process to create .bundle files for the Revit plugins.
-https://github.com/ricaun-io/Autodesk.PackageBuilder
+On a different topic, questions were raised on
+the [RevitAddinUtility usage and redistribution permissions](https://forums.autodesk.com/t5/revit-api-forum/revitaddinutility-usage-and-redistribution-permissions/td-p/8182324).
 
-####<a name="2"></a> we discussed two workarounds to [Determine Elements Present in Section View]
+Again, ricaun comes to the rescue with his bundle package builder:
+
+> I actually recreated similar functionality only to create the `.addin` manifest and the `PackageContent.xml`.
+That is what I am using in my build process to create `.bundle` files for Revit plugins:
+
+> - [Autodesk.PackageBuilder](https://github.com/ricaun-io/Autodesk.PackageBuilder) &ndash; This package is intended to build Autodesk PackageContent.xml and RevitAddin.addin using C# fluent API.
+
+Thanks again to ricaun for a different way to address this.
+
+
+####<a name="5"></a> Two Ways to Determine Elements in Section View
 
 we discussed two workarounds to [Determine Elements Present in Section View]
 https://thebuildingcoder.typepad.com/blog/2024/01/directcontext3d-ids-and-linked-section-elements-.html#5
@@ -227,7 +234,7 @@ FilteredElementCollector(Document, ElementId, ElementId)
 Constructs a new FilteredElementCollector that will search and filter the visible elements from a Revit link in a host document view.
 Constructs a new FilteredElementCollector that will search and filter the visible elements from a Revit link in a host document view.
 
-####<a name="2"></a> https://autodesk.slack.com/archives/C0SR6NAP8/p1730892247924659
+####<a name="6"></a> Python versus .NET
 
 https://autodesk.slack.com/archives/C0SR6NAP8/p1730892247924659
 Python versus .NET
@@ -243,7 +250,7 @@ One thing which I think is imperative to note that we do not have any control or
 All of that said, the API is .NET so the most robust and accessible version of the API is .NET, and every interpreter layer in between that and the written code will only bring lower performance, stability, and scope, and Python is generally not the best option to scale automations as a result.
 (For anyone curious about my personal ordering of scaled efficiency I rank them as APS Design Automation, then external service and Revit Add-In, then Revit Add-In, then Dynamo / Python tools)  (edited)
 
-####<a name="2"></a> how to opt out of non-essential cookies?
+####<a name="7"></a> Opting out of Cookies
 
 how to opt out of non-essential cookies?
 not so easy, check out the Google research on
@@ -254,16 +261,7 @@ on [Automated Cookie Notice Analysis and Enforcement](https://www.usenix.org/sys
 using AI with machine learning and natural language processing
 
 
-
-
-####<a name="2"></a>
-
 <pre><code class="language-cs"></code></pre>
-
-
-Many thanks to ricaun for discovering and sharing this!
-
-
 
 <center>
 <img src="img/" alt="" title="" width="600"/>
