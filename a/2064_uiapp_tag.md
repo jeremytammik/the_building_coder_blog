@@ -96,6 +96,19 @@ Continuing LLM explorations, Revit API highlights and other stuff of interest
 
 linkedin:
 
+#RevitAPI support with Gemini LLM, UIApplication access, relationship between tagged element and tag
+
+https://thebuildingcoder.typepad.com/blog/2025/01/access-to-uiapplication-tags-and-llm-api-support.html
+
+- Revit API support with Gemini LLM
+- UIApplication access
+- Relationship between tagged element and tag
+- Self-operating computer framework
+- BigBlueButton and conferencing tools
+- Internet security and privacy
+- Postel's law, the robustness principle
+- Stargate cost comparison...
+
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
