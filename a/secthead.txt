@@ -9815,3 +9815,12 @@
 2063:<"#2"> Wall Centre, Core and Face References
 2063:<"#3"> Promptimalising my Revit API Support Prompt
 2063:<"#4"> Generate 3D Model from Single 2D Image
+2064:Access to UIApplication, Tags and LLM API Support
+2064:<"#2"> Revit API Support with Gemini LLM
+2064:<"#3"> UIApplication Access
+2064:<"#4"> Relationship Between Tagged Element and Tag
+2064:<"#5"> Self-Operating Computer Framework
+2064:<"#6"> BigBlueButton  and Conferencing Tools
+2064:<"#7"> Internet Security and Privacy
+2064:<"#8"> Postel's Law, the Robustness Principle
+2064:<"#9"> Stargate Cost Comparison

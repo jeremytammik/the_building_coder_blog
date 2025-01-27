@@ -105,8 +105,6 @@ Now I just need to create a DA4R template 😊
   on [Automated Cookie Notice Analysis and Enforcement](https://www.usenix.org/system/files/sec23fall-prepub-389-khandelwal.pdf)
   using AI with machine learning and natural language processing
 
-
-
 twitter:
 
 #RevitAPI @AutodeskRevit #BIM @DynamoBIM
@@ -130,62 +128,85 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ### API Context and Extensible Storage in DA4R
 
 
-####<a name="2"></a> check api context
+####<a name="2"></a> Check for Valid Revit API Context
 
-check api context
-ricaun 2024-03
-https://thebuildingcoder.typepad.com/blog/2024/03/api-context-aps-toolkit-and-da4r-debugging.html#2
-roman nice3point 2024-08
-https://thebuildingcoder.typepad.com/blog/2024/08/api-context-background-process-postcommand.html#4
-ricaun 2025-01
-[How to know if Revit API is in Context](https://forums.autodesk.com/t5/revit-api-forum/how-to-know-if-revit-api-is-in-context/m-p/13276039#M83476)
+Checking that the add-in code is currently executing within a valid Revit API context keeps spawning new solutions.
 
-####<a name="2"></a> ricaun handles add-in id for extensible storage in DA4R to solve
+Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari suggested one approach in March last year
+by [attempting to subscribe to the application `Idling` event and catching the exception](https://thebuildingcoder.typepad.com/blog/2024/03/api-context-aps-toolkit-and-da4r-debugging.html#2) in
+case of failure.
+Throwing an exception is expensive and should be avoided if possible, so that approach is suboptimal.
 
-ricaun handles add-in id for extensible storage in DA4R to solve
-Revit Design Automation | Extensible Storage "Writing of Entities of this Schema is not allowed to the current add-in." Error
-https://forums.autodesk.com/t5/revit-api-forum/revit-design-automation-extensible-storage-quot-writing-of/m-p/13280384#M83582
+Next, in August 2024, Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович, shared a more effective approach in
+his [RevitToolkit.Context method](https://thebuildingcoder.typepad.com/blog/2024/08/api-context-background-process-postcommand.html#4).
 
-@tristan-m I found a way to make the ActiveAddInId valid in the Design Automation Ready event.
+Now, in Janauary 2025, Ricaun returns with a new solution by checking the application `ActiveAddInId` property, in
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
+on [how to know if Revit API is in context](https://forums.autodesk.com/t5/revit-api-forum/how-to-know-if-revit-api-is-in-context/m-p/13276039#M83476):
 
-You can create a custom ExternalSevice and register in the OnStartup and make the Design Automation Ready event to execute your custom ExternalSevice, the code inside the ExternalSevice is execute in the same AddIn Context.
+> Revit AddIn Context is what I'm calling the Revit API Context now.
+I tested in a lot of places inside the Revit API and the `ActiveAddInId` is always valid because Revit tracks what AddInId is executing the code.
+Some methods require to have an AddInId like the Extensible Storage, and when registering a `IExternalCommand` in a panel the command always generates the same AddInId that was used to register the command.
+This is the basic code to check if [Revit is in the AddIn Context](https://ricaun.com/revit-addin-context/):
 
-I created a library to make easier to use DA4R and fix this issue by default.
-https://github.com/ricaun-io/ricaun.Revit.DA
-
-
-This is how the sample to check if the ActiveAddInId is not null in the DA4R event. In the code below the Execute method.
-public class App : DesignApplication
+<pre><code class="language-cs">bool InAddInContext(UIApplication application)
 {
-    public override void OnStartup()
-    {
-        Console.WriteLine("----------------------------------------");
-        Console.WriteLine($"AddInId: \t{ControlledApplication.ActiveAddInId?.GetAddInName()}");
-        Console.WriteLine("----------------------------------------");
-    }
+  // ActiveAddInId is null when invoked outside Revit API context.
+  return application.ActiveAddInId is not null;
+}</code></pre>
 
-    public override void OnShutdown()
-    {
-    }
+There is only one place that the ActiveAddInId is null and Revit API in in Context, inside the APS Design Automation for Revit event.
+That is a bug/limitation and what prompted me to take a closer look at the ActiveAddInId proprerty, discussed in more depth in the thread
+on [Revit Design Automation Extensible Storage "Writing of Entities of this Schema is not allowed to the current add-in" error](https://forums.autodesk.com/t5/revit-api-forum/revit-design-automation-extensible-storage-quot-writing-of/td-p/12833018).
+Because now I know how the ActiveAddInId works, I can use ExternalService inside Design Automation for Revit to make the event run in a valid ActiveAddInId.
+So, I created
+the [ricaun.Revit.DA Design Automation for Revit utility library](https://github.com/ricaun-io/ricaun.Revit.DA) to
+fix that and another issue I'm having inside DA4R.
 
-    public bool Execute(Application application, string filePath, Document document)
-    {
-        Console.WriteLine("----------------------------------------");
-        Console.WriteLine($"AddInId: \t{application.ActiveAddInId?.GetAddInName()}");
-        Console.WriteLine("----------------------------------------");
+Many thanks to ricaun for discovering and sharing this, and all his other outstanding work with the Revit API and DA4R!
 
-        return application.ActiveAddInId != null;
-    }
-}
+####<a name="3"></a> External Service Enables Extensible Storage in DA4R
 
-I update my RevitAddin.DA.Tester project to use the library.
-https://github.com/ricaun-io/RevitAddin.DA.Tester
+Ricaun makes use of the add-in id understanding to address
+the [Revit Design Automation Extensible Storage "Writing of Entities of this Schema is not allowed to the current add-in" error](https://forums.autodesk.com/t5/revit-api-forum/revit-design-automation-extensible-storage-quot-writing-of/m-p/13280384#M83582):
 
+> I found a way to make the `ActiveAddInId` valid in the Design Automation Ready event.
+You can create a custom `ExternalService`, register it in `OnStartup` and make the Design Automation Ready event to execute your custom ExternalService; the code inside the ExternalService is executed in the same AddIn Context.
+I created
+the [ricaun.Revit.DA Design Automation for Revit utility library](https://github.com/ricaun-io/ricaun.Revit.DA) to
+fix this issue.
 
-Now I just need to create a DA4R template 😊
+This is how the sample checks if the ActiveAddInId is not null in the DA4R event, in the code below the Execute method:
 
+<pre><code class="language-cs">public class App : DesignApplication
+{
+  public override void OnStartup()
+  {
+    Console.WriteLine("----------------------------------------");
+    Console.WriteLine($"AddInId: \t{ControlledApplication.ActiveAddInId?.GetAddInName()}");
+    Console.WriteLine("----------------------------------------");
+  }
 
-####<a name="2"></a> ricaun's bundle package builder
+  public override void OnShutdown()
+  {
+  }
+
+  public bool Execute(Application application, string filePath, Document document)
+  {
+    Console.WriteLine("----------------------------------------");
+    Console.WriteLine($"AddInId: \t{application.ActiveAddInId?.GetAddInName()}");
+    Console.WriteLine("----------------------------------------");
+
+    return application.ActiveAddInId != null;
+  }
+}</code></pre>
+
+I updated my [RevitAddin.DA.Tester project](https://github.com/ricaun-io/RevitAddin.DA.Tester) to use the library.
+Now I just need to create a DA4R template &nbsp;  :-)
+
+Many thanks again to ricaun for solving this!
+
+####<a name="4"></a> ricaun's bundle package builder
 
 ricaun's bundle package builder
 RevitAddinUtility usage and redistribution permissions.
