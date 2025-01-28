@@ -109,10 +109,7 @@ twitter:
 
 A solution to check for valid #RevitAPI context and use extensible storage in the @AutodeskAPS Design Automation for Revit API, PackageBuilder versus RevitAddinUtility, Python vs .NET and two ways to determine elements in section view @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/01/api-context-and-extensible-storage-in-da4r.html
 
-
-
 #RevitAPI @AutodeskRevit #BIM @DynamoBIM @AutodeskAPS
-
 
 A solution to use extensible storage in the APS Design Automation for Revit API
 &ndash; Check for valid Revit API context
@@ -123,6 +120,17 @@ A solution to use extensible storage in the APS Design Automation for Revit API
 &ndash; Opting out of cookies...
 
 linkedin:
+
+A solution to check for valid #RevitAPI context and use extensible storage in the @AutodeskAPS Design Automation for Revit API, PackageBuilder versus RevitAddinUtility, Python vs .NET and two ways to determine elements in section view:
+
+https://thebuildingcoder.typepad.com/blog/2025/01/api-context-and-extensible-storage-in-da4r.html
+
+- Check for valid Revit API context
+- External service enables extensible storage in DA4R
+- PackageBuilder versus RevitAddinUtility
+- Two ways to determine elements in section view
+- Python and .NET
+- Opting out of cookies...
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
