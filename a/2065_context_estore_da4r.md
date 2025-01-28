@@ -107,7 +107,12 @@ Now I just need to create a DA4R template 😊
 
 twitter:
 
-#RevitAPI @AutodeskRevit #BIM @DynamoBIM
+A solution to check for valid #RevitAPI context and use extensible storage in the @AutodeskAPS Design Automation for Revit API, PackageBuilder versus RevitAddinUtility, Python vs .NET and two ways to determine elements in section view @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/01/api-context-and-extensible-storage-in-da4r.html
+
+
+
+#RevitAPI @AutodeskRevit #BIM @DynamoBIM @AutodeskAPS
+
 
 A solution to use extensible storage in the APS Design Automation for Revit API
 &ndash; Check for valid Revit API context
