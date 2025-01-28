@@ -148,7 +148,7 @@ Throwing an exception is expensive and should be avoided if possible, so that ap
 Next, in August 2024, Roman [@Nice3point](https://t.me/nice3point) Karpovich, aka Роман Карпович, shared a more effective approach in
 his [RevitToolkit.Context method](https://thebuildingcoder.typepad.com/blog/2024/08/api-context-background-process-postcommand.html#4).
 
-Now, in Janauary 2025, Ricaun returns with a new solution by checking the application `ActiveAddInId` property, in
+Now, in January 2025, Ricaun returns with a new solution by checking the application `ActiveAddInId` property, in
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
 on [how to know if Revit API is in context](https://forums.autodesk.com/t5/revit-api-forum/how-to-know-if-revit-api-is-in-context/m-p/13276039#M83476):
 
@@ -164,7 +164,7 @@ This is the basic code to check if [Revit is in the AddIn Context](https://ricau
 }</code></pre>
 
 There is only one place that the ActiveAddInId is null and Revit API in in Context, inside the APS Design Automation for Revit event.
-That is a bug/limitation and what prompted me to take a closer look at the ActiveAddInId proprerty, discussed in more depth in the thread
+That is a bug/limitation and what prompted me to take a closer look at the ActiveAddInId property, discussed in more depth in the thread
 on [Revit design automation extensible storage "Writing of Entities of this Schema is not allowed to the current add-in" error](https://forums.autodesk.com/t5/revit-api-forum/revit-design-automation-extensible-storage-quot-writing-of/td-p/12833018).
 Because I now know how the ActiveAddInId works, I can use ExternalService inside Design Automation for Revit to make the event run in a valid ActiveAddInId.
 So, I created
@@ -260,7 +260,7 @@ In theory, all languages can be used to drive the .NET API.
 Here some further clarification on using Python for the Revit API:
 
 **Question:** regarding Revit and its scripting capabilities.
-It seems that Revit is shifting away from Python scripting in favor of .NET scripting.
+It seems that Revit is shifting away from Python scripting in favour of .NET scripting.
 Is this true?
 If so, could you provide some insight into why this change is happening?
 Additionally, what does this mean for the future usability of Python scripts within Revit?
