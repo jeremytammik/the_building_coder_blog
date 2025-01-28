@@ -109,7 +109,13 @@ twitter:
 
 #RevitAPI @AutodeskRevit #BIM @DynamoBIM
 
-&ndash; ...
+A solution to use extensible storage in the APS Design Automation for Revit API
+&ndash; Check for valid Revit API context
+&ndash; External service enables extensible storage in DA4R
+&ndash; PackageBuilder versus RevitAddinUtility
+&ndash; Two ways to determine elements in section view
+&ndash; Python and .NET
+&ndash; Opting out of cookies...
 
 linkedin:
 
