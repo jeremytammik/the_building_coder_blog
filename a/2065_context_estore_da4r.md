@@ -113,6 +113,7 @@ Breaking news: a solution to use extensible storage in the APS Design Automation
 - [PackageBuilder versus RevitAddinUtility](#4)
 - [Two ways to determine elements in section view](#5)
 - [Python and .NET](#6)
+- [PythonNet3 and Dynamo BIM](#6.2)
 - [Opting out of cookies](#7)
 
 ####<a name="2"></a> Check for Valid Revit API Context
@@ -264,6 +265,20 @@ All of that said, the API is .NET, so the most robust and accessible version of 
 To rank the API interfaces for ordering of scaled efficiency from highest to lower, you might start with APS Design Automation at the top, followed by external service and Revit add-in, then Revit Add-In, and finally Dynamo / Python tools.
 
 Thanks to Scott Conover and Jacob Small for explaining this.
+
+####<a name="6.2"></a> PythonNet3 and Dynamo BIM
+
+Jean-Marc [@jmcouffin](https://github.com/jmcouffin) Couffin picked up on this and continued the discussion
+on [PythonNET3 / .NET](https://forum.dynamobim.com/t/pythonnet3-net/107603) with Jacob, who adds:
+
+First off, you might want to read the extensive article
+about [PythonNet3, a new Python to fix everything](https://dynamobim.org/pythonnet3-a-new-dynamo-python-to-fix-everything/).
+
+It’s about as thorough an outline of the ‘why’ we can give, in a very well organized and structured format.
+I can’t imagine giving much more non-technical information than this to anyone ‘outside the factory’ so to speak, and what we have ‘in the factory’ is too hard to digest easily &ndash; you’d spend three months finding, collating, and consolidating everything if you came in cold from the exterior.
+
+Do you have any direct links to the conversations you’ve had around the single engine efforts?
+Most discussions seem to revolve around implementing work arounds for particular tasks (i.e. the great post on WPF), but I don’t see any discussion or analysis on the pros and cons of each engine (IronPython, CPython, PythonNet, etc.).
 
 ####<a name="7"></a> Opting out of Cookies
 

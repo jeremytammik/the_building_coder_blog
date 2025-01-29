@@ -110,6 +110,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 <li><a href="#4">PackageBuilder versus RevitAddinUtility</a></li>
 <li><a href="#5">Two ways to determine elements in section view</a></li>
 <li><a href="#6">Python and .NET</a></li>
+<li><a href="#6.2">PythonNet3 and Dynamo BIM</a></li>
 <li><a href="#7">Opting out of cookies</a></li>
 </ul>
 <h4><a name="2"></a> Check for Valid Revit API Context</h4>
@@ -237,6 +238,15 @@ Note that pyRevit relies almost entirely on IronPython 2 for most scripts, as th
 All of that said, the API is .NET, so the most robust and accessible version of the API is .NET, and every interpreter layer in between that and the written code will only bring lower performance, stability, and scope, and Python is generally not the best option to scale automations as a result.
 To rank the API interfaces for ordering of scaled efficiency from highest to lower, you might start with APS Design Automation at the top, followed by external service and Revit add-in, then Revit Add-In, and finally Dynamo / Python tools.</p>
 <p>Thanks to Scott Conover and Jacob Small for explaining this.</p>
+<h4><a name="6.2"></a> PythonNet3 and Dynamo BIM</h4>
+<p>Jean-Marc <a href="https://github.com/jmcouffin">@jmcouffin</a> Couffin picked up on this and continued the discussion
+on <a href="https://forum.dynamobim.com/t/pythonnet3-net/107603">PythonNET3 / .NET</a> with Jacob, who adds:</p>
+<p>First off, you might want to read the extensive article
+about <a href="https://dynamobim.org/pythonnet3-a-new-dynamo-python-to-fix-everything/">PythonNet3, a new Python to fix everything</a>.</p>
+<p>It’s about as thorough an outline of the ‘why’ we can give, in a very well organized and structured format.
+I can’t imagine giving much more non-technical information than this to anyone ‘outside the factory’ so to speak, and what we have ‘in the factory’ is too hard to digest easily &ndash; you’d spend three months finding, collating, and consolidating everything if you came in cold from the exterior.</p>
+<p>Do you have any direct links to the conversations you’ve had around the single engine efforts?
+Most discussions seem to revolve around implementing work arounds for particular tasks (i.e. the great post on WPF), but I don’t see any discussion or analysis on the pros and cons of each engine (IronPython, CPython, PythonNet, etc.).</p>
 <h4><a name="7"></a> Opting out of Cookies</h4>
 <p>Opting out of cookies is not as easy as I naively assumed, whether essential or not.
 I noticed that from looking at the Google research on
