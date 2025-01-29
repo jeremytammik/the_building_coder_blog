@@ -25,45 +25,6 @@ https://prismjs.com
   Revit Design Automation | Extensible Storage "Writing of Entities of this Schema is not allowed to the current add-in." Error
   https://forums.autodesk.com/t5/revit-api-forum/revit-design-automation-extensible-storage-quot-writing-of/m-p/13280384#M83582
 
-@tristan-m I found a way to make the ActiveAddInId valid in the Design Automation Ready event.
-
-You can create a custom ExternalSevice and register in the OnStartup and make the Design Automation Ready event to execute your custom ExternalSevice, the code inside the ExternalSevice is execute in the same AddIn Context.
-
-I created a library to make easier to use DA4R and fix this issue by default.
-https://github.com/ricaun-io/ricaun.Revit.DA
-
-
-This is how the sample to check if the ActiveAddInId is not null in the DA4R event. In the code below the Execute method.
-public class App : DesignApplication
-{
-    public override void OnStartup()
-    {
-        Console.WriteLine("----------------------------------------");
-        Console.WriteLine($"AddInId: \t{ControlledApplication.ActiveAddInId?.GetAddInName()}");
-        Console.WriteLine("----------------------------------------");
-    }
-
-    public override void OnShutdown()
-    {
-    }
-
-    public bool Execute(Application application, string filePath, Document document)
-    {
-        Console.WriteLine("----------------------------------------");
-        Console.WriteLine($"AddInId: \t{application.ActiveAddInId?.GetAddInName()}");
-        Console.WriteLine("----------------------------------------");
-
-        return application.ActiveAddInId != null;
-    }
-}
-
-I update my RevitAddin.DA.Tester project to use the library.
-https://github.com/ricaun-io/RevitAddin.DA.Tester
-
-
-Now I just need to create a DA4R template 😊
-
-
 - ricaun's bundle package builder
   RevitAddinUtility usage and redistribution permissions.
   https://forums.autodesk.com/t5/revit-api-forum/revitaddinutility-usage-and-redistribution-permissions/td-p/8182324
@@ -78,7 +39,6 @@ Now I just need to create a DA4R template 😊
   https://apidocs.co/apps/revit/2024/968b52a0-de55-2f96-de40-968812bc41c7.htm
   https://www.revitapidocs.com/2024/968b52a0-de55-2f96-de40-968812bc41c7.htm
   FilteredElementCollector(Document, ElementId, ElementId)
-  Constructs a new FilteredElementCollector that will search and filter the visible elements from a Revit link in a host document view.
   Constructs a new FilteredElementCollector that will search and filter the visible elements from a Revit link in a host document view.
 
 - https://autodesk.slack.com/archives/C0SR6NAP8/p1730892247924659
