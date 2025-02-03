@@ -1,0 +1,36 @@
+/Users/jta/a/doc/revit/tbc/git/a/not_todo_ai.txt
+
+AI-related stuff that i noted in todo_tbc.txt and deccided not to add to any blog post after all
+
+- Pause Giant AI Experiments: An Open Letter
+  https://futureoflife.org/open-letter/pause-giant-ai-experiments/
+
+- [GPT-4 Developer Demo](https://www.youtube.com/watch?v=outcGtbnMuQ&t=10s)
+
+- AI-generated "news"
+  Sports Illustrated Published Articles by Fake, AI-Generated Writers
+  https://futurism.com/sports-illustrated-ai-generated-writers
+  publishing CEO fired
+  Sports Illustrated publisher fires CEO in latest round of exec terminations after AI scandal
+  https://www.nbcnews.com/news/us-news/sports-illustrated-publisher-fires-ceo-latest-exec-terminations-ai-sca-rcna129236
+
+- Long context prompting for Claude 2.1
+  https://www.anthropic.com/index/claude-2-1-prompting
+  some interesting hints on optimising a prompt
+
+- Developers - Stop Asking LLMs (GenAI) to Write Code!!
+  https://newsletter.victordibia.com/p/developers-stop-asking-llms-genai
+  Instead - Here are 7 ways to get the most of Generative AI pair programming tools like ChatGPT or Claude
+
+- talking about agents:
+  Generative Agents: Interactive Simulacra of Human Behavior: https://arxiv.org/pdf/2304.03442
+  Generative Agent Simulations of 1,000 People: https://arxiv.org/abs/2411.10109
+
+- Amazon and Anthropic deepen strategic collaboration
+  https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai
+  Anthropic names AWS its primary training partner and will use AWS Trainium to train and deploy its largest foundation models; Amazon to invest additional $4 billion in Anthropic.
+
+- No code, only natural language: Q&A on prompt engineering with Professor Greg Benson
+  https://stackoverflow.blog/2024/11/07/no-code-only-natural-language-q-and-a-on-prompt-engineering-with-professor-greg-benson/
+  Will prompt engineering replace the coder’s art or will software engineers who understand code still have a place in future software lifecycles?
+
