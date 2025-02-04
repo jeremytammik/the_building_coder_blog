@@ -74,10 +74,14 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-### Extensible Storage Schema Migration
+### Tools for Extensible Storage and OAuth Auth0
 
+- [SchemaMigrations extensible storage lib](#2)
+- [OpenAI ChatGPT deep research](#3)
+- [OAuth Auth0 in a Revit add-in](#4)
+- [Docling markdown generator](#5)
 
-####<a name="2"></a> SchemaMigrations Revit Extensible Storage API
+####<a name="2"></a> SchemaMigrations Extensible Storage Lib
 
 The [atomatiq](https://www.linkedin.com/company/atomatiq/) team including Ilia Ivanov, Roman Karpovich and Sergei Nefedov presents
 the [SchemaMigrations library](https://github.com/atomatiq/SchemaMigrations) of comfortable tools for the Revit Extensible Storage API to make its usage similar to
@@ -92,15 +96,15 @@ the [SchemaMigrations GitHub repository documentation](https://github.com/atomat
 
 ####<a name="3"></a> OpenAI ChatGPT Deep Research
 
-Daily exciting news on AI keeps on coming.
-Today, OpenAI published
+Daily exciting news on AI keeps on coming and continues accelerating.
+OpenAI published
 a [20-minute YouTube presentation on Deep Research](https://youtu.be/YkCDVn3_wiw), allowing the LLM to use agents, Internet access and other tools for longer-lasting partially unsupervised tasks.
 This functionality is launching in ChatGPT pro today.
 
 Similar functionality was already added to other LLMs, e.g., [Claude computer use](https://thebuildingcoder.typepad.com/blog/2024/10/au-api-wishes-and-revit-20253.html#5).
 Things are certainly moving fast, baundaries pushed and new functionality publisdhed daily, with strong competition from many sides.
 
-####<a name="4"></a> Using OAuth Auth0 in a Revit add-in
+####<a name="4"></a> OAuth Auth0 in a Revit Add-In
 
 Using OAuth Auth0 in a Revit add-in
 WebView2 throws System.Runtime.InteropServices.COMException: 'The requested resource is in use. (0x800700AA)'
@@ -108,12 +112,10 @@ https://forums.autodesk.com/t5/revit-api-forum/webview2-throws-system-runtime-in
 in case you wonder What the difference is between OAuth 2.0 and Auth0, check out the StackOverflow explanantion
 [OAuth 2.0 vs Auth0](https://stackoverflow.com/questions/46782725/oauth-2-0-vs-auth0)
 
-####<a name="2"></a> Docling
+####<a name="5"></a> Docling Markdown Generator
 
-Docling
-https://ds4sd.github.io/docling/
-Docling simplifies document processing, parsing diverse formats — including advanced PDF understanding — and providing seamless integrations with the gen AI ecosystem.
-Features
+[Docling](https://ds4sd.github.io/docling/) by IBM simplifies document processing, parsing diverse formats &ndash; including advanced PDF understanding &ndash; and providing seamless integrations with the gen AI ecosystem, featuring:
+
 - Parsing of multiple document formats incl. PDF, DOCX, XLSX, HTML, images, and more
 - Advanced PDF understanding incl. page layout, reading order, table structure, code, formulas, image classification, and more
 - Unified, expressive DoclingDocument representation format
@@ -122,14 +124,13 @@ Features
 - Plug-and-play integrations incl. LangChain, LlamaIndex, Crew AI & Haystack for agentic AI
 - Extensive OCR support for scanned PDFs and images
 - Simple and convenient CLI
-i tested docling on an archiv scientific paper listed in the installation instructions, and it works perfectly with very impressive results:
-installation:
-pip install docling
-testing:
-docling https://arxiv.org/pdf/2206.01062
-the result is markdown:
-1626109 bytes -- 2206.01062v1.md
-includes images, tables, text, headings, the whole shebang perfectly formatted.
+
+I tested docling on an arxiv scientific paper listed in the installation instructions, and it works perfectly right out of the box with very impressive results:
+
+- Installation: `pip install docling`
+- Testing: `docling [https://arxiv.org/pdf/2206.01062](https://arxiv.org/pdf/2206.01062)`
+
+The result is a 1.6 MB markdown file `2206.01062v1.md` complete with images, tables, text, headings, the whole shebang, perfectly formatted.
 
 
 <pre><code class="language-cs"> </code></pre>
