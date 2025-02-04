@@ -80,6 +80,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 - [OpenAI ChatGPT deep research](#3)
 - [OAuth Auth0 in a Revit add-in](#4)
 - [Docling markdown generator](#5)
+- [DIY open source redox flow battery](#6)
 
 ####<a name="2"></a> SchemaMigrations Extensible Storage Lib
 
@@ -132,11 +133,22 @@ I tested docling on an arxiv scientific paper listed in the installation instruc
 
 The result is a 1.6 MB markdown file `2206.01062v1.md` complete with images, tables, text, headings, the whole shebang, perfectly formatted.
 
+####<a name="6"></a> DIY Open Source Redox Flow Battery
 
-<pre><code class="language-cs"> </code></pre>
+Moving away completely for digital topics, I was previously not aware of any DIY efforts to create battery storage.
+I was therefore excited to discover
+the [Flow Battery Research Collective](https://fbrc.dev) open source project targeted at
+creating a simple DIY [redox flow battery](https://en.wikipedia.org/wiki/Flow_battery).
+
+This [20-minute video](https://spectra.video/w/6BddEiwBqRMHSbC9qBLBz9) discusses progress so far and current status.
+The [roadmap](https://fbrc.dev/posts/roadmap-faq-forum/) posits a research kit in the middle of this year to help discover optimal liquid chemical components, and hopes to be able to provide a kit for creating your own working 48V battery sufficient for powering a small home by the end of the year.
 
 <center>
-<img src="img/.png" alt="" title="" width="100"/>
+<img src="img/redox_flow_battery.jpg" alt="Redox flow battery" title="Redox flow battery" width="300"/>
+<p style="font-size: 80%; font-style:italic">By
+  <a href="https://avs.scitation.org/doi/10.1116/1.4983210">Colintheone</a>
+  <a href="https://commons.wikimedia.org/w/index.php?curid=59002803">CC BY-SA 4.0</a></p>
 </center>
 
+<pre><code class="language-cs"> </code></pre>
 
