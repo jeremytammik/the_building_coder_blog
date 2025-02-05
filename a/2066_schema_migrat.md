@@ -19,7 +19,6 @@ https://prismjs.com
   https://github.com/atomatiq/SchemaMigrations
   https://www.linkedin.com/pulse/revit-extensible-storage-schema-migration-atomatiq-a1yaf/?trackingId=RCpg3ZD4SYSHzxAgzWXP1g%3D%3D
   The [atomatiq](https://www.linkedin.com/company/atomatiq/) team including Ilia Ivanov
-  Roman Karpovich and Sergei Nefedov
 
 - openai chatgpt deep research
   It keeps coming: [20-minute youtube presentation on OpenAI deep research](https://youtu.be/YkCDVn3_wiw) using agents and internet access for long-lasting unsupervised tasks ... launching in ChatGPT pro today.
@@ -93,7 +92,7 @@ Revit API tools for extensible storage and OAuth Auth0, notes on AI news, a Mac 
 
 ####<a name="2"></a> SchemaMigrations Extensible Storage Lib
 
-The [atomatiq](https://www.linkedin.com/company/atomatiq/) team including Ilia Ivanov, Roman Karpovich and Sergei Nefedov presents
+The [atomatiq](https://www.linkedin.com/company/atomatiq/) team including Ilia Ivanov and Sergei Nefedov presents
 the [SchemaMigrations library](https://github.com/atomatiq/SchemaMigrations) of comfortable tools for the Revit Extensible Storage API to make its usage similar to
 the [.NET Entity Framework](https://en.wikipedia.org/wiki/Entity_Framework):
 
@@ -314,7 +313,7 @@ The [roadmap](https://fbrc.dev/posts/roadmap-faq-forum/) posits a research kit i
 </center>
 
 By the way, there are a number of non-DIY effort underway as well, with significant interest, support and funding, e.g.,
-the [Long-term energy storage challenge](https://www.sprind.org/en/impulses/challenges/energystorage)
+the [long-term energy storage challenge](https://www.sprind.org/en/impulses/challenges/energystorage)
 by [SPRIN-D](https://www.sprind.org/en/we).
 One example is the Swiss startup [Unbound Potential](https://youtu.be/e_3Yd8mKvmw?feature=shared).
 
