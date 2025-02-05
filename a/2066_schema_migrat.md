@@ -107,11 +107,147 @@ Things are certainly moving fast, baundaries pushed and new functionality publis
 
 ####<a name="4"></a> OAuth Auth0 in a Revit Add-In
 
-Using OAuth Auth0 in a Revit add-in
-WebView2 throws System.Runtime.InteropServices.COMException: 'The requested resource is in use. (0x800700AA)'
-https://forums.autodesk.com/t5/revit-api-forum/webview2-throws-system-runtime-interopservices-comexception-the/td-p/13291882
-in case you wonder What the difference is between OAuth 2.0 and Auth0, check out the StackOverflow explanantion
-[OAuth 2.0 vs Auth0](https://stackoverflow.com/questions/46782725/oauth-2-0-vs-auth0)
+Daniel [christev7HTEL](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/15843072) Christev kindly
+shared a fix to enable using `OAuth` `Auth0` in a Revit add-in in the
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
+on [WebView2 throws System.Runtime.InteropServices.COMException: 'The requested resource is in use. (0x800700AA)'](https://forums.autodesk.com/t5/revit-api-forum/webview2-throws-system-runtime-interopservices-comexception-the/td-p/13291882).
+in case &ndash;; like me &ndash;; you wonder what the difference is between OAuth 2.0 and Auth0, check out the StackOverflow explanantion
+on [OAuth 2.0 vs Auth0](https://stackoverflow.com/questions/46782725/oauth-2-0-vs-auth0).
+Daniel says:
+
+Just wanted to post some info on a bug I came across + fix.
+Maybe noone will run into this problem, but it took me a while to get to the bottom of it.
+
+It started with trying to use `Auth0` in a Revit application; the default implementation throws the exception and Revit crashes:
+
+- System.Runtime.InteropServices.COMException: 'The requested resource is in use. (0x800700AA)'
+
+It is possible to fix this by instantiating your client with a `WebBrowserBrowser`:
+
+<pre><code class="language-cs">IBrowser browser = new WebBrowserBrowser();
+
+client = new Auth0Client(new Auth0ClientOptions
+{
+Domain = domain,
+ClientId = clientId,
+RedirectUri = "http://localhost:3003",
+PostLogoutRedirectUri = "http://localhost:3003",
+Browser = browser
+});</code></pre>
+
+or even creating an implementation to try to use the default `SystemBrowser`
+but I still wanted `WebView2` here.
+It turns out the prickly bit of code boils down to the default environment that is created.
+Generally, when you are generating a WebView2 within an application, you should call the following code:
+
+<pre><code class="language-cs">string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+System.IO.Directory.CreateDirectory(appDataFolder);
+var env = await CoreWebView2Environment.CreateAsync(null, appDataFolderACAD);
+await webView.EnsureCoreWebView2Async(env);</code></pre>
+
+It's important to create the environment, or else the default implementation will register a data folder running out of a secured folder that can't write like Program Files..
+And this was what happened to me. WebView2 in Revit was trying to create a directory at:
+
+- C:\Program Files\Autodesk\Revit 2025\Revit.exe.WebView2\`
+
+which aside from being an absolute eye-sore, requires admin privileges to write to, and thus the resource cannot be used.
+
+As someone new to WebView2, this really tripped me up, so here's to hoping it will help someone else at some point too.
+
+So I created a custom `UserEnvironmentWebViewBrowser` where the `UserDataFolder` can be set, and defaults to appdata.
+(This is by and large identical to the `WebViewBrowser` implementation, with the addition of the aforementioned):
+
+<pre><code class="language-cs">public class UserEnvironmentWebViewBrowser : IBrowser
+{
+private readonly Func&lt;Window&gt; _windowFactory;
+
+private readonly bool _shouldCloseWindow;
+
+public UserEnvironmentWebViewBrowser(Func&lt;Window&gt; windowFactory, bool shouldCloseWindow = true)
+{
+_windowFactory = windowFactory;
+_shouldCloseWindow = shouldCloseWindow;
+}
+
+public UserEnvironmentWebViewBrowser(
+  string title = "Authenticating...",
+  string? userDataFolder = null,
+  int width = 1024,
+  int height = 768)
+:
+  this(() =&gt; new Window
+{
+  Name = "WebAuthentication",
+  Title = title,
+  Width = width,
+  Height = height
+})
+{
+  if (userDataFolder != null && Directory.Exists(userDataFolder))
+  {
+    UserDataFolder = userDataFolder;
+  }
+}
+
+public string UserDataFolder { get; set; }
+  = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+public async Task&lt;BrowserResult&gt; InvokeAsync(
+  BrowserOptions options,
+  CancellationToken cancellationToken = default(CancellationToken))
+{
+  TaskCompletionSource&lt;BrowserResult&gt; tcs
+    = new TaskCompletionSource&lt;BrowserResult&gt;();
+  Window window = _windowFactory();
+  WebView2 webView = new WebView2();
+  window.Content = webView;
+  webView.NavigationStarting += delegate (object? sender,
+    CoreWebView2NavigationStartingEventArgs e)
+  {
+    if (e.Uri.StartsWith(options.EndUrl))
+    {
+      tcs.SetResult(new BrowserResult
+      {
+        ResultType = BrowserResultType.Success,
+        Response = e.Uri.ToString()
+      });
+      if (_shouldCloseWindow)
+      {
+        window.Close();
+      }
+      else
+      {
+        window.Content = null;
+      }
+    }
+  };
+  window.Closing += delegate
+  {
+    webView.Dispose();
+    if (!tcs.Task.IsCompleted)
+    {
+      tcs.SetResult(new BrowserResult
+      {
+        ResultType = BrowserResultType.UserCancel
+      });
+    }
+  };
+  window.Show();
+
+  var webView2Environment = await CoreWebView2Environment.CreateAsync(null, UserDataFolder);
+  await webView.EnsureCoreWebView2Async(webView2Environment);
+  webView.CoreWebView2.Navigate(options.StartUrl);
+  return await tcs.Task;
+}
+}</code></pre>
+
+You can also check out the solution at
+my [github](https://github.com/bulgos/RevitWebView2Bug.
+
+Shoutout to [@grahamcook](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/1070920) as
+I found the answer within his [post](https://forums.autodesk.com/t5/net/using-the-webviewer2-package-version-issues/m-p/12941602.
+
+Many thanks, Daniel and Graham, for sharing this.
 
 ####<a name="5"></a> Docling Markdown Generator
 
@@ -133,10 +269,25 @@ I tested docling on an arxiv scientific paper listed in the installation instruc
 
 The result is a 1.6 MB markdown file `2206.01062v1.md` complete with images, tables, text, headings, the whole shebang, perfectly formatted.
 
-####<a name="6"></a> DIY Open Source Redox Flow Battery
+####<a name="6"></a> MacOS Copy Paste Sans Formatting
 
-Moving away completely for digital topics, I was previously not aware of any DIY efforts to create battery storage.
-I was therefore excited to discover
+After thousands of unthinking repetitions, I finally searched and found a note
+on [how to copy and paste text excluding formatting on Mac](https://www.macrumors.com/how-to/copy-paste-text-no-formatting-mac/):
+
+> In Windows, the Copy and Paste key combinations are Control-C and Control-V, respectively.
+On the Mac, it's similar using the Command (⌘) key instead of Control.
+You can also paste text without its original formatting.
+Not knowing that this is possible on a Mac, many users paste text into a plain-format text editor to strip it of any styling before copying and pasting it again to its intended destination (that's me).
+But you don't have to do that.
+To directly paste the copied text elsewhere as purely plain text, use the key combination Command-Option-Shift-V and it will be automatically stripped of any formatting.
+
+Wow.
+I should have thought of checking that out years ago.
+
+####<a name="7"></a> DIY Open Source Redox Flow Battery
+
+Now to round off with a non-digital topic:
+I was previously not aware of any DIY efforts to create battery storage and therefore excited to discover
 the [Flow Battery Research Collective](https://fbrc.dev) open source project targeted at
 creating a simple DIY [redox flow battery](https://en.wikipedia.org/wiki/Flow_battery).
 
@@ -150,5 +301,4 @@ The [roadmap](https://fbrc.dev/posts/roadmap-faq-forum/) posits a research kit i
   <a href="https://commons.wikimedia.org/w/index.php?curid=59002803">CC BY-SA 4.0</a></p>
 </center>
 
-<pre><code class="language-cs"> </code></pre>
 
