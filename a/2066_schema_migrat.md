@@ -58,7 +58,13 @@ twitter:
 
  #RevitAPI  @AutodeskAPS  @AutodeskRevit #BIM @DynamoBIM
 
-&ndash; ...
+Revit API tools for extensible storage and OAuth Auth0, notes on AI news, a Mac feature and electrical energy storage
+&ndash; SchemaMigrations extensible storage lib
+&ndash; OpenAI ChatGPT deep research
+&ndash; OAuth Auth0 in a Revit add-in
+&ndash; Docling markdown generator
+&ndash; MacOS copy paste sans formatting
+&ndash; DIY open source redox flow battery...
 
 linkedin:
 
@@ -75,6 +81,8 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 -->
 
 ### Tools for Extensible Storage and OAuth Auth0
+
+Revit API tools for extensible storage and OAuth Auth0, notes on AI news, a Mac feature and electrical energy storage:
 
 - [SchemaMigrations extensible storage lib](#2)
 - [OpenAI ChatGPT deep research](#3)
@@ -101,9 +109,12 @@ the [SchemaMigrations GitHub repository documentation](https://github.com/atomat
 Daily exciting news on AI keeps on coming and continues accelerating.
 OpenAI published
 a [20-minute YouTube presentation on Deep Research](https://youtu.be/YkCDVn3_wiw), allowing the LLM to use agents, Internet access and other tools for longer-lasting partially unsupervised tasks.
-This functionality is launching in ChatGPT pro today.
+This functionality already launched in ChatGPT pro.
 
-Similar functionality was already added to other LLMs, e.g., [Claude computer use](https://thebuildingcoder.typepad.com/blog/2024/10/au-api-wishes-and-revit-20253.html#5).
+Some of this functionality was previously available for some other LLMs, e.g.,
+[Claude computer use](https://thebuildingcoder.typepad.com/blog/2024/10/au-api-wishes-and-revit-20253.html#5).
+Deep research is still pushing new boundaries, though, e.g., solving a much larger part
+of [Humanity's Last Exam](https://lastexam.ai/).
 Things are certainly moving fast, boundaries pushed and new functionality published daily, with strong competition from many sides.
 
 ####<a name="4"></a> OAuth Auth0 in a Revit Add-In
@@ -266,7 +277,7 @@ Many thanks, Daniel and Graham, for sharing this.
 I tested docling on an arxiv scientific paper listed in the installation instructions, and it works perfectly right out of the box with very impressive results:
 
 - Installation: `pip install docling`
-- Testing: `docling [https://arxiv.org/pdf/2206.01062](https://arxiv.org/pdf/2206.01062)`
+- Testing: `docling https://arxiv.org/pdf/2206.01062`
 
 The result is a 1.6 MB markdown file `2206.01062v1.md` complete with images, tables, text, headings, the whole shebang, perfectly formatted.
 
@@ -302,7 +313,7 @@ The [roadmap](https://fbrc.dev/posts/roadmap-faq-forum/) posits a research kit i
   <a href="https://commons.wikimedia.org/w/index.php?curid=59002803">CC BY-SA 4.0</a></p>
 </center>
 
-By the way, there are a number of non-DIY effort underway as well, with significant interest, support, and funding, e.g.,
+By the way, there are a number of non-DIY effort underway as well, with significant interest, support and funding, e.g.,
 the [Long-term energy storage challenge](https://www.sprind.org/en/impulses/challenges/energystorage)
 by [SPRIN-D](https://www.sprind.org/en/we).
 One example is the Swiss startup [Unbound Potential](https://youtu.be/e_3Yd8mKvmw?feature=shared).
