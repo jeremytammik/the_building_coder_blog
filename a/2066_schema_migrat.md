@@ -80,7 +80,8 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 - [OpenAI ChatGPT deep research](#3)
 - [OAuth Auth0 in a Revit add-in](#4)
 - [Docling markdown generator](#5)
-- [DIY open source redox flow battery](#6)
+- [MacOS copy paste sans formatting](#6)
+- [DIY open source redox flow battery](#7)
 
 ####<a name="2"></a> SchemaMigrations Extensible Storage Lib
 
@@ -103,20 +104,20 @@ a [20-minute YouTube presentation on Deep Research](https://youtu.be/YkCDVn3_wiw
 This functionality is launching in ChatGPT pro today.
 
 Similar functionality was already added to other LLMs, e.g., [Claude computer use](https://thebuildingcoder.typepad.com/blog/2024/10/au-api-wishes-and-revit-20253.html#5).
-Things are certainly moving fast, baundaries pushed and new functionality publisdhed daily, with strong competition from many sides.
+Things are certainly moving fast, boundaries pushed and new functionality published daily, with strong competition from many sides.
 
 ####<a name="4"></a> OAuth Auth0 in a Revit Add-In
 
 Daniel [christev7HTEL](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/15843072) Christev kindly
-shared a fix to enable using `OAuth` `Auth0` in a Revit add-in in the
+shared a fix to enable using `OAuth` `Auth0` in a Revit add-in in
 the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
 on [WebView2 throws System.Runtime.InteropServices.COMException: 'The requested resource is in use. (0x800700AA)'](https://forums.autodesk.com/t5/revit-api-forum/webview2-throws-system-runtime-interopservices-comexception-the/td-p/13291882).
-in case &ndash;; like me &ndash;; you wonder what the difference is between OAuth 2.0 and Auth0, check out the StackOverflow explanantion
+in case &ndash;; like me &ndash;; you wonder what the difference is between OAuth 2.0 and Auth0, check out the StackOverflow explanation
 on [OAuth 2.0 vs Auth0](https://stackoverflow.com/questions/46782725/oauth-2-0-vs-auth0).
 Daniel says:
 
 Just wanted to post some info on a bug I came across + fix.
-Maybe noone will run into this problem, but it took me a while to get to the bottom of it.
+Maybe no one will run into this problem, but it took me a while to get to the bottom of it.
 
 It started with trying to use `Auth0` in a Revit application; the default implementation throws the exception and Revit crashes:
 
@@ -241,8 +242,8 @@ public async Task&lt;BrowserResult&gt; InvokeAsync(
 }
 }</code></pre>
 
-You can also check out the solution at
-my [github](https://github.com/bulgos/RevitWebView2Bug.
+You can also check out the solution in
+my [RevitWebView2Bug GitHub repo](https://github.com/bulgos/RevitWebView2Bug).
 
 Shoutout to [@grahamcook](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/1070920) as
 I found the answer within his [post](https://forums.autodesk.com/t5/net/using-the-webviewer2-package-version-issues/m-p/12941602.
@@ -301,4 +302,8 @@ The [roadmap](https://fbrc.dev/posts/roadmap-faq-forum/) posits a research kit i
   <a href="https://commons.wikimedia.org/w/index.php?curid=59002803">CC BY-SA 4.0</a></p>
 </center>
 
+By the way, there are a number of non-DIY effort underway as well, with significant interest, support, and funding, e.g.,
+the [Long-term energy storage challenge](https://www.sprind.org/en/impulses/challenges/energystorage)
+by [SPRIN-D](https://www.sprind.org/en/we).
+One example is the Swiss startup [Unbound Potential](https://youtu.be/e_3Yd8mKvmw?feature=shared).
 
