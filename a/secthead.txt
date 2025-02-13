@@ -9832,3 +9832,10 @@
 2065:<"#6"> Python and .NET
 2065:<"#6.2"> PythonNet3 and Dynamo BIM
 2065:<"#7"> Opting out of Cookies
+2066:Tools for Extensible Storage and OAuth Auth0
+2066:<"#2"> SchemaMigrations Extensible Storage Lib
+2066:<"#3"> OpenAI ChatGPT Deep Research
+2066:<"#4"> OAuth Auth0 in a Revit Add-In
+2066:<"#5"> Docling Markdown Generator
+2066:<"#6"> MacOS Copy Paste Sans Formatting
+2066:<"#7"> DIY Open Source Redox Flow Battery

@@ -328,3 +328,8 @@ the [long-term energy storage challenge](https://www.sprind.org/en/impulses/chal
 by [SPRIN-D](https://www.sprind.org/en/we).
 One example is the Swiss startup [Unbound Potential](https://youtu.be/e_3Yd8mKvmw?feature=shared).
 
+####<a name="7.2"></a> Flexbase Plans Swiss 500MW Redox Flow
+
+[Flexbase plant 500 Megawatt Redox-Flow-Speicher in der Schweiz](https://www.pv-magazine.de/2024/09/20/flexbase-plant-500-megawatt-redox-flow-speicher-in-der-schweiz/)
+
+

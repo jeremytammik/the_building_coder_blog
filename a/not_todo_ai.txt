@@ -34,3 +34,6 @@ AI-related stuff that i noted in todo_tbc.txt and deccided not to add to any blo
   https://stackoverflow.blog/2024/11/07/no-code-only-natural-language-q-and-a-on-prompt-engineering-with-professor-greg-benson/
   Will prompt engineering replace the coder’s art or will software engineers who understand code still have a place in future software lifecycles?
 
+- How engineering teams can thrive in 2025
+  https://stackoverflow.blog/2025/01/28/how-engineering-teams-can-thrive-in-2025/
+
