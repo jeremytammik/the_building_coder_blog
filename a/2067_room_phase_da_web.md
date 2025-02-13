@@ -78,9 +78,119 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ###
 
 
+
+I’m fine, although a bit busy, a bit overwhelmed, a bit in turmoil, too many things to do and stressing myself.
+
+My two years younger brother is dying, and that is freaking me out a lot. Cancer, no digestion, no nutrition… could be days, could be weeks…
+
+I hope to be able to calm down a bit gradually.
+
+I am also overwhelmed by what is happening in the world, politically, climate, war.
+
+At the same time, I am very excited about the AI revolution. Have you read Sam Altman’s three observations?
+
+https://blog.samaltman.com/three-observations
+
+Very exciting optimistic outlook into the near future.
+
+Back on the negative side, we have the limits to growth with much evidence corroborating the prediction of a crash:
+
+https://en.wikipedia.org/wiki/The_Limits_to_Growth
+
+Image
+
+Maybe the AI revolution predicted by Sam can help address the catastrophe predicted by the [limits to growth](https://en.wikipedia.org/wiki/The_Limits_to_Growth?
+
+So, that is my short answer to your first question. Sorry if it is a bit overwhelming. I feel overwhelmed too.
+
+Yes, my retirement, and the blog.
+
+We are recruiting a replacement for me. The replacement needs to be based in Europe. You would be a cool candidate. Chuong Ho has expressed interest already and would be a great choice. I’ll ask him if he would be willing to relocate. Would you?
+
+My guess is the blog will just stand still. New stuff will go into the APS blogs. Just a guess, though.
+
+Thank you very much for the in-depth explanation about the unit testing!
+
+That is very useful.
+
+I wish you a great week as well!
+
+
 ####<a name="2"></a> Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
 
 Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
+
+the most interesting observation, i think, is that there is an exponential development in AI, similar to Moore's law.
+
+2x computation power every 18 months.
+
+well, sam altmans says that the AI intelligence has a similar exponential growth, much more extreme:
+
+10x intelligence increase every 12 months.
+
+he says, by 2035, every human being will have more intelligence at their disposal that the entire humanity has today.
+
+crazy prospect.
+
+maybe that will help us handle &ndash; and solve? &ndash; the problems that we are scheduled to run into in the next couple of decades according to the limits to growth?
+
+####<a name="2"></a> Ricaun.RevitTest Unit Testing Framework
+
+I discussed [ricaun.RevitTest unit testing framework](https://github.com/ricaun-io/ricaun.RevitTest)
+with Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari to clarify some important aspects; he says:
+
+When I started researching about unit tests inside Revit, I had a hard time setting up
+the [DynamoDS/RevitTestFramework](https://github.com/DynamoDS/RevitTestFramework) inside my Revit;
+the project looks abandoned, and the last updates are six years old.
+
+In the end I started using
+the [geberit/Revit.TestRunner](https://github.com/geberit/Revit.TestRunner) version
+that was a little easier to install.
+I submitted PRs to fix some issues, and the project is alive on Github with more recent versions of Revit.
+
+When I start using/playing with the [Autodesk Platform Services APS](https://aps.autodesk.com/)
+[Design Automation API for Revit, DA4R](https://aps.autodesk.com/design-automation-apis,
+I also want to be able to use DA4R to run tests use inside a GitHub Action.
+
+That was the main goal: be able to run tests using both Revit for Desktop and Revit for Design Automation.
+
+Plus, I found a way to use the default Test Explorer inside Visual Studio to run tests inside Revit.
+
+No need to manually install the plugin in the machine, the `ricaun.RevitTest.TestAdapter` does the work to install the plugin in the machine, find Revit folder based in the Revit installation, open Revit, run the tests, show the result inside Visual Studio and close Revit.
+
+Is really easy and convenient, you can download the sample project and just run the tests directly inside Visual Studio.
+
+- [github.com/ricaun-io/RevitTest](https://github.com/ricaun-io/RevitTest)
+
+Knowing that the Revit 2025 API was based on .NET Core, I designed the whole project with that in mind.
+
+Supporting Revit versions from 2019 to 2025, and also, yes, ricaun.RevitTest works with the Revit Preview.
+
+For running tests in DA4R, I still need to share the main project,
+[ricaun-io/ricaun.DA4R.NUnit](https://github.com/ricaun-io/ricaun.DA4R.NUnit)
+
+I have a class session in DevCon Europe this year, that's gonna be fun:
+
+- [Multi-Version RevitTest Framework: Unit Testing Revit API using Design Automation](https://events.autodesk.com/flow/autodesk/devcon25emea/mainevent/page/agenda/session/1734703627846001oL4U)
+
+> In the class, "Multi-Version RevitTest Framework: Unit Testing Revit API using Design Automation." you'll learn the intricacies of executing unit tests for Revit add-ins both locally and remotely. Using the versatile RevitTest Framework, you'll discover how to create consistent and reliable unit tests that can be run on your local machine as well as through Design Automation for Revit. Elevate your unit testing practices with Revit API by joining us and unlock the potential of running tests for multiple Revit versions using a unique and unified RevitTest Framework.
+
+The ricaun.RevitTest features include:
+
+- Support multiple Revit versions (2019-2025) (Revit Preview)
+- Run inside Visual Studio Test Explorer (dotnet test)
+- Do not require any manual plugin installation.
+- Support to run tests using Design Automation for Revit.
+
+Have a great week!
+
+Many thanks to ricaun for the very helpful and detailed in-depth explanation!
+
+RevitTest.Feature.Open.Close
+
+ricaun_revittest.gif
+.Feature.Open.Close
+
 
 ####<a name="2"></a> Eason Kang published two blog posts about exporting IFC using Revit DA:
 
