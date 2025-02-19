@@ -78,6 +78,11 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ###
 
 
+####<a name="2"></a> Life, Death, Turmoil
+
+My daughter is imminently expecting a baby.
+
+My brother is imminently dying.
 
 I’m fine, although a bit busy, a bit overwhelmed, a bit in turmoil, too many things to do and stressing myself.
 
@@ -116,6 +121,32 @@ That is very useful.
 I wish you a great week as well!
 
 
+Today, only 199 human programmers are better than `o3`, and `r1` can produce the best kernel code: [Reasoning Models are Near-Superhuman Coders (OpenAI IOI, Nvidia Kernels)](https://buttondown.com/ainews/archive/ainews-reasoning-models-are-near-superhuman/):
+
+* RL is all you need
+* o3 achieves a gold medal at the 2024 IOI and obtains a Codeforces rating on par with elite human competitors - in particular, the Codeforces score is at the 99.8-tile
+* In Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling, Nvidia found that DeepSeek r1 could write custom kernels that "turned out to be better than the optimized kernels developed by skilled engineers in some cases"; In the Nvidia case, the solution was also extremely simple, causing much consternation.
+
+Lots of comments from people reacting to an initial post saying [I'm in my 50's and I just had ChatGPT write me a javascript/html calculator for my website. I'm shook.](https://www.reddit.com/r/ChatGPT/comments/1iosoyp/im_in_my_50s_and_i_just_had_chatgpt_write_me_a/?rdt=52104).
+
+####<a name="2"></a> Retirement, Recruiting, Job Offer
+
+Here is the public job posting, specifying a location in Europe, specifically Spain, Czechia or Ireland:
+
+https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Senior-Developer-Advocate-Engineer_25WD85215-2
+
+If you are interested in this opportunity, I suggest you do not apply directly through the link above.
+
+Instead, send me a message by email to my Autodesk address and let me know your contact details.
+
+Then, I can submit a referral for you, and the recruiters will contact you directly.
+
+Good luck!
+
+
+Let’s keep in touch. Let me know if you hear from the recruiting guys based on my referral. I hope it works out.
+
+
 ####<a name="2"></a> Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
 
 Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
@@ -133,6 +164,13 @@ he says, by 2035, every human being will have more intelligence at their disposa
 crazy prospect.
 
 maybe that will help us handle &ndash; and solve? &ndash; the problems that we are scheduled to run into in the next couple of decades according to the limits to growth?
+
+####<a name="2"></a> New Rev API Docs
+
+[Rev API Docs](https://revapidocs.com/)
+new online Revit API documentation, seeing as revitapidocs.com has not yet been brought up to date for Revit 2025.
+I like it. free of advertising. fast. good search functionality with immediate feedback. super cool.
+i just discovered a new online version of the Revit API documentation,  [Rev API docs](https://revapidocs.com/) -- [revapidocs.com](https://revapidocs.com/). this is a new member of the family, created by a Revit API consulting company [nonica.io](https://nonica.io/). it includes coverage for Revit 2025 API, which was (and still is) lacking in [revitapidocs.com](https://www.revitapidocs.com/). so, nonica have either decompiled the CHM, like i did, or discovered my sharing of the resulting HTML snippets on github. i presume they did it themselves, though.
 
 ####<a name="2"></a> Ricaun.RevitTest Unit Testing Framework
 
@@ -216,19 +254,36 @@ The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Co
 https://www.microsoft.com/en-us/research/uploads/prod/2025/01/lee_2025_ai_critical_thinking_survey.pdf
 The rise of Generative AI (GenAI) in knowledge workflows raises questions about its impact on critical thinking skills and practices. We survey 319 knowledge workers to investigate 1) when and how they perceive the enaction of critical thinking when using GenAI, and 2) when and why GenAI affects their effort to do so. Participants shared 936 first-hand examples of using GenAI in work tasks. Quantitatively, when considering both task- and user-specific factors, a user’s task-specific self-confidence and confidence in GenAI are predictive of whether critical thinking is enacted and the effort of doing so in GenAI-assisted tasks. Specifically, higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. Qualitatively, GenAI shifts the nature of critical thinking toward information verification, response integration, and task stewardship. Our insights reveal new design challenges and opportunities for developing GenAI tools for knowledge work.
 
-####<a name="2"></a> Revit API: Retrieving Room Data for Demolished Family Instances
+####<a name="2"></a> New AI AGI Test Suites
 
-Revit API: Retrieving Room Data for Demolished Family Instances
-https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html
+Humanity's Last Exam
+https://lastexam.ai/
 
-####<a name="2"></a> RST Results Package Create with Api
 
-RST Results Package Create with Api
-https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333
-Structural Analysis Toolkit, ResultsBuilder, Reviewing Stored Results in Revit
-https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306
+ENIGMAEVAL: A Benchmark of Long Multimodal Reasoning Challenges
+https://scale.com/research/enigma_eval
 
-####<a name="2"></a> uv
+
+
+####<a name="2"></a> uv Python Package and Project Manager
+
+Do you do any work with Python at all?
+
+If so, the following tool may be of interest:
+
+[uv](https://docs.astral.sh/uv/), an extremely fast Python package and project manager, written in Rust, sporting the following impressive features:
+
+- A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.
+- 10-100x faster than pip.
+- Provides comprehensive project management, with a universal lockfile.
+- Runs scripts, with support for inline dependency metadata.
+- Installs and manages Python versions.
+- Runs and installs tools published as Python packages.
+- Includes a pip-compatible interface for a performance boost with a familiar CLI.
+- Supports Cargo-style workspaces for scalable projects.
+- Disk-space efficient, with a global cache for dependency deduplication.
+- Installable without Rust or Python via curl or pip.
+- Supports macOS, Linux, and Windows.
 
 uv
 https://autodesk.slack.com/archives/C016D5HE66T/p1738900731261749
@@ -243,16 +298,12 @@ Those are very interesting tricks with uv! Thanks
 
 
 
-
-
-
 <pre><code class="language-cs"></code></pre>
 
 
 <center>
-<img src="img/redox_flow_battery.jpg" alt="Redox flow battery" title="Redox flow battery" width="300"/>
-<p style="font-size: 80%; font-style:italic">By
-  <a href="https://avs.scitation.org/doi/10.1116/1.4983210">Colintheone</a>
-  <a href="https://commons.wikimedia.org/w/index.php?curid=59002803">CC BY-SA 4.0</a></p>
+<img src="img/" alt="" title="" width="100"/>
+<p style="font-size: 80%; font-style:italic"></p>
 </center>
+
 
