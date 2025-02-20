@@ -89,6 +89,17 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ###
 
 
+- [Life, death, turmoil](#2)
+- [Retirement, recruiting, job offer](#3)
+- [New Rev API docs](#4)
+- [Ricaun.RevitTest unit testing framework](#5)
+- [ForgeTypeId for other parameter group](#6)
+- [Exporting IFC using DA4R](#7)
+- [Using Revit API from a web app](#8)
+- [GenAI impacts critical thinking](#9)
+- [New AI AGI test suites](#10)
+- [uv Python package and project manager](#11)
+
 ####<a name="2"></a> Life, Death, Turmoil
 
 I am somewhat in turmoil.
@@ -253,14 +264,15 @@ Thought you guys might be interested &nbsp; :-)
 
 
 
-####<a name="7"></a> Eason Kang published two blog posts about exporting IFC using Revit DA:
+####<a name="7"></a> Exporting IFC Using DA4R
 
-Eason Kang published two blog posts about exporting IFC using Revit DA:
+Eason Kang published two blog posts about exporting IFC using DA4R,
+the Autodesk Platform Services APS [Design Automation for Revit API](https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/):
 
-- [Export IFC from RVT using Design Automation API for Revit - Part I](https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-i)
-- [Export IFC from RVT using Design Automation API for Revit - Part II](https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-ii)
+- [Export IFC from RVT using Design Automation API for Revit &ndash; Part I](https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-i)
+- [Export IFC from RVT using Design Automation API for Revit &ndash; Part II](https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-ii)
 
-####<a name="8"></a> Use Revit API from a web app
+####<a name="8"></a> Using Revit API from a Web App
 
 People regularly ponder driving Revit from outside, and now this question came up again,
 how to [use Revit API from a web app](https://forums.autodesk.com/t5/revit-api-forum/use-revit-api-from-a-web-app/m-p/13314320):
@@ -279,7 +291,7 @@ Chuong Ho adds another idea to play with:
 this Revit project contains a GraphQL endpoint that can be accessed locally as well as remotely over the web.
 Check out [BIMrx.Marconi.pdf](https://github.com/gregorvilkner/Revit2GraphQL/blob/master/BIMrx.Marconi%20SinglePage%201.1.pdf) for more information.
 
-####<a name="9"></a> GenAI Impact Critical Thinking
+####<a name="9"></a> GenAI Impacts Critical Thinking
 
 Back to AI-related topics, a report
 on [the impact of generative AI on critical thinking: self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers](https://www.microsoft.com/en-us/research/uploads/prod/2025/01/lee_2025_ai_critical_thinking_survey.pdf):
@@ -315,13 +327,4 @@ If you like how blazingly fast it is, you might be interested in learning
 the [smart engineering behind it (40 minute video)](https://youtu.be/gSKTfG1GXYQ).
 It also enables some interesting ways to run scripts, cf.,
 some [tricks with UV and a new Python project: uvtrick](https://youtu.be/jXWIxk2brfk).
-
-<pre><code class="language-cs"></code></pre>
-
-
-<center>
-<img src="img/" alt="" title="" width="100"/>
-<p style="font-size: 80%; font-style:italic"></p>
-</center>
-
 
