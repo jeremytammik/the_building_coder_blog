@@ -117,12 +117,12 @@ by [Sam Altman's Three Observations](https://blog.samaltman.com/three-observatio
 providing an exciting optimistic outlook into the near future.
 He compares the development of AI
 with [Moore's law](https://en.wikipedia.org/wiki/Moore%27s_law),
-which notes that computing power increased expobnentially by a factor of 2 every 18 months.
+which notes that computing power increased exponentially by a factor of 2 every 18 months.
 In AI development, Altman notes that the cost to use a given level of AI falls about 10x every 12 months, and lower prices lead to much more use, cf.,
 [Jevons Paradox](https://thebuildingcoder.typepad.com/blog/2024/10/determine-rvt-version-and-add-data-from-exe.html#10).
 He concludes:
 
-> Anyone in 2035 should be able to marshall the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.
+> Anyone in 2035 should be able to marshal the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.
 
 Let's hope that really true.
 
@@ -152,8 +152,8 @@ Today, only 199 human programmers are better than `o3`, and `r1` can produce the
 [reasoning models are near-superhuman coders](https://buttondown.com/ainews/archive/ainews-reasoning-models-are-near-superhuman/):
 
 - RL is all you need
-- o3 achieves a gold medal at the 2024 IOI and obtains a Codeforces rating on par with elite human competitors - in particular, the Codeforces score is at the 99.8-tile
-- In Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling, Nvidia found that DeepSeek r1 could write custom kernels that "turned out to be better than the optimized kernels developed by skilled engineers in some cases"; In the Nvidia case, the solution was also extremely simple, causing much consternation.
+- o3 achieves a gold medal at the 2024 IOI and obtains a Codeforces rating on par with elite human competitors &ndash; in particular, the Codeforces score is at the 99.8-tile
+- In Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling, Nvidia found that DeepSeek r1 could write custom kernels that "turned out to be better than the optimized kernels developed by skilled engineers in some cases"; in the Nvidia case, the solution was also extremely simple, causing much consternation.
 
 A number of developers reacted to an initial post
 saying [I'm in my 50's and I just had ChatGPT write me a javascript/html calculator for my website. I'm shook.](https://www.reddit.com/r/ChatGPT/comments/1iosoyp/im_in_my_50s_and_i_just_had_chatgpt_write_me_a/?rdt=52104).
@@ -202,7 +202,7 @@ the project looks abandoned, and the last updates are six years old.
 In the end, I started using
 the [geberit/Revit.TestRunner](https://github.com/geberit/Revit.TestRunner) version
 that was a little easier to install.
-I submitted PRs to fix some issues, and the project is alive on Github and supports more recent versions of Revit.
+I submitted PRs to fix some issues, and the project is alive on GitHub and supports more recent versions of Revit.
 
 When I started using/playing with the [Autodesk Platform Services APS](https://aps.autodesk.com/)
 [Design Automation API for Revit, DA4R](https://aps.autodesk.com/design-automation-apis),
