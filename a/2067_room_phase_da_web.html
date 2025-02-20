@@ -1,0 +1,287 @@
+<p><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="bc.css"></p>
+<!--
+https://prismjs.com
+<pre><code class="language-cs">
+-->
+<p><link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet" /></p>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<style> code[class*=language-], pre[class*=language-] { font-size : 90%; } </style>
+
+<p></head></p>
+<!--
+
+- intro personal
+  My two years younger brother is dying, and that is freaking me out a lot. Cancer, no digestion, no nutrition… could be days, could be weeks…
+  I hope to be able to calm down a bit gradually.
+  I am also overwhelmed by what is happening in the world, politically, climate, war.
+  At the same time, I am very excited about the AI revolution. Have you read Sam Altman’s three observations?
+  Back on the negative side, we have the limits to growth with much evidence corroborating the prediction of a crash:
+  https://en.wikipedia.org/wiki/The_Limits_to_Growth
+  Image
+  Maybe the AI revolution predicted by Sam can help address the catastrophe predicted by the [limits to growth](https://en.wikipedia.org/wiki/The_Limits_to_Growth?
+  So, that is my short answer to your first question. Sorry if it is a bit overwhelming. I feel overwhelmed too.
+
+- Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
+
+- Eason Kang published two blog posts about exporting IFC using Revit DA:
+  https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-i
+  https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-ii
+
+- Use Revit API from a web app
+  https://forums.autodesk.com/t5/revit-api-forum/use-revit-api-from-a-web-app/m-p/13314320
+  Q: Is it possible to create a web app that manipulates a simple object in Revit "Beam for example".
+  A: The pure Revit API is a Windows .NET API that requires a running session of Revit and a valid Revit API context to execute, which is only provided within a running session of Revit.exe on a Windows desktop PC. You can however also use the Revit API in the cloud on a virtual machine directly from a web app by making use of the Autodesk Platform Services APS Design Automation for Revit API:
+  https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/
+  Chuong Ho adds, here is another idea you can play with:
+  - Build the add-in and open a listener to get data from Revit: [Revit2GraphQL](https://github.com/BIMrxLAB/Revit2GraphQL)
+  The GraphQL for Revit project contains a GraphQL endpoint for Revit that can be accessed locally as well as remotely over the web.
+  Check out [BIMrx.Marconi.pdf](https://github.com/gregorvilkner/Revit2GraphQL/blob/master/BIMrx.Marconi%20SinglePage%201.1.pdf) for more information.
+
+- The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
+  https://www.microsoft.com/en-us/research/uploads/prod/2025/01/lee_2025_ai_critical_thinking_survey.pdf
+  The rise of Generative AI (GenAI) in knowledge workflows raises questions about its impact on critical thinking skills and practices. We survey 319 knowledge workers to investigate 1) when and how they perceive the enaction of critical thinking when using GenAI, and 2) when and why GenAI affects their effort to do so. Participants shared 936 first-hand examples of using GenAI in work tasks. Quantitatively, when considering both task- and user-specific factors, a user’s task-specific self-confidence and confidence in GenAI are predictive of whether critical thinking is enacted and the effort of doing so in GenAI-assisted tasks. Specifically, higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. Qualitatively, GenAI shifts the nature of critical thinking toward information verification, response integration, and task stewardship. Our insights reveal new design challenges and opportunities for developing GenAI tools for knowledge work.
+
+- Revit API: Retrieving Room Data for Demolished Family Instances
+  https://adndevblog.typepad.com/aec/2024/10/revit-api-retrieving-room-data-for-demolished-family-instances.html
+
+- RST Results Package Create with Api
+  https://forums.autodesk.com/t5/revit-api-forum/results-package-create-with-api/m-p/13093333
+  Structural Analysis Toolkit, ResultsBuilder, Reviewing Stored Results in Revit
+  https://forums.autodesk.com/t5/revit-api-forum/structural-analysis-toolkit-resultsbuilder-reviewing-stored/m-p/8778306
+
+- uv
+  https://autodesk.slack.com/archives/C016D5HE66T/p1738900731261749
+  If you have not tried uv as a replacement for: pip, conda, poetry, pyenv, pip-tools - please give it a try.
+  If you like how blazingly fast it is, you might be interested in learning the smart engineering behind it. Very great video.
+  https://www.youtube.com/watch?v=gSKTfG1GXYQ
+  uv: An Extremely Fast Python Package Manager
+  It also let's us enable some interesting ways to run scripts. I've switched completely to uv for all my personal projects :)
+  https://youtu.be/jXWIxk2brfk?si=Px8RLFYCRwbFiCzH
+  Some tricks with UV and a new Python project: uvtrick!
+  Those are very interesting tricks with uv! Thanks
+
+twitter:
+
+ #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM
+
+&ndash; ...
+
+linkedin:
+
+
+#BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
+
+the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread
+
+<center>
+<img src="img/" alt="" title="" width="600"/>
+<p style="font-size: 80%; font-style:italic"></p>
+<a href="img/.gif"><p style="font-size: 80%; font-style:italic">Click for animation</p></a>
+</center>
+
+-->
+
+<h3>Unit Testing and More Serious Matters</h3>
+<ul>
+<li><a href="#2">Life, death, turmoil</a></li>
+<li><a href="#3">Retirement, recruiting, job offer</a></li>
+<li><a href="#4">New Rev API docs</a></li>
+<li><a href="#5">Ricaun.RevitTest unit testing framework</a></li>
+<li><a href="#6">ForgeTypeId for other parameter group</a></li>
+<li><a href="#7">Exporting IFC using DA4R</a></li>
+<li><a href="#8">Using Revit API from a web app</a></li>
+<li><a href="#9">GenAI impacts critical thinking</a></li>
+<li><a href="#10">New AI AGI test suites</a></li>
+<li><a href="#11">uv Python package and project manager</a></li>
+</ul>
+<h4><a name="2"></a> Life, Death, Turmoil</h4>
+<p>I am somewhat in turmoil.
+My daughter is imminently expecting a baby.
+My brother is imminently dying.
+The entire world seems to be in upheaval, politically, technologically, in polarisation between continents and socially.
+I’m fine myself, physically.</p>
+<p>The largest global upheaval that I see looming is the projection by
+the <a href="https://thebuildingcoder.typepad.com/blog/2024/01/valid-revit-api-context-llm-and-ltg.html#7">1972 study on the limits to growth</a> that
+I pointed out in January.</p>
+<p>One sliver of hope on possibly handling the collapse that it predicts in the coming decades is offered
+by <a href="https://blog.samaltman.com/three-observations">Sam Altman's Three Observations</a> on the rapid and accelerating AI evolution we are observing,
+providing an exciting optimistic outlook into the near future.
+He compares the development of AI
+with <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore's law</a>,
+which notes that computing power increased expobnentially by a factor of 2 every 18 months.
+In AI development, Altman notes that the cost to use a given level of AI falls about 10x every 12 months, and lower prices lead to much more use, cf.,
+<a href="https://thebuildingcoder.typepad.com/blog/2024/10/determine-rvt-version-and-add-data-from-exe.html#10">Jevons Paradox</a>.
+He concludes:</p>
+<blockquote>
+<p>Anyone in 2035 should be able to marshall the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.</p>
+</blockquote>
+<p>Let's hope that really true.</p>
+<!--
+
+Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
+
+Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
+
+the most interesting observation, i think, is that there is an exponential development in AI, similar to Moore's law.
+
+2x computation power every 18 months.
+
+well, sam altmans says that the AI intelligence has a similar exponential growth, much more extreme:
+
+10x intelligence increase every 12 months.
+
+he says, by 2035, every human being will have more intelligence at their disposal that the entire humanity has today.
+
+crazy prospect.
+
+maybe that will help us handle &ndash; and solve? &ndash; the problems that we are scheduled to run into in the next couple of decades according to the limits to growth?
+
+-->
+
+<p>Today, only 199 human programmers are better than <code>o3</code>, and <code>r1</code> can produce the best kernel code, cf.,
+<a href="https://buttondown.com/ainews/archive/ainews-reasoning-models-are-near-superhuman/">reasoning models are near-superhuman coders</a>:</p>
+<ul>
+<li>RL is all you need</li>
+<li>o3 achieves a gold medal at the 2024 IOI and obtains a Codeforces rating on par with elite human competitors - in particular, the Codeforces score is at the 99.8-tile</li>
+<li>In Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling, Nvidia found that DeepSeek r1 could write custom kernels that "turned out to be better than the optimized kernels developed by skilled engineers in some cases"; In the Nvidia case, the solution was also extremely simple, causing much consternation.</li>
+</ul>
+<p>A number of developers reacted to an initial post
+saying <a href="https://www.reddit.com/r/ChatGPT/comments/1iosoyp/im_in_my_50s_and_i_just_had_chatgpt_write_me_a/?rdt=52104">I'm in my 50's and I just had ChatGPT write me a javascript/html calculator for my website. I'm shook.</a>.</p>
+<p>Exciting times indeed, with huge changes ahead.</p>
+<h4><a name="3"></a> Retirement, Recruiting, Job Offer</h4>
+<p>I will be retiring before those calamities arrive.</p>
+<p>We are recruiting a replacement for me.
+The replacement should be based in Europe.
+Here is the public job posting for a <a href="https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Senior-Developer-Advocate-Engineer_25WD85215-2">Senior Developer Advocate Engineer</a>.</p>
+<p>If you are interested in this opportunity, I suggest you do not apply directly through the link above.
+Instead, send me a message to my Autodesk email address and let me know your contact details.
+Then, I can submit a referral for you, and the recruiters will contact you directly.</p>
+<p>Good luck!</p>
+<h4><a name="4"></a> New Rev API Docs</h4>
+<p>I just discovered a new online version of the Revit API documentation,
+<a href="https://revapidocs.com/">Rev API docs</a> &ndash; <a href="https://revapidocs.com/">revapidocs.com</a>.</p>
+<p>It was created by the Revit API consulting company <a href="https://nonica.io/">Nonica.io</a>.
+It includes coverage for the Revit 2025 API, which was (and still is) lacking in <a href="https://www.revitapidocs.com/">revitapidocs.com</a>.</p>
+<p>I like it.
+It is free of advertising.
+It is fast.
+It has good search functionality with immediate feedback.</p>
+<p>Many thanks to Nonica.io for creating and sharing this resource.</p>
+<h4><a name="5"></a> Ricaun.RevitTest Unit Testing Framework</h4>
+<p>I discussed
+the <a href="https://github.com/ricaun-io/ricaun.RevitTest">ricaun.RevitTest unit testing framework</a>
+with Luiz Henrique <a href="https://ricaun.com/">@ricaun</a> Cassettari to clarify some aspects; he says:</p>
+<p>When I started researching about unit tests inside Revit, I had a hard time setting up
+the <a href="https://github.com/DynamoDS/RevitTestFramework">DynamoDS/RevitTestFramework</a> inside my Revit;
+the project looks abandoned, and the last updates are six years old.</p>
+<p>In the end, I started using
+the <a href="https://github.com/geberit/Revit.TestRunner">geberit/Revit.TestRunner</a> version
+that was a little easier to install.
+I submitted PRs to fix some issues, and the project is alive on Github and supports more recent versions of Revit.</p>
+<p>When I started using/playing with the <a href="https://aps.autodesk.com/">Autodesk Platform Services APS</a>
+<a href="https://aps.autodesk.com/design-automation-apis">Design Automation API for Revit, DA4R</a>,
+I also wanted to be able to use DA4R to run tests use inside a GitHub Action.</p>
+<p>That was the main goal: run tests using both Revit for Desktop and Revit for Design Automation.</p>
+<p>Plus, I found a way to use the default Test Explorer inside Visual Studio to run tests inside Revit.</p>
+<p>No need to manually install the plugin in the machine:
+the <code>ricaun.RevitTest.TestAdapter</code> does the work to install the plugin in the machine, find Revit folder based on the Revit installation, open Revit, run the tests, show the results inside Visual Studio and close Revit.</p>
+<p>It is easy and convenient; you can download the sample project and just run the tests directly inside Visual Studio.</p>
+<ul>
+<li><a href="https://github.com/ricaun-io/RevitTest">github.com/ricaun-io/RevitTest</a></li>
+</ul>
+<p>Furthermore, knowing that the Revit 2025 API was based on .NET Core, I designed the whole project with that in mind.</p>
+<p>Supporting Revit versions from 2019 to 2025, and also, yes, ricaun.RevitTest works with the Revit Preview.</p>
+<p>For running tests in DA4R, I still need to share the main project,
+<a href="https://github.com/ricaun-io/ricaun.DA4R.NUnit">ricaun-io/ricaun.DA4R.NUnit</a>.</p>
+<p>I have a class session coming up
+at <a href="https://aps.autodesk.com/topics/autodesk-devcon">Autodesk DevCon Europe</a> this year,
+taking place on May 20–21 2025 in Amsterdam; that's gonna be fun:</p>
+<ul>
+<li><a href="https://events.autodesk.com/flow/autodesk/devcon25emea/mainevent/page/agenda/session/1734703627846001oL4U">Multi-Version RevitTest Framework: Unit Testing Revit API using Design Automation</a></li>
+</ul>
+<blockquote>
+<p>In the class, "Multi-Version RevitTest Framework: Unit Testing Revit API using Design Automation." you'll learn the intricacies of executing unit tests for Revit add-ins both locally and remotely. Using the versatile RevitTest Framework, you'll discover how to create consistent and reliable unit tests that can be run on your local machine as well as through Design Automation for Revit. Elevate your unit testing practices with Revit API by joining us and unlock the potential of running tests for multiple Revit versions using a unique and unified RevitTest Framework.</p>
+</blockquote>
+<p>The ricaun.RevitTest features include:</p>
+<ul>
+<li>Support multiple Revit versions (2019-2025) (Revit Preview)</li>
+<li>Run inside Visual Studio Test Explorer (dotnet test)</li>
+<li>Do not require any manual plugin installation.</li>
+<li>Support to run tests using Design Automation for Revit.</li>
+</ul>
+<p>Have a great week!</p>
+<p>Many thanks to ricaun for the very helpful and detailed in-depth explanation!</p>
+<p><center>
+<img src="img/ricaun_revittest.png" alt="RevitTest.Feature.Open.Close" title="RevitTest.Feature.Open.Close" width="600"/> <!-- Pixel Height: 655 Pixel Width: 800 -->
+<a href="img/ricaun_revittest.gif"><p style="font-size: 80%; font-style:italic">Click for animation</p></a>
+</center></p>
+<h4><a name="6"></a> ForgeTypeId for Other Parameter Group</h4>
+<p>Andrea <a href="https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8492813">@andrea.tassera</a> Tassera shared a new insight on
+the [Revit 2024 <code>Other</code> parameter group]https://forums.autodesk.com/t5/revit-api-forum/revit-2024-other-parameter-group/m-p/13326968#M83989:</p>
+<blockquote>
+<p>Apparently, using</p>
+<p><pre><code class="language-cs">new ForgeTypeId(string.Empty)</code></pre></p>
+<p>only works for Revit 2024 and above.
+I was just testing what's on this post in my code, and it was working with Revit 2025, but not in Revit 2023.
+The <code>ForgeTypeId</code> change seems to be applied from Revit 2021 onwards, so I thought it was strange that it wasn't working in 2023.
+I did some experimentation and if you use <code>null</code> instead of <code>new ForgeTypeId(string.Empty)</code>, then it works in all versions of Revit.
+Thought you guys might be interested &nbsp; :-)</p>
+</blockquote>
+<h4><a name="7"></a> Exporting IFC Using DA4R</h4>
+<p>Eason Kang published two blog posts about exporting IFC using DA4R,
+the Autodesk Platform Services APS <a href="https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/">Design Automation for Revit API</a>:</p>
+<ul>
+<li><a href="https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-i">Export IFC from RVT using Design Automation API for Revit &ndash; Part I</a></li>
+<li><a href="https://aps.autodesk.com/blog/export-ifc-rvt-using-design-automation-api-revit-part-ii">Export IFC from RVT using Design Automation API for Revit &ndash; Part II</a></li>
+</ul>
+<h4><a name="8"></a> Using Revit API from a Web App</h4>
+<p>People regularly ponder driving Revit from outside, and now this question came up again,
+how to <a href="https://forums.autodesk.com/t5/revit-api-forum/use-revit-api-from-a-web-app/m-p/13314320">use Revit API from a web app</a>:</p>
+<p><strong>Question:</strong>
+Is it possible to create a web app that manipulates a simple object in Revit "Beam for example".</p>
+<p><strong>Answer:</strong>
+The pure Revit API is a Windows .NET API that requires a running session of Revit and a valid Revit API context to execute, which is only provided within a running session of Revit.exe on a Windows desktop PC.
+You can however also use the Revit API in the cloud on a virtual machine directly from a web app by making use of the Autodesk Platform Services <a href="https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/">APS Design Automation for Revit API</a>.</p>
+<p>Chuong Ho adds another idea to play with:</p>
+<ul>
+<li>Build the add-in and open a listener to get data from Revit:
+<a href="https://github.com/BIMrxLAB/Revit2GraphQL">Revit2GraphQL</a>;
+this Revit project contains a GraphQL endpoint that can be accessed locally as well as remotely over the web.
+Check out <a href="https://github.com/gregorvilkner/Revit2GraphQL/blob/master/BIMrx.Marconi%20SinglePage%201.1.pdf">BIMrx.Marconi.pdf</a> for more information.</li>
+</ul>
+<h4><a name="9"></a> GenAI Impacts Critical Thinking</h4>
+<p>Back to AI-related topics, a report
+on <a href="https://www.microsoft.com/en-us/research/uploads/prod/2025/01/lee_2025_ai_critical_thinking_survey.pdf">the impact of generative AI on critical thinking: self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers</a>:</p>
+<blockquote>
+<p>The rise of Generative AI (GenAI) in knowledge workflows raises questions about its impact on critical thinking skills and practices. We survey 319 knowledge workers to investigate 1) when and how they perceive the enaction of critical thinking when using GenAI, and 2) when and why GenAI affects their effort to do so. Participants shared 936 first-hand examples of using GenAI in work tasks. Quantitatively, when considering both task- and user-specific factors, a user’s task-specific self-confidence and confidence in GenAI are predictive of whether critical thinking is enacted and the effort of doing so in GenAI-assisted tasks. Specifically, higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. Qualitatively, GenAI shifts the nature of critical thinking toward information verification, response integration, and task stewardship. Our insights reveal new design challenges and opportunities for developing GenAI tools for knowledge work.</p>
+</blockquote>
+<h4><a name="10"></a> New AI AGI Test Suites</h4>
+<p>As we seem to be nearing AGI, it is interesting to look at more challenging tests that the current LLMs cannot yet handle:</p>
+<ul>
+<li><a href="https://lastexam.ai/">Humanity's Last Exam</a></li>
+<li><a href="https://scale.com/research/enigma_eval">EnigmaEval: A Benchmark of Long Multimodal Reasoning Challenges</a></li>
+</ul>
+<h4><a name="11"></a> uv Python Package and Project Manager</h4>
+<p>Do you work with Python?
+If so, the following tool may be of interest:
+<a href="https://docs.astral.sh/uv/">uv</a>, an extremely fast Python package and project manager sporting the following impressive features:</p>
+<ul>
+<li>A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.</li>
+<li>10-100x faster than pip.</li>
+<li>Provides comprehensive project management, with a universal lockfile.</li>
+<li>Runs scripts, with support for inline dependency metadata.</li>
+<li>Installs and manages Python versions.</li>
+<li>Runs and installs tools published as Python packages.</li>
+<li>Includes a pip-compatible interface for a performance boost with a familiar CLI.</li>
+<li>Supports Cargo-style workspaces for scalable projects.</li>
+<li>Disk-space efficient, with a global cache for dependency deduplication.</li>
+<li>Installable without Rust or Python via curl or pip.</li>
+<li>Supports macOS, Linux, and Windows.</li>
+</ul>
+<p>If you like how blazingly fast it is, you might be interested in learning
+the <a href="https://youtu.be/gSKTfG1GXYQ">smart engineering behind it (40 minute video)</a>.
+It also enables some interesting ways to run scripts, cf.,
+some <a href="https://youtu.be/jXWIxk2brfk">tricks with UV and a new Python project: uvtrick</a>.</p>

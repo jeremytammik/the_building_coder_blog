@@ -86,7 +86,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 -->
 
-###
+### Unit Testing and More Serious Matters
 
 
 - [Life, death, turmoil](#2)
@@ -124,7 +124,7 @@ He concludes:
 
 > Anyone in 2035 should be able to marshall the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.
 
-Let's hope that really comes true.
+Let's hope that really true.
 
 <!--
 
@@ -180,7 +180,7 @@ I just discovered a new online version of the Revit API documentation,
 [Rev API docs](https://revapidocs.com/) &ndash; [revapidocs.com](https://revapidocs.com/).
 
 It was created by the Revit API consulting company [Nonica.io](https://nonica.io/).
-It includes coverage for Revit 2025 API, which was (and still is) lacking in [revitapidocs.com](https://www.revitapidocs.com/).
+It includes coverage for the Revit 2025 API, which was (and still is) lacking in [revitapidocs.com](https://www.revitapidocs.com/).
 
 I like it.
 It is free of advertising.
@@ -199,33 +199,36 @@ When I started researching about unit tests inside Revit, I had a hard time sett
 the [DynamoDS/RevitTestFramework](https://github.com/DynamoDS/RevitTestFramework) inside my Revit;
 the project looks abandoned, and the last updates are six years old.
 
-In the end I started using
+In the end, I started using
 the [geberit/Revit.TestRunner](https://github.com/geberit/Revit.TestRunner) version
 that was a little easier to install.
-I submitted PRs to fix some issues, and the project is alive on Github with more recent versions of Revit.
+I submitted PRs to fix some issues, and the project is alive on Github and supports more recent versions of Revit.
 
-When I start using/playing with the [Autodesk Platform Services APS](https://aps.autodesk.com/)
-[Design Automation API for Revit, DA4R](https://aps.autodesk.com/design-automation-apis,
-I also want to be able to use DA4R to run tests use inside a GitHub Action.
+When I started using/playing with the [Autodesk Platform Services APS](https://aps.autodesk.com/)
+[Design Automation API for Revit, DA4R](https://aps.autodesk.com/design-automation-apis),
+I also wanted to be able to use DA4R to run tests use inside a GitHub Action.
 
-That was the main goal: be able to run tests using both Revit for Desktop and Revit for Design Automation.
+That was the main goal: run tests using both Revit for Desktop and Revit for Design Automation.
 
 Plus, I found a way to use the default Test Explorer inside Visual Studio to run tests inside Revit.
 
-No need to manually install the plugin in the machine, the `ricaun.RevitTest.TestAdapter` does the work to install the plugin in the machine, find Revit folder based in the Revit installation, open Revit, run the tests, show the result inside Visual Studio and close Revit.
+No need to manually install the plugin in the machine:
+the `ricaun.RevitTest.TestAdapter` does the work to install the plugin in the machine, find Revit folder based on the Revit installation, open Revit, run the tests, show the results inside Visual Studio and close Revit.
 
-Is really easy and convenient, you can download the sample project and just run the tests directly inside Visual Studio.
+It is easy and convenient; you can download the sample project and just run the tests directly inside Visual Studio.
 
 - [github.com/ricaun-io/RevitTest](https://github.com/ricaun-io/RevitTest)
 
-Knowing that the Revit 2025 API was based on .NET Core, I designed the whole project with that in mind.
+Furthermore, knowing that the Revit 2025 API was based on .NET Core, I designed the whole project with that in mind.
 
 Supporting Revit versions from 2019 to 2025, and also, yes, ricaun.RevitTest works with the Revit Preview.
 
 For running tests in DA4R, I still need to share the main project,
-[ricaun-io/ricaun.DA4R.NUnit](https://github.com/ricaun-io/ricaun.DA4R.NUnit)
+[ricaun-io/ricaun.DA4R.NUnit](https://github.com/ricaun-io/ricaun.DA4R.NUnit).
 
-I have a class session in DevCon Europe this year, that's gonna be fun:
+I have a class session coming up
+at [Autodesk DevCon Europe](https://aps.autodesk.com/topics/autodesk-devcon) this year,
+taking place on May 20–21 2025 in Amsterdam; that's gonna be fun:
 
 - [Multi-Version RevitTest Framework: Unit Testing Revit API using Design Automation](https://events.autodesk.com/flow/autodesk/devcon25emea/mainevent/page/agenda/session/1734703627846001oL4U)
 
@@ -261,8 +264,6 @@ I was just testing what's on this post in my code, and it was working with Revit
 The `ForgeTypeId` change seems to be applied from Revit 2021 onwards, so I thought it was strange that it wasn't working in 2023.
 I did some experimentation and if you use `null` instead of `new ForgeTypeId(string.Empty)`, then it works in all versions of Revit.
 Thought you guys might be interested &nbsp; :-)
-
-
 
 ####<a name="7"></a> Exporting IFC Using DA4R
 
