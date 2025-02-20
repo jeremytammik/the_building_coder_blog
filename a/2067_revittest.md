@@ -69,10 +69,20 @@ twitter:
 
  #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM
 
-&ndash; ...
+
+Exciting things, personally, globally, technically and politically
+&ndash; Life, death, turmoil
+&ndash; Retirement, recruiting, job offer
+&ndash; New Rev API docs
+&ndash; Ricaun.RevitTest unit testing framework
+&ndash; ForgeTypeId for other parameter group
+&ndash; Exporting IFC using DA4R
+&ndash; Using Revit API from a web app
+&ndash; GenAI impacts critical thinking
+&ndash; New AI AGI test suites
+&ndash; uv Python package and project manager...
 
 linkedin:
-
 
 #BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk
 
@@ -88,6 +98,7 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ### Unit Testing and More Serious Matters
 
+So many exciting things going on, personally, globally, technically and politically:
 
 - [Life, death, turmoil](#2)
 - [Retirement, recruiting, job offer](#3)
@@ -124,7 +135,7 @@ He concludes:
 
 > Anyone in 2035 should be able to marshal the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.
 
-Let's hope that really true.
+Let's hope that comes true.
 
 <!--
 
@@ -248,12 +259,13 @@ Many thanks to ricaun for the very helpful and detailed in-depth explanation!
 <center>
 <img src="img/ricaun_revittest.png" alt="RevitTest.Feature.Open.Close" title="RevitTest.Feature.Open.Close" width="600"/> <!-- Pixel Height: 655 Pixel Width: 800 -->
 <a href="img/ricaun_revittest.gif"><p style="font-size: 80%; font-style:italic">Click for animation</p></a>
+<!-- https://github.com/jeremytammik/tbc/tree/gh-pages/a/img/ricaun_revittest.gif -->
 </center>
 
 ####<a name="6"></a> ForgeTypeId for Other Parameter Group
 
 Andrea [@andrea.tassera](https://forums.autodesk.com/t5/user/viewprofilepage/user-id/8492813) Tassera shared a new insight on
-the [Revit 2024 `Other` parameter group]https://forums.autodesk.com/t5/revit-api-forum/revit-2024-other-parameter-group/m-p/13326968#M83989:
+the [Revit 2024 `Other` parameter group](https://forums.autodesk.com/t5/revit-api-forum/revit-2024-other-parameter-group/m-p/13326968#M83989):
 
 > Apparently, using
 
@@ -264,6 +276,8 @@ I was just testing what's on this post in my code, and it was working with Revit
 The `ForgeTypeId` change seems to be applied from Revit 2021 onwards, so I thought it was strange that it wasn't working in 2023.
 I did some experimentation and if you use `null` instead of `new ForgeTypeId(string.Empty)`, then it works in all versions of Revit.
 Thought you guys might be interested &nbsp; :-)
+
+Thank you, Andrea, for sharing this.
 
 ####<a name="7"></a> Exporting IFC Using DA4R
 
