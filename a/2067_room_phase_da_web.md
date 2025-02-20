@@ -15,6 +15,17 @@ https://prismjs.com
 
 <!--
 
+- intro personal
+  My two years younger brother is dying, and that is freaking me out a lot. Cancer, no digestion, no nutrition… could be days, could be weeks…
+  I hope to be able to calm down a bit gradually.
+  I am also overwhelmed by what is happening in the world, politically, climate, war.
+  At the same time, I am very excited about the AI revolution. Have you read Sam Altman’s three observations?
+  Back on the negative side, we have the limits to growth with much evidence corroborating the prediction of a crash:
+  https://en.wikipedia.org/wiki/The_Limits_to_Growth
+  Image
+  Maybe the AI revolution predicted by Sam can help address the catastrophe predicted by the [limits to growth](https://en.wikipedia.org/wiki/The_Limits_to_Growth?
+  So, that is my short answer to your first question. Sorry if it is a bit overwhelming. I feel overwhelmed too.
+
 - Sam Altman shared [Three Observations](https://blog.samaltman.com/three-observations) offering insights likely related to AI developments, industry trends, or human potential. The content emphasises the ongoing evolution and impact of technology.
 
 - Eason Kang published two blog posts about exporting IFC using Revit DA:
@@ -80,33 +91,31 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 
 ####<a name="2"></a> Life, Death, Turmoil
 
+I am somewhat in turmoil.
 My daughter is imminently expecting a baby.
-
 My brother is imminently dying.
+The entire world seems to be in upheaval, politically, technologically, in polarisation between continents and socially.
+I’m fine myself, physically.
 
-I’m fine, although a bit busy, a bit overwhelmed, a bit in turmoil, too many things to do and stressing myself.
+The largest global upheaval that I see looming is the projection by
+the [1972 study on the limits to growth](https://thebuildingcoder.typepad.com/blog/2024/01/valid-revit-api-context-llm-and-ltg.html#7) that
+I pointed out in January.
 
-My two years younger brother is dying, and that is freaking me out a lot. Cancer, no digestion, no nutrition… could be days, could be weeks…
+One sliver of hope on possibly handling the collapse that it predicts in the coming decades is offered
+by [Sam Altman's Three Observations](https://blog.samaltman.com/three-observations) on the rapid and accelerating AI evolution we are observing,
+providing a very exciting optimistic outlook into the near future.
+He compares the development of AI
+with [Moore's law](https://en.wikipedia.org/wiki/Moore%27s_law),
+which notes that computing power increased expobnentially by a factor of 2 every 18 months.
+In AI development, Altman notes that the cost to use a given level of AI falls about 10x every 12 months, and lower prices lead to much more use, cf.,
+[Jevons Paradox](https://thebuildingcoder.typepad.com/blog/2024/10/determine-rvt-version-and-add-data-from-exe.html#10).
+He concludes:
 
-I hope to be able to calm down a bit gradually.
+> Anyone in 2035 should be able to marshall the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine. There is a great deal of talent right now without the resources to fully express itself, and if we change that, the resulting creative output of the world will lead to tremendous benefits for us all.
 
-I am also overwhelmed by what is happening in the world, politically, climate, war.
+Let's hope that really comes true.
 
-At the same time, I am very excited about the AI revolution. Have you read Sam Altman’s three observations?
 
-https://blog.samaltman.com/three-observations
-
-Very exciting optimistic outlook into the near future.
-
-Back on the negative side, we have the limits to growth with much evidence corroborating the prediction of a crash:
-
-https://en.wikipedia.org/wiki/The_Limits_to_Growth
-
-Image
-
-Maybe the AI revolution predicted by Sam can help address the catastrophe predicted by the [limits to growth](https://en.wikipedia.org/wiki/The_Limits_to_Growth?
-
-So, that is my short answer to your first question. Sorry if it is a bit overwhelming. I feel overwhelmed too.
 
 Yes, my retirement, and the blog.
 
