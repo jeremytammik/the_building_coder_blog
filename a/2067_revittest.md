@@ -306,6 +306,17 @@ Chuong Ho adds another idea to play with:
 this Revit project contains a GraphQL endpoint that can be accessed locally as well as remotely over the web.
 Check out [BIMrx.Marconi.pdf](https://github.com/gregorvilkner/Revit2GraphQL/blob/master/BIMrx.Marconi%20SinglePage%201.1.pdf) for more information.
 
+Chuong also points out this tutorial for getting started with
+the [Autodesk Platform Services APS](https://aps.autodesk.com/)
+[Design Automation API for Revit, DA4R](https://aps.autodesk.com/design-automation-apis),
+to update a Revit Model
+in [ACC, the Autodesk Construction Cloud](https://construction.autodesk.com/):
+
+- [Use Revit Design Automation Update Revit Model In ACC Part 1](https://dev.to/chuongmep/use-revit-design-automation-update-revit-model-in-acc-part-1-1o31)
+- [Use Revit Design Automation Update Revit Model In ACC Part 2](https://dev.to/chuongmep/use-revit-design-automation-update-revit-model-in-acc-part-2-58kc)
+
+Thank you for the pointers, Chuong!
+
 ####<a name="9"></a> GenAI Impacts Critical Thinking
 
 Back to AI-related topics, a report
