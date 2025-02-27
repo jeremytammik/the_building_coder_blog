@@ -269,7 +269,7 @@ the [Revit 2024 `Other` parameter group](https://forums.autodesk.com/t5/revit-ap
 
 > Apparently, using
 
-> <pre><code class="language-cs">new ForgeTypeId(string.Empty)</code></pre>
+<pre><code class="language-cs">new ForgeTypeId(string.Empty)</code></pre>
 
 > only works for Revit 2024 and above.
 I was just testing what's on this post in my code, and it was working with Revit 2025, but not in Revit 2023.
