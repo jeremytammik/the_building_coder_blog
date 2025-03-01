@@ -15,6 +15,10 @@ https://prismjs.com
 
 <!--
 
+- three horizons
+  https://www.h3uni.org/tutorial/three-horizons/
+
+
 - XOR
   https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/xor/
   Simon Tatham made a good stab at summarising everything one might possibly want to know about XOR.
@@ -89,10 +93,10 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 ### UIApplication and Bounding Box on Sheet
 
 
-Get UIApplication Anywhere
-https://forums.autodesk.com/t5/revit-api-forum/get-uiapplication-anywhere/td-p/13341551
+####<a name="2"></a> Access UIApplication Anywhere
 
-ricaun
+Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari shares yet another new discovery,
+how to [get `UIApplication` anywhere](https://forums.autodesk.com/t5/revit-api-forum/get-uiapplication-anywhere/td-p/13341551):
 
 UIApplication is the most useful class inside Revit API, give access to all events, documents and can be used to know if your code is in the AddInContext (Revit API Context).
 
@@ -100,32 +104,31 @@ Would be really handy is there a way to have access to UIApplication any time yo
 
 There is a way native way in the RevitAPIUI.dll to get UIApplication without any reflection or internal code. I figure out that a long time ago (~3 years) when I was messing with events.
 
-The class RibbonItemEventArgs have a directly reference for a new UIApplication class.
+The class `RibbonItemEventArgs` provides a direct reference for a new `UIApplication` class.
 
-UIApplication uiapp = new Autodesk.Revit.UI.Events.RibbonItemEventArgs().Application;
+<pre><code class="language-cs">UIApplication uiapp = new Autodesk.Revit.UI.Events.RibbonItemEventArgs().Application;</code></pre>
 
-I created a class RevitApplication in my ricaun.Revit.UI library just to have a base standard.
+I created a class `RevitApplication` in
+my [ricaun.Revit.UI](https://github.com/ricaun-io/ricaun.Revit.UI) library
+just to have a base standard:
 
 https://github.com/ricaun-io/ricaun.Revit.UI/blob/master/ricaun.Revit.UI/RevitApplication.cs
-UIApplication uiapp = RevitApplication.UIApplication;
+
+<pre><code class="language-cs">UIApplication uiapp = RevitApplication.UIApplication;
 UIControlledApplication application = RevitApplication.UIControlledApplication;
-bool inAddInContext = RevitApplication.IsInAddInContext;
+bool inAddInContext = RevitApplication.IsInAddInContext;</code></pre>
 
-Better when that only if Autodesk create a static class like RevitApplication in the RevitAPIUI.dll.
+Better still if Autodesk creates a static class like RevitApplication in RevitAPIUI.dll.
 
-That conclude my post, I hope you like it.
+That concludes my post, I hope you like it.
 
 See yaa!
 
-####<a name="2"></a>
 
 <center>
-<img src="img/ricaun_revittest.png" alt="RevitTest.Feature.Open.Close" title="RevitTest.Feature.Open.Close" width="600"/> <!-- Pixel Height: 655 Pixel Width: 800 -->
-<a href="img/ricaun_revittest.gif"><p style="font-size: 80%; font-style:italic">Click for animation</p></a>
-<!-- https://github.com/jeremytammik/tbc/tree/gh-pages/a/img/ricaun_revittest.gif -->
-</center>
+<img src="img/.png" alt="" title="" width="100"/> <!-- Pixel Height: 655 Pixel Width: 800 -->
+/center>
 
 
-<pre><code class="language-cs"></code></pre>
 
 
