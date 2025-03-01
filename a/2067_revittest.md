@@ -67,8 +67,7 @@ https://prismjs.com
 
 twitter:
 
- #RevitAPI @AutodeskAPS @AutodeskRevit #BIM @DynamoBIM
-
+Personal, global, technical and political turmoil, job offer, new online updated @AutodeskAPS #RevitAPI docs and unit testing framework @AutodeskRevit #BIM @DynamoBIM https://thebuildingcoder.typepad.com/blog/2025/02/unit-testing-and-more-serious-matters.html
 
 Exciting things, personally, globally, technically and politically
 &ndash; Life, death, turmoil
