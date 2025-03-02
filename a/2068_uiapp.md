@@ -98,13 +98,14 @@ the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/b
 Luiz Henrique [@ricaun](https://ricaun.com/) Cassettari shares yet another new discovery,
 how to [get `UIApplication` anywhere](https://forums.autodesk.com/t5/revit-api-forum/get-uiapplication-anywhere/td-p/13341551):
 
-UIApplication is the most useful class inside Revit API, give access to all events, documents and can be used to know if your code is in the AddInContext (Revit API Context).
+`UIApplication` is the most useful class inside Revit API, providing access to all events, documents and to know whether your code is in the AddInContext (Revit API Context).
 
-Would be really handy is there a way to have access to UIApplication any time you need.
+It would be really handy is there was way to have access to `UIApplication` any time you need.
 
-There is a way native way in the RevitAPIUI.dll to get UIApplication without any reflection or internal code. I figure out that a long time ago (~3 years) when I was messing with events.
+There is a way, a native way in the RevitAPIUI.dll, to retrieve the `UIApplication` without any reflection or internal code.
+I figured that out that a long time ago (~3 years) when I was messing with events.
 
-The class `RibbonItemEventArgs` provides a direct reference for a new `UIApplication` class.
+The class `RibbonItemEventArgs` provides a direct reference for a new `UIApplication` class:
 
 <pre><code class="language-cs">UIApplication uiapp = new Autodesk.Revit.UI.Events.RibbonItemEventArgs().Application;</code></pre>
 
